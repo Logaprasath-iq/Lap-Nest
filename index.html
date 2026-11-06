@@ -12,8 +12,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
+  <!-- Preload Hero Video for Instant Playback (No Poster Flash) -->
+  <link rel="preload" href="assets/videos/home1.mp4" as="video" type="video/mp4">
+  
   <!-- Compiled Tailwind & Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=2.2">
 </head>
 <body class="bg-[#0e181f] text-white selection:bg-[#FD802E] selection:text-white antialiased overflow-x-hidden min-h-screen flex flex-col">
 
@@ -30,7 +33,7 @@
              data-dark="assets/images/logo/logo-dark.svg" 
              data-light="assets/images/logo/logo-light.svg" 
              alt="LAPNEST – BUY • SELL • REPAIR • RENT" 
-             class="brand-logo-img header-logo h-11 sm:h-12 w-auto transition-transform duration-300 group-hover:scale-105">
+             class="brand-logo-img header-logo h-9 sm:h-11 md:h-12 w-auto max-w-[150px] sm:max-w-none transition-transform duration-300 group-hover:scale-105">
       </a>
 
       <!-- Desktop Center Navigation Menu (Old Nav Layout - Clean Text Links) -->
@@ -68,13 +71,13 @@
       <div class="flex items-center gap-2 sm:gap-2.5 xl:gap-3 shrink-0">
         
         <!-- RTL/LTR Toggle with Clean Arrow -->
-        <button type="button" class="rtl-toggle-btn h-10 px-3 rounded-xl text-xs font-bold border border-[#233D4C] bg-[#172731] text-[#9fb3be] hover:text-[#FD802E] hover:border-[#FD802E] transition-all inline-flex items-center justify-center gap-1.5 shrink-0" title="Toggle RTL / LTR" aria-label="Toggle Text Direction">
+        <button type="button" class="rtl-toggle-btn h-10 px-3 rounded-xl text-xs font-bold border border-[#233D4C] bg-[#172731] text-[#9fb3be] hover:text-[#FD802E] hover:border-[#FD802E] transition-all hidden sm:inline-flex items-center justify-center gap-1.5 shrink-0" title="Toggle RTL / LTR" aria-label="Toggle Text Direction">
           <svg class="w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
           <span class="dir-badge text-[11px] tracking-wider">RTL</span>
         </button>
 
         <!-- Dark/Light Theme Toggle -->
-        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-xl text-[#9fb3be] hover:text-[#FD802E] bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] transition-all inline-flex items-center justify-center shrink-0" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
+        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-xl text-[#9fb3be] hover:text-[#FD802E] bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] transition-all hidden sm:inline-flex items-center justify-center shrink-0" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
           <svg class="sun-icon w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
           <svg class="moon-icon w-4 h-4 text-[#FD802E] hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
         </button>
@@ -126,6 +129,22 @@
     </nav>
 
     <div class="pt-6 border-t border-[#233D4C] space-y-3">
+            <!-- Mobile Quick Controls: RTL & Dark/Light Mode -->
+      <div class="grid grid-cols-2 gap-2.5">
+        <!-- Mobile RTL Toggle -->
+        <button type="button" class="rtl-toggle-btn h-11 px-3 rounded-xl text-xs font-bold border border-[#233D4C] bg-[#172731] text-[#9fb3be] hover:text-[#FD802E] hover:border-[#FD802E] transition-all inline-flex items-center justify-center gap-2" title="Toggle RTL / LTR" aria-label="Toggle Text Direction">
+          <svg class="w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+          <span class="dir-badge text-xs tracking-wider">RTL</span>
+        </button>
+
+        <!-- Mobile Dark/Light Theme Toggle -->
+        <button type="button" class="theme-toggle-btn h-11 px-3 rounded-xl text-xs font-bold text-[#9fb3be] hover:text-[#FD802E] bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] transition-all inline-flex items-center justify-center gap-2" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
+          <svg class="sun-icon w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          <svg class="moon-icon w-4 h-4 text-[#FD802E] hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          <span class="text-xs">Theme</span>
+        </button>
+      </div>
+
       <a href="order.html" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#FD802E] hover:bg-[#ff9248] text-white font-bold text-sm shadow-lg shadow-[#FD802E]/25">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
         Place Order
@@ -223,11 +242,9 @@
             <video id="hero-laptop-video"
                    class="w-full h-full object-cover rounded-3xl transition-transform duration-700 group-hover:scale-105"
                    autoplay loop muted playsinline webkit-playsinline
-                   poster="assets/images/hero/hero-laptop-floating.png">
+                   preload="auto">
               <source src="assets/videos/home1.mp4" type="video/mp4">
               <source src="assets/videos/hero-laptop.mp4" type="video/mp4">
-              <!-- Static Fallback Image -->
-              <img src="assets/images/hero/hero-laptop-floating.png" alt="LAPNEST High-Performance Floating Laptop" class="w-full h-full object-cover">
             </video>
 
             <!-- Ambient Edge Ring & Subtle Vignette -->
@@ -267,11 +284,11 @@
               <div class="absolute inset-0 bg-gradient-to-t from-[#172731] via-transparent to-transparent"></div>
               <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FD802E] text-white">High FPS</span>
             </div>
-            <div class="equal-card-body p-5">
-              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors">Gaming Laptops</h3>
-              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed">GeForce RTX 40-Series power with 165Hz+ high refresh displays for elite gamers.</p>
-              <div class="equal-card-footer">
-                <a href="products.html?cat=gaming" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-[#233D4C] group-hover:bg-[#FD802E] text-white flex items-center justify-center gap-2 transition-colors">
+            <div class="equal-card-body p-5 flex flex-col flex-1">
+              <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">Gaming Laptops</h3>
+              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">GeForce RTX 40-Series power with 165Hz+ high refresh displays for elite gamers.</p>
+              <div class="equal-card-footer mt-auto pt-4">
+                <a href="products.html?cat=gaming" class="category-explore-btn w-full py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all">
                   <span>Explore Gaming</span>
                   <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </a>
@@ -286,11 +303,11 @@
               <div class="absolute inset-0 bg-gradient-to-t from-[#172731] via-transparent to-transparent"></div>
               <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FD802E] text-white shadow-sm">Enterprise</span>
             </div>
-            <div class="equal-card-body p-5">
-              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors">Business Laptops</h3>
-              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed">Mil-spec durability, TPM 2.0 security, and all-day battery life for corporate leaders.</p>
-              <div class="equal-card-footer">
-                <a href="products.html?cat=business" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-[#233D4C] group-hover:bg-[#FD802E] text-white flex items-center justify-center gap-2 transition-colors">
+            <div class="equal-card-body p-5 flex flex-col flex-1">
+              <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">Business Laptops</h3>
+              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Mil-spec durability, TPM 2.0 security, and all-day battery life for corporate leaders.</p>
+              <div class="equal-card-footer mt-auto pt-4">
+                <a href="products.html?cat=business" class="category-explore-btn w-full py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all">
                   <span>Explore Business</span>
                   <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </a>
@@ -305,11 +322,11 @@
               <div class="absolute inset-0 bg-gradient-to-t from-[#172731] via-transparent to-transparent"></div>
               <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FD802E] text-white shadow-sm">Student Deals</span>
             </div>
-            <div class="equal-card-body p-5">
-              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors">Student Laptops</h3>
-              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed">Lightweight laptops with reliable fast SSD storage for coding, coursework, and college.</p>
-              <div class="equal-card-footer">
-                <a href="products.html?cat=student" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-[#233D4C] group-hover:bg-[#FD802E] text-white flex items-center justify-center gap-2 transition-colors">
+            <div class="equal-card-body p-5 flex flex-col flex-1">
+              <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">Student Laptops</h3>
+              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Lightweight laptops with fast SSDs for coding, campus coursework, and daily study.</p>
+              <div class="equal-card-footer mt-auto pt-4">
+                <a href="products.html?cat=student" class="category-explore-btn w-full py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all">
                   <span>Explore Student</span>
                   <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </a>
@@ -324,11 +341,11 @@
               <div class="absolute inset-0 bg-gradient-to-t from-[#172731] via-transparent to-transparent"></div>
               <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FD802E] text-white shadow-sm">Creator 4K</span>
             </div>
-            <div class="equal-card-body p-5">
-              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors">Professional Workstations</h3>
-              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed">Color-accurate displays and ECC RAM support for 3D renderers, video editors, and engineers.</p>
-              <div class="equal-card-footer">
-                <a href="products.html?cat=professional" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-[#233D4C] group-hover:bg-[#FD802E] text-white flex items-center justify-center gap-2 transition-colors">
+            <div class="equal-card-body p-5 flex flex-col flex-1">
+              <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">Professional Workstations</h3>
+              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Color-accurate displays with ECC RAM support for 3D renderers and video editors.</p>
+              <div class="equal-card-footer mt-auto pt-4">
+                <a href="products.html?cat=professional" class="category-explore-btn w-full py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all">
                   <span>Explore Creator</span>
                   <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </a>
@@ -343,11 +360,11 @@
               <div class="absolute inset-0 bg-gradient-to-t from-[#172731] via-transparent to-transparent"></div>
               <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FD802E] text-white shadow-sm">Genuine OEM</span>
             </div>
-            <div class="equal-card-body p-5">
-              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors">Laptop Accessories</h3>
-              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed">Original USB-C GaN adapters, mechanical keyboards, ergonomic stands, and sleeves.</p>
-              <div class="equal-card-footer">
-                <a href="products.html?cat=accessories" class="w-full py-2.5 px-4 rounded-xl text-xs font-bold bg-[#233D4C] group-hover:bg-[#FD802E] text-white flex items-center justify-center gap-2 transition-colors">
+            <div class="equal-card-body p-5 flex flex-col flex-1">
+              <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">Laptop Accessories</h3>
+              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Original USB-C GaN adapters, mechanical keyboards, precision stands, and sleeves.</p>
+              <div class="equal-card-footer mt-auto pt-4">
+                <a href="products.html?cat=accessories" class="category-explore-btn w-full py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all">
                   <span>Explore Gear</span>
                   <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </a>
@@ -780,10 +797,10 @@
               <div class="absolute inset-0 bg-gradient-to-t from-[#172731] via-transparent to-transparent"></div>
               <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FD802E] text-white">Same-Day</span>
             </div>
-            <div class="equal-card-body p-6">
-              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors">Screen & Panel Replacement</h3>
-              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed">Fix cracked displays, flickering backlights, vertical lines, and color distortions with genuine FHD, OLED, and 144Hz IPS panels.</p>
-              <div class="equal-card-footer flex items-center justify-between">
+            <div class="equal-card-body p-6 flex flex-col flex-1">
+              <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">Screen & Panel Replacement</h3>
+              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Fix cracked displays, flickering backlights, vertical lines, and color distortions with genuine FHD, OLED, and 144Hz IPS panels.</p>
+              <div class="equal-card-footer mt-auto pt-4 flex items-center justify-between">
                 <span class="text-xs text-[#FD802E] font-semibold">From ₹2,499</span>
                 <a href="service-details.html?service=screen" class="inline-flex items-center gap-1.5 text-xs font-bold text-white group-hover:text-[#FD802E] transition-colors">
                   <span>Learn More</span>
@@ -800,10 +817,10 @@
               <div class="absolute inset-0 bg-gradient-to-t from-[#172731] via-transparent to-transparent"></div>
               <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#233D4C] text-[#FD802E]">OEM Grade</span>
             </div>
-            <div class="equal-card-body p-6">
-              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors">Battery Replacement</h3>
-              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed">Resolve battery drain, swelling, and charge failure with high-capacity Grade-A OEM lithium cells with 1-year warranty.</p>
-              <div class="equal-card-footer flex items-center justify-between">
+            <div class="equal-card-body p-6 flex flex-col flex-1">
+              <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">Battery Replacement</h3>
+              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Resolve battery drain, swelling, and charge failure with high-capacity Grade-A OEM lithium cells with 1-year warranty.</p>
+              <div class="equal-card-footer mt-auto pt-4 flex items-center justify-between">
                 <span class="text-xs text-[#FD802E] font-semibold">From ₹1,899</span>
                 <a href="service-details.html?service=battery" class="inline-flex items-center gap-1.5 text-xs font-bold text-white group-hover:text-[#FD802E] transition-colors">
                   <span>Learn More</span>
@@ -820,10 +837,10 @@
               <div class="absolute inset-0 bg-gradient-to-t from-[#172731] via-transparent to-transparent"></div>
               <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FD802E] text-white">45-Min Express</span>
             </div>
-            <div class="equal-card-body p-6">
-              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors">RAM Memory Upgrades</h3>
-              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed">Boost multitasking and eliminate stutter with dual-channel high-speed DDR4 (3200MHz) and DDR5 (5600MHz) expansions.</p>
-              <div class="equal-card-footer flex items-center justify-between">
+            <div class="equal-card-body p-6 flex flex-col flex-1">
+              <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">RAM Memory Upgrades</h3>
+              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Boost multitasking and eliminate stutter with dual-channel high-speed DDR4 (3200MHz) and DDR5 (5600MHz) expansions.</p>
+              <div class="equal-card-footer mt-auto pt-4 flex items-center justify-between">
                 <span class="text-xs text-[#FD802E] font-semibold">From ₹1,499</span>
                 <a href="service-details.html?service=ram" class="inline-flex items-center gap-1.5 text-xs font-bold text-white group-hover:text-[#FD802E] transition-colors">
                   <span>Learn More</span>
@@ -840,10 +857,10 @@
               <div class="absolute inset-0 bg-gradient-to-t from-[#172731] via-transparent to-transparent"></div>
               <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#233D4C] text-[#FD802E]">Gen4 NVMe</span>
             </div>
-            <div class="equal-card-body p-6">
-              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors">NVMe SSD Storage Expansion</h3>
-              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed">Multiply system boot speeds by 10x with blazing-fast PCIe Gen4 NVMe drives (500GB / 1TB / 2TB) with complete OS cloning.</p>
-              <div class="equal-card-footer flex items-center justify-between">
+            <div class="equal-card-body p-6 flex flex-col flex-1">
+              <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">NVMe SSD Storage Expansion</h3>
+              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Multiply system boot speeds by 10x with blazing-fast PCIe Gen4 NVMe drives (500GB / 1TB / 2TB) with complete OS cloning.</p>
+              <div class="equal-card-footer mt-auto pt-4 flex items-center justify-between">
                 <span class="text-xs text-[#FD802E] font-semibold">From ₹1,999</span>
                 <a href="service-details.html?service=ssd" class="inline-flex items-center gap-1.5 text-xs font-bold text-white group-hover:text-[#FD802E] transition-colors">
                   <span>Learn More</span>
@@ -860,10 +877,10 @@
               <div class="absolute inset-0 bg-gradient-to-t from-[#172731] via-transparent to-transparent"></div>
               <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#FD802E] text-white">RGB & Backlit</span>
             </div>
-            <div class="equal-card-body p-6">
-              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors">Keyboard & Trackpad Repair</h3>
-              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed">Fix liquid-spill damaged keys, unresponsive trackpads, and malfunctioning backlights with genuine factory-fitted keyboards.</p>
-              <div class="equal-card-footer flex items-center justify-between">
+            <div class="equal-card-body p-6 flex flex-col flex-1">
+              <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">Keyboard & Trackpad Repair</h3>
+              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Fix liquid-spill damaged keys, unresponsive trackpads, and malfunctioning backlights with genuine factory-fitted keyboards.</p>
+              <div class="equal-card-footer mt-auto pt-4 flex items-center justify-between">
                 <span class="text-xs text-[#FD802E] font-semibold">From ₹1,299</span>
                 <a href="service-details.html?service=keyboard" class="inline-flex items-center gap-1.5 text-xs font-bold text-white group-hover:text-[#FD802E] transition-colors">
                   <span>Learn More</span>
@@ -880,10 +897,10 @@
               <div class="absolute inset-0 bg-gradient-to-t from-[#172731] via-transparent to-transparent"></div>
               <span class="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#233D4C] text-[#FD802E]">Micro-BGA Lab</span>
             </div>
-            <div class="equal-card-body p-6">
-              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors">Logic Board & Chip Repair</h3>
-              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed">Revive dead laptops with specialized short-circuit hunting, power IC replacement, BIOS re-programming, and GPU reballing.</p>
-              <div class="equal-card-footer flex items-center justify-between">
+            <div class="equal-card-body p-6 flex flex-col flex-1">
+              <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">Logic Board & Chip Repair</h3>
+              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Revive dead laptops with specialized short-circuit hunting, power IC replacement, BIOS re-programming, and GPU reballing.</p>
+              <div class="equal-card-footer mt-auto pt-4 flex items-center justify-between">
                 <span class="text-xs text-[#FD802E] font-semibold">From ₹2,999</span>
                 <a href="service-details.html?service=motherboard" class="inline-flex items-center gap-1.5 text-xs font-bold text-white group-hover:text-[#FD802E] transition-colors">
                   <span>Learn More</span>

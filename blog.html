@@ -28,7 +28,7 @@
              data-dark="assets/images/logo/logo-dark.svg" 
              data-light="assets/images/logo/logo-light.svg" 
              alt="LAPNEST – BUY • SELL • REPAIR • RENT" 
-             class="brand-logo-img header-logo h-11 sm:h-12 w-auto transition-transform duration-300 group-hover:scale-105">
+             class="brand-logo-img header-logo h-9 sm:h-11 md:h-12 w-auto max-w-[150px] sm:max-w-none transition-transform duration-300 group-hover:scale-105">
       </a>
 
       <!-- Desktop Center Navigation Menu (Old Nav Layout - Clean Text Links) -->
@@ -66,13 +66,13 @@
       <div class="flex items-center gap-2 sm:gap-2.5 xl:gap-3 shrink-0">
         
         <!-- RTL/LTR Toggle with Clean Arrow -->
-        <button type="button" class="rtl-toggle-btn h-10 px-3 rounded-xl text-xs font-bold border border-[#233D4C] bg-[#172731] text-[#9fb3be] hover:text-[#FD802E] hover:border-[#FD802E] transition-all inline-flex items-center justify-center gap-1.5 shrink-0" title="Toggle RTL / LTR" aria-label="Toggle Text Direction">
+        <button type="button" class="rtl-toggle-btn h-10 px-3 rounded-xl text-xs font-bold border border-[#233D4C] bg-[#172731] text-[#9fb3be] hover:text-[#FD802E] hover:border-[#FD802E] transition-all hidden sm:inline-flex items-center justify-center gap-1.5 shrink-0" title="Toggle RTL / LTR" aria-label="Toggle Text Direction">
           <svg class="w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
           <span class="dir-badge text-[11px] tracking-wider">RTL</span>
         </button>
 
         <!-- Dark/Light Theme Toggle -->
-        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-xl text-[#9fb3be] hover:text-[#FD802E] bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] transition-all inline-flex items-center justify-center shrink-0" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
+        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-xl text-[#9fb3be] hover:text-[#FD802E] bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] transition-all hidden sm:inline-flex items-center justify-center shrink-0" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
           <svg class="sun-icon w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
           <svg class="moon-icon w-4 h-4 text-[#FD802E] hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
         </button>
@@ -124,6 +124,22 @@
     </nav>
 
     <div class="pt-6 border-t border-[#233D4C] space-y-3">
+            <!-- Mobile Quick Controls: RTL & Dark/Light Mode -->
+      <div class="grid grid-cols-2 gap-2.5">
+        <!-- Mobile RTL Toggle -->
+        <button type="button" class="rtl-toggle-btn h-11 px-3 rounded-xl text-xs font-bold border border-[#233D4C] bg-[#172731] text-[#9fb3be] hover:text-[#FD802E] hover:border-[#FD802E] transition-all inline-flex items-center justify-center gap-2" title="Toggle RTL / LTR" aria-label="Toggle Text Direction">
+          <svg class="w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+          <span class="dir-badge text-xs tracking-wider">RTL</span>
+        </button>
+
+        <!-- Mobile Dark/Light Theme Toggle -->
+        <button type="button" class="theme-toggle-btn h-11 px-3 rounded-xl text-xs font-bold text-[#9fb3be] hover:text-[#FD802E] bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] transition-all inline-flex items-center justify-center gap-2" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
+          <svg class="sun-icon w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          <svg class="moon-icon w-4 h-4 text-[#FD802E] hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          <span class="text-xs">Theme</span>
+        </button>
+      </div>
+
       <a href="order.html" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#FD802E] hover:bg-[#ff9248] text-white font-bold text-sm shadow-lg shadow-[#FD802E]/25">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
         Place Order
@@ -289,18 +305,18 @@
             <div class="aspect-[16/10] overflow-hidden bg-[#0e181f]">
               <img src="assets/images/blog/blog-2.jpg" alt="Thermal Paste" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="p-6 equal-card-body">
+            <div class="p-6 equal-card-body flex flex-col flex-1">
               <div class="flex items-center justify-between text-xs text-[#9fb3be] mb-2">
                 <span class="font-bold text-[#FD802E]">Maintenance Tips</span>
                 <span>Oct 28, 2026</span>
               </div>
-              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors line-clamp-2 mb-2">
+              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors line-clamp-2 min-h-[3.5rem] flex items-start mb-2">
                 Why Replacing Thermal Paste Every 18 Months Saves Your GPU
               </h3>
-              <p class="text-xs text-[#9fb3be] line-clamp-3 leading-relaxed equal-card-body">
+              <p class="text-xs text-[#9fb3be] min-h-[3.75rem] max-h-[3.75rem] line-clamp-3 leading-relaxed">
                 How desiccated factory thermal compound causes microscopic hot-spots, thermal throttling, and permanent solder fatigue on modern NVIDIA RTX chips.
               </p>
-              <div class="equal-card-footer pt-4 border-t border-[#233D4C]">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C]">
                 <a href="blog-details.html?id=thermal-paste-guide" class="text-xs font-bold text-[#FD802E] hover:underline flex items-center gap-1">
                   <span>Read Guide</span>
                   <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
@@ -314,18 +330,18 @@
             <div class="aspect-[16/10] overflow-hidden bg-[#0e181f]">
               <img src="assets/images/blog/blog-3.jpg" alt="Student Laptops" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="p-6 equal-card-body">
+            <div class="p-6 equal-card-body flex flex-col flex-1">
               <div class="flex items-center justify-between text-xs text-[#9fb3be] mb-2">
                 <span class="font-bold text-[#FD802E]">Buying Guides</span>
                 <span>Oct 22, 2026</span>
               </div>
-              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors line-clamp-2 mb-2">
+              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors line-clamp-2 min-h-[3.5rem] flex items-start mb-2">
                 Best Laptops for Anna University & IIT Madras Engineering Students
               </h3>
-              <p class="text-xs text-[#9fb3be] line-clamp-3 leading-relaxed equal-card-body">
+              <p class="text-xs text-[#9fb3be] min-h-[3.75rem] max-h-[3.75rem] line-clamp-3 leading-relaxed">
                 From MATLAB simulations to SolidWorks 3D CAD modeling: which processor and minimum GPU specifications you actually need without overspending.
               </p>
-              <div class="equal-card-footer pt-4 border-t border-[#233D4C]">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C]">
                 <a href="blog-details.html?id=student-guide" class="text-xs font-bold text-[#FD802E] hover:underline flex items-center gap-1">
                   <span>Read Guide</span>
                   <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
@@ -339,18 +355,18 @@
             <div class="aspect-[16/10] overflow-hidden bg-[#0e181f]">
               <img src="assets/images/blog/blog-4.jpg" alt="MacBook M3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="p-6 equal-card-body">
+            <div class="p-6 equal-card-body flex flex-col flex-1">
               <div class="flex items-center justify-between text-xs text-[#9fb3be] mb-2">
                 <span class="font-bold text-[#FD802E]">Technology News</span>
                 <span>Oct 14, 2026</span>
               </div>
-              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors line-clamp-2 mb-2">
+              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors line-clamp-2 min-h-[3.5rem] flex items-start mb-2">
                 Apple M3 Pro vs Intel Core i9-13980HX: Battery vs Raw Throughput
               </h3>
-              <p class="text-xs text-[#9fb3be] line-clamp-3 leading-relaxed equal-card-body">
+              <p class="text-xs text-[#9fb3be] min-h-[3.75rem] max-h-[3.75rem] line-clamp-3 leading-relaxed">
                 Testing watt-for-watt energy consumption during intense Docker container workloads and Unreal Engine compilation tasks.
               </p>
-              <div class="equal-card-footer pt-4 border-t border-[#233D4C]">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C]">
                 <a href="blog-details.html?id=apple-vs-intel" class="text-xs font-bold text-[#FD802E] hover:underline flex items-center gap-1">
                   <span>Read Guide</span>
                   <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
@@ -364,18 +380,18 @@
             <div class="aspect-[16/10] overflow-hidden bg-[#0e181f]">
               <img src="assets/images/blog/blog-5.jpg" alt="Refurbished Inspection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="p-6 equal-card-body">
+            <div class="p-6 equal-card-body flex flex-col flex-1">
               <div class="flex items-center justify-between text-xs text-[#9fb3be] mb-2">
                 <span class="font-bold text-[#FD802E]">Refurbished Insights</span>
                 <span>Oct 05, 2026</span>
               </div>
-              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors line-clamp-2 mb-2">
+              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors line-clamp-2 min-h-[3.5rem] flex items-start mb-2">
                 What Actually Happens in a 40-Point Corporate Refurbishment Check
               </h3>
-              <p class="text-xs text-[#9fb3be] line-clamp-3 leading-relaxed equal-card-body">
+              <p class="text-xs text-[#9fb3be] min-h-[3.75rem] max-h-[3.75rem] line-clamp-3 leading-relaxed">
                 Inside our diagnostics cleanroom: checking battery charge cycles, keyboard switch resistance, hinge torque meters, and memory parity tests.
               </p>
-              <div class="equal-card-footer pt-4 border-t border-[#233D4C]">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C]">
                 <a href="blog-details.html?id=refurb-testing" class="text-xs font-bold text-[#FD802E] hover:underline flex items-center gap-1">
                   <span>Read Guide</span>
                   <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
@@ -389,18 +405,18 @@
             <div class="aspect-[16/10] overflow-hidden bg-[#0e181f]">
               <img src="assets/images/blog/blog-6.jpg" alt="Liquid Damage First Aid" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="p-6 equal-card-body">
+            <div class="p-6 equal-card-body flex flex-col flex-1">
               <div class="flex items-center justify-between text-xs text-[#9fb3be] mb-2">
                 <span class="font-bold text-[#FD802E]">Emergency First Aid</span>
                 <span>Sep 28, 2026</span>
               </div>
-              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors line-clamp-2 mb-2">
+              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors line-clamp-2 min-h-[3.5rem] flex items-start mb-2">
                 Spilled Chai on Your Laptop? 3 Critical Steps To Take in 60 Seconds
               </h3>
-              <p class="text-xs text-[#9fb3be] line-clamp-3 leading-relaxed equal-card-body">
+              <p class="text-xs text-[#9fb3be] min-h-[3.75rem] max-h-[3.75rem] line-clamp-3 leading-relaxed">
                 Why putting it in rice is a destructive myth. How to instantly disconnect power rails and neutralize corrosive galvanic oxidation before it ruins the motherboard.
               </p>
-              <div class="equal-card-footer pt-4 border-t border-[#233D4C]">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C]">
                 <a href="blog-details.html?id=liquid-damage-guide" class="text-xs font-bold text-[#FD802E] hover:underline flex items-center gap-1">
                   <span>Read Guide</span>
                   <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
@@ -414,18 +430,18 @@
             <div class="aspect-[16/10] overflow-hidden bg-[#0e181f]">
               <img src="assets/images/general/deals-rental.jpg" alt="Rental Economics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="p-6 equal-card-body">
+            <div class="p-6 equal-card-body flex flex-col flex-1">
               <div class="flex items-center justify-between text-xs text-[#9fb3be] mb-2">
                 <span class="font-bold text-[#FD802E]">Startup Finances</span>
                 <span>Sep 18, 2026</span>
               </div>
-              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors line-clamp-2 mb-2">
+              <h3 class="text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors line-clamp-2 min-h-[3.5rem] flex items-start mb-2">
                 The Financial Math: Why Chennai Startups Prefer Leasing Over Buying
               </h3>
-              <p class="text-xs text-[#9fb3be] line-clamp-3 leading-relaxed equal-card-body">
+              <p class="text-xs text-[#9fb3be] min-h-[3.75rem] max-h-[3.75rem] line-clamp-3 leading-relaxed">
                 Tax write-offs under OpEx, zero hardware depreciation risk, and seamless 4-hour hot-swap warranties for growing engineering squads.
               </p>
-              <div class="equal-card-footer pt-4 border-t border-[#233D4C]">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C]">
                 <a href="blog-details.html?id=rental-economics" class="text-xs font-bold text-[#FD802E] hover:underline flex items-center gap-1">
                   <span>Read Guide</span>
                   <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>

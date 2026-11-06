@@ -28,7 +28,7 @@
              data-dark="assets/images/logo/logo-dark.svg" 
              data-light="assets/images/logo/logo-light.svg" 
              alt="LAPNEST – BUY • SELL • REPAIR • RENT" 
-             class="brand-logo-img header-logo h-11 sm:h-12 w-auto transition-transform duration-300 group-hover:scale-105">
+             class="brand-logo-img header-logo h-9 sm:h-11 md:h-12 w-auto max-w-[150px] sm:max-w-none transition-transform duration-300 group-hover:scale-105">
       </a>
 
       <!-- Desktop Center Navigation Menu (Old Nav Layout - Clean Text Links) -->
@@ -66,13 +66,13 @@
       <div class="flex items-center gap-2 sm:gap-2.5 xl:gap-3 shrink-0">
         
         <!-- RTL/LTR Toggle with Clean Arrow -->
-        <button type="button" class="rtl-toggle-btn h-10 px-3 rounded-xl text-xs font-bold border border-[#233D4C] bg-[#172731] text-[#9fb3be] hover:text-[#FD802E] hover:border-[#FD802E] transition-all inline-flex items-center justify-center gap-1.5 shrink-0" title="Toggle RTL / LTR" aria-label="Toggle Text Direction">
+        <button type="button" class="rtl-toggle-btn h-10 px-3 rounded-xl text-xs font-bold border border-[#233D4C] bg-[#172731] text-[#9fb3be] hover:text-[#FD802E] hover:border-[#FD802E] transition-all hidden sm:inline-flex items-center justify-center gap-1.5 shrink-0" title="Toggle RTL / LTR" aria-label="Toggle Text Direction">
           <svg class="w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
           <span class="dir-badge text-[11px] tracking-wider">RTL</span>
         </button>
 
         <!-- Dark/Light Theme Toggle -->
-        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-xl text-[#9fb3be] hover:text-[#FD802E] bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] transition-all inline-flex items-center justify-center shrink-0" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
+        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-xl text-[#9fb3be] hover:text-[#FD802E] bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] transition-all hidden sm:inline-flex items-center justify-center shrink-0" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
           <svg class="sun-icon w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
           <svg class="moon-icon w-4 h-4 text-[#FD802E] hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
         </button>
@@ -124,6 +124,22 @@
     </nav>
 
     <div class="pt-6 border-t border-[#233D4C] space-y-3">
+            <!-- Mobile Quick Controls: RTL & Dark/Light Mode -->
+      <div class="grid grid-cols-2 gap-2.5">
+        <!-- Mobile RTL Toggle -->
+        <button type="button" class="rtl-toggle-btn h-11 px-3 rounded-xl text-xs font-bold border border-[#233D4C] bg-[#172731] text-[#9fb3be] hover:text-[#FD802E] hover:border-[#FD802E] transition-all inline-flex items-center justify-center gap-2" title="Toggle RTL / LTR" aria-label="Toggle Text Direction">
+          <svg class="w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+          <span class="dir-badge text-xs tracking-wider">RTL</span>
+        </button>
+
+        <!-- Mobile Dark/Light Theme Toggle -->
+        <button type="button" class="theme-toggle-btn h-11 px-3 rounded-xl text-xs font-bold text-[#9fb3be] hover:text-[#FD802E] bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] transition-all inline-flex items-center justify-center gap-2" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
+          <svg class="sun-icon w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          <svg class="moon-icon w-4 h-4 text-[#FD802E] hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+          <span class="text-xs">Theme</span>
+        </button>
+      </div>
+
       <a href="order.html" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#FD802E] hover:bg-[#ff9248] text-white font-bold text-sm shadow-lg shadow-[#FD802E]/25">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
         Place Order
@@ -452,15 +468,15 @@
           <h2 class="text-2xl sm:text-4xl font-black text-white mt-2">Meet Our Specialists</h2>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch equal-card-grid">
           <div class="tilt-card equal-card rounded-2xl bg-[#172731] border border-[#233D4C] overflow-hidden group">
             <div class="aspect-square overflow-hidden bg-[#111e26]">
               <img src="assets/images/team/team-2.jpg" alt="Venkatesh Raghavan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="p-5 equal-card-body">
+            <div class="p-5 equal-card-body flex flex-col flex-1">
               <h3 class="text-base font-bold text-white">Venkatesh Raghavan</h3>
-              <p class="text-xs text-[#FD802E] font-semibold">Founder & Chief Hardware Architect</p>
-              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed">14+ years in BGA micro-soldering and high-frequency schematic analysis.</p>
+              <p class="text-xs text-[#FD802E] font-semibold min-h-[2rem] flex items-center">Founder & Chief Hardware Architect</p>
+              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Over 14+ years in BGA micro-soldering, chip diagnostic lab protocols, and schematic analysis.</p>
             </div>
           </div>
 
@@ -468,10 +484,10 @@
             <div class="aspect-square overflow-hidden bg-[#111e26]">
               <img src="assets/images/team/team-1.jpg" alt="Pooja Meenakshi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="p-5 equal-card-body">
+            <div class="p-5 equal-card-body flex flex-col flex-1">
               <h3 class="text-base font-bold text-white">Pooja Meenakshi</h3>
-              <p class="text-xs text-[#FD802E] font-semibold">Head of Enterprise Rental Solutions</p>
-              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed">Manages procurement, logistics and custom OS deployments for 50+ Chennai startups.</p>
+              <p class="text-xs text-[#FD802E] font-semibold min-h-[2rem] flex items-center">Head of Enterprise Rental Solutions</p>
+              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Manages procurement, logistics and custom OS deployments for 50+ Chennai startups.</p>
             </div>
           </div>
 
@@ -479,10 +495,10 @@
             <div class="aspect-square overflow-hidden bg-[#111e26]">
               <img src="assets/images/team/team-4.jpg" alt="Ashwin Sundar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="p-5 equal-card-body">
+            <div class="p-5 equal-card-body flex flex-col flex-1">
               <h3 class="text-base font-bold text-white">Ashwin Sundar</h3>
-              <p class="text-xs text-[#FD802E] font-semibold">Senior Apple & Logic Board Specialist</p>
-              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed">Certified Mac technician specializing in Apple Silicon power rails and liquid recovery.</p>
+              <p class="text-xs text-[#FD802E] font-semibold min-h-[2rem] flex items-center">Senior Apple & Logic Board Specialist</p>
+              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Certified Mac technician specializing in Apple Silicon power rails and liquid recovery.</p>
             </div>
           </div>
 
@@ -490,10 +506,10 @@
             <div class="aspect-square overflow-hidden bg-[#111e26]">
               <img src="assets/images/team/team-3.jpg" alt="Divya Balasubramanian" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="p-5 equal-card-body">
+            <div class="p-5 equal-card-body flex flex-col flex-1">
               <h3 class="text-base font-bold text-white">Divya Balasubramanian</h3>
-              <p class="text-xs text-[#FD802E] font-semibold">Customer Experience & QA Lead</p>
-              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed">Ensures strict quality compliance and coordinates our 24-hour turnaround guarantees.</p>
+              <p class="text-xs text-[#FD802E] font-semibold min-h-[2rem] flex items-center">Customer Experience & QA Lead</p>
+              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Ensures strict quality compliance and coordinates our 24-hour turnaround guarantees.</p>
             </div>
           </div>
         </div>
