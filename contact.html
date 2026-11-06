@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Showroom Location – LAPNEST Chennai</title>
+  <meta name="description" content="Visit the LAPNEST laptop showroom and cleanroom repair lab in Sholinganallur, OMR Chennai. Phone numbers, maps, opening hours and online enquiry desk.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-[#0e181f] text-white selection:bg-[#FD802E] selection:text-white antialiased">
+
+  <div id="scroll-progress"></div>
+
+  <!-- NAVBAR -->
+    <!-- STICKY NAVBAR - FLOATING CAPSULE PILL DESIGN (IMAGE 2 AESTHETIC) -->
+    <!-- STICKY NAVBAR (FULL-WIDTH BRAND HEADER) -->
+  <header id="main-navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3.5 bg-[#0e181f]/90 backdrop-blur-md border-b border-[#233D4C]/60">
+    <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 flex items-center justify-between gap-4 lg:gap-6 xl:gap-8">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none shrink-0">
+        <img src="assets/images/logo/logo-dark.svg" 
+             data-dark="assets/images/logo/logo-dark.svg" 
+             data-light="assets/images/logo/logo-light.svg" 
+             alt="LAPNEST – BUY • SELL • REPAIR • RENT" 
+             class="brand-logo-img header-logo h-11 sm:h-12 w-auto transition-transform duration-300 group-hover:scale-105">
+      </a>
+
+      <!-- Desktop Center Navigation Menu (Old Nav Layout - Clean Text Links) -->
+      <nav class="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-8">
+        
+        <!-- Home Dropdown -->
+        <div class="relative group dropdown-container">
+          <button type="button" class="dropdown-btn nav-link-item flex items-center gap-1.5 text-sm font-semibold text-white hover:text-[#FD802E] transition-colors focus:outline-none py-2 whitespace-nowrap" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-arrow-icon w-4 h-4 transition-transform duration-200 group-hover:rotate-180 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="dropdown-menu-wrapper absolute top-full left-0 pt-2 w-56 opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 z-50">
+            <div class="rounded-xl bg-[#172731] border border-[#233D4C] shadow-2xl p-2">
+              <a href="index.html" class="flex items-center gap-2.5 px-3 py-2 text-xs font-semibold rounded-lg text-white hover:bg-[#233D4C] hover:text-[#FD802E] transition-colors">
+                <span class="w-2 h-2 rounded-full bg-[#FD802E]"></span>
+                Home 1 – Flagship Store
+              </a>
+              <a href="home-2.html" class="flex items-center gap-2.5 px-3 py-2 text-xs font-semibold rounded-lg text-[#9fb3be] hover:bg-[#233D4C] hover:text-[#FD802E] transition-colors">
+                <span class="w-2 h-2 rounded-full bg-[#233D4C]"></span>
+                Home 2 – Editorial Tech
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">About</a>
+        <a href="products.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Products</a>
+        <a href="pricing.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Pricing</a>
+        <a href="repair-upgrade.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Repair & Upgrade</a>
+        <a href="blog.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Blog</a>
+        <a href="contact.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Contact</a>
+      </nav>
+
+      <!-- Right Controls: RTL Toggle, Theme Toggle, Order CTA -->
+      <div class="flex items-center gap-2 sm:gap-2.5 xl:gap-3 shrink-0">
+        
+        <!-- RTL/LTR Toggle with Clean Arrow -->
+        <button type="button" class="rtl-toggle-btn h-10 px-3 rounded-xl text-xs font-bold border border-[#233D4C] bg-[#172731] text-[#9fb3be] hover:text-[#FD802E] hover:border-[#FD802E] transition-all inline-flex items-center justify-center gap-1.5 shrink-0" title="Toggle RTL / LTR" aria-label="Toggle Text Direction">
+          <svg class="w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+          <span class="dir-badge text-[11px] tracking-wider">RTL</span>
+        </button>
+
+        <!-- Dark/Light Theme Toggle -->
+        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-xl text-[#9fb3be] hover:text-[#FD802E] bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] transition-all inline-flex items-center justify-center shrink-0" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
+          <svg class="sun-icon w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          <svg class="moon-icon w-4 h-4 text-[#FD802E] hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+        </button>
+
+        <!-- Dedicated Order CTA -->
+        <a href="order.html" class="hidden sm:inline-flex items-center justify-center gap-2 h-10 px-4 xl:px-5 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white shadow-lg shadow-[#FD802E]/25 transition-all duration-300 transform hover:-translate-y-0.5 shrink-0 whitespace-nowrap">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+          <span>Order Now</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button id="mobile-menu-btn" type="button" class="lg:hidden w-10 h-10 rounded-xl text-[#9fb3be] hover:text-white bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] inline-flex items-center justify-center shrink-0" aria-label="Open Mobile Menu">
+          <svg class="w-5 h-5 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop & Menu -->
+  <div id="mobile-drawer-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300"></div>
+  <div id="mobile-drawer" class="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-[#0e181f] border-l border-[#233D4C] z-50 transform translate-x-full transition-transform duration-300 flex flex-col p-6 overflow-y-auto">
+    <div class="flex items-center justify-between pb-6 border-b border-[#233D4C]">
+      <img src="assets/images/logo/logo-dark.svg" data-dark="assets/images/logo/logo-dark.svg" data-light="assets/images/logo/logo-light.svg" alt="LAPNEST – BUY • SELL • REPAIR • RENT" class="brand-logo-img mobile-logo h-11 sm:h-12 w-auto">
+      <button id="close-mobile-menu" class="p-2 text-[#9fb3be] hover:text-white" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+
+    <nav class="flex-1 py-6 space-y-2">
+      <!-- Mobile Home Accordion -->
+      <div>
+        <button class="mobile-dropdown-trigger w-full flex items-center justify-between py-2.5 px-3 rounded-lg text-white font-medium hover:bg-[#172731]">
+          <span>Home</span>
+          <svg class="dropdown-arrow w-4 h-4 text-[#FD802E] transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+        <div class="hidden pl-4 py-1 space-y-1">
+          <a href="index.html" class="block py-2 px-3 text-sm text-[#FD802E] font-semibold hover:bg-[#172731] rounded-md">• Home 1 (Store)</a>
+          <a href="home-2.html" class="block py-2 px-3 text-sm text-[#9fb3be] hover:text-white hover:bg-[#172731] rounded-md">• Home 2 (Editorial)</a>
+        </div>
+      </div>
+
+      <a href="about.html" class="block py-2.5 px-3 text-white font-medium hover:bg-[#172731] rounded-lg">About Us</a>
+      <a href="products.html" class="block py-2.5 px-3 text-white font-medium hover:bg-[#172731] rounded-lg">Products Catalog</a>
+      <a href="pricing.html" class="block py-2.5 px-3 text-white font-medium hover:bg-[#172731] rounded-lg">Pricing & Rentals</a>
+      <a href="repair-upgrade.html" class="block py-2.5 px-3 text-white font-medium hover:bg-[#172731] rounded-lg">Repair & Upgrade</a>
+      <a href="blog.html" class="block py-2.5 px-3 text-white font-medium hover:bg-[#172731] rounded-lg">Tech Blog</a>
+      <a href="contact.html" class="block py-2.5 px-3 text-white font-medium hover:bg-[#172731] rounded-lg">Contact & Location</a>
+    </nav>
+
+    <div class="pt-6 border-t border-[#233D4C] space-y-3">
+      <a href="order.html" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#FD802E] hover:bg-[#ff9248] text-white font-bold text-sm shadow-lg shadow-[#FD802E]/25">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+        Place Order
+      </a>
+      <p class="text-center text-xs text-[#9fb3be] font-bold tracking-wider">BUY • SELL • REPAIR • RENT</p>
+    </div>
+  </div>
+    </section>
+
+    <!-- SECTION 2: CONTACT INFORMATION (4 Info Cards) -->
+        <!-- UNIFIED HERO SECTION: CONTACT & STOREFRONT -->
+        <!-- COMPACT ENCLOSED HERO SECTION (MATCHING PRODUCT PAGE STYLE) -->
+    <section class="pt-24 pb-8 lg:pt-28 lg:pb-10 bg-[#0e181f]">
+      <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+        
+        <!-- Enclosed Compact Card Container -->
+        <div class="rounded-3xl bg-[#172731] border border-[#233D4C] p-6 sm:p-8 lg:p-9 relative overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-xl">
+          
+          <!-- Subtle Ambient Glow inside Card -->
+          <div class="absolute -right-10 -bottom-10 w-72 h-72 bg-[#FD802E]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <!-- Left Content (lg:col-span-7) -->
+          <div class="lg:col-span-7 space-y-3 z-10">
+            <!-- Breadcrumb -->
+            <nav class="flex items-center gap-2 text-xs text-[#9fb3be] font-mono">
+              <a href="index.html" class="hover:text-[#FD802E] transition-colors">Home</a>
+              <span>/</span>
+              <span class="text-[#FD802E] font-semibold">Contact & Location</span>
+            </nav>
+
+            <!-- Tagline Pill -->
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0e181f] border border-[#233D4C] text-[11px] font-bold text-[#FD802E]">
+              <span class="w-2 h-2 rounded-full bg-[#FD802E] animate-pulse"></span>
+              <span>FLAGSHIP SHOWROOM & LAB • OMR TECH CORRIDOR</span>
+            </div>
+
+            <!-- Heading -->
+            <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+              Visit Our Chennai Hub or Speak to an Engineer.
+            </h1>
+
+            <!-- Description -->
+            <p class="text-xs sm:text-sm text-[#9fb3be] max-w-xl leading-relaxed">
+              Located conveniently on the Rajiv Gandhi Salai IT corridor in Sholinganallur. Walk in for live diagnosis, rental consultation, or tech support.
+            </p>
+
+            <!-- Compact Action / Badge Pill -->
+            <div class="pt-1 flex items-center gap-3">
+              <span class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-[#0e181f] border border-[#233D4C] text-[#FD802E]">
+                Mon – Sat: 09:30 – 20:30
+              </span>
+              <a href="https://maps.google.com" class="text-xs font-semibold text-white hover:text-[#FD802E] flex items-center gap-1 transition-colors">
+                <span>Get Directions</span>
+                <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Image Card (lg:col-span-5) -->
+          <div class="lg:col-span-5 z-10">
+            <div class="relative h-48 sm:h-56 rounded-2xl overflow-hidden border border-[#233D4C] shadow-lg group">
+              <img src="https://i.pinimg.com/736x/64/30/0f/64300f362471ac4504d4c2eff1c3e998.jpg" alt="Contact & Location" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0e181f]/85 via-transparent to-transparent"></div>
+              <span class="absolute bottom-3 left-3 px-3 py-1 rounded-lg text-[11px] font-bold bg-[#0e181f]/90 border border-[#233D4C] text-[#9fb3be] backdrop-blur-md">
+                Tech Plaza — Sholinganallur
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    
+    <!-- ELEGANT SECTION SEPARATION DIVIDER -->
+    <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-6 sm:py-8">
+      <div class="relative flex items-center justify-center">
+        <div class="w-full border-t border-[#233D4C]"></div>
+        <div class="absolute bg-[#0e181f] px-5 py-1.5 rounded-full border border-[#233D4C] flex items-center gap-2.5 text-[11px] font-mono font-bold tracking-widest text-[#FD802E] uppercase shadow-lg shadow-black/40">
+          <span class="w-2 h-2 rounded-full bg-[#FD802E] animate-pulse"></span>
+          <span>COMMUNICATION DESK & SERVICE BOOKING</span>
+          <span class="w-2 h-2 rounded-full bg-[#FD802E] animate-pulse"></span>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- SECTION: DIRECT DEPARTMENTAL DIRECTORY & TRANSIT INFORMATION (NON-IMAGE) -->
+    <section class="py-16 lg:py-20 bg-[#0e181f] border-t border-[#233D4C]">
+      <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#172731] border border-[#233D4C] text-[11px] font-bold text-[#FD802E] uppercase tracking-wider mb-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#FD802E]"></span>
+            <span>Direct Routing Directory</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight">Direct Departmental Escalation Desks</h2>
+          <p class="text-xs sm:text-sm text-[#9fb3be] mt-2">Connect straight to our specialized teams without automated phone menus or waiting in queues.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          
+          <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C]">
+            <span class="text-xs font-mono font-bold text-[#FD802E]">EXT 101</span>
+            <h3 class="text-base font-bold text-white mt-1 mb-2">Showroom & Retail Sales</h3>
+            <p class="text-xs text-[#9fb3be] mb-3">Model availability, instant laptop configuration, trade-in valuations.</p>
+            <p class="text-xs text-white font-mono">sales@lapnest.in</p>
+            <p class="text-xs text-[#FD802E] font-semibold mt-1">Direct: +91 98400 12345</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C]">
+            <span class="text-xs font-mono font-bold text-[#FD802E]">EXT 102</span>
+            <h3 class="text-base font-bold text-white mt-1 mb-2">Corporate Fleet Leasing</h3>
+            <p class="text-xs text-[#9fb3be] mb-3">Multi-seat company rentals, custom MDM provisioning, SLA contracts.</p>
+            <p class="text-xs text-white font-mono">enterprise@lapnest.in</p>
+            <p class="text-xs text-[#FD802E] font-semibold mt-1">Direct: +91 98400 12346</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C]">
+            <span class="text-xs font-mono font-bold text-[#FD802E]">EXT 103</span>
+            <h3 class="text-base font-bold text-white mt-1 mb-2">Cleanroom Engineering Lab</h3>
+            <p class="text-xs text-[#9fb3be] mb-3">Micro-soldering status updates, severe liquid damage recovery consults.</p>
+            <p class="text-xs text-white font-mono">lab@lapnest.in</p>
+            <p class="text-xs text-[#FD802E] font-semibold mt-1">Direct: +91 98400 12347</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C]">
+            <span class="text-xs font-mono font-bold text-[#FD802E]">EXT 104</span>
+            <h3 class="text-base font-bold text-white mt-1 mb-2">Billing & GST Accounts</h3>
+            <p class="text-xs text-[#9fb3be] mb-3">Corporate GST invoices, vendor onboarding, annual maintenance billing.</p>
+            <p class="text-xs text-white font-mono">accounts@lapnest.in</p>
+            <p class="text-xs text-[#FD802E] font-semibold mt-1">Direct: +91 98400 12348</p>
+          </div>
+
+        </div>
+
+        <!-- Transit & Arrival Guide (Non-Image) -->
+        <div class="p-8 rounded-3xl bg-[#172731] border border-[#233D4C]">
+          <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-[#FD802E]"></span>
+            <span>Visitor Transit & In-Person Walk-In Guidelines</span>
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#233D4C] text-xs text-[#9fb3be]">
+            <div class="pb-6 md:pb-0 md:pr-6">
+              <p class="font-bold text-white uppercase tracking-wider mb-1">Customer Parking</p>
+              <p class="leading-relaxed">20+ dedicated underground parking bays with free Level-2 EV charging. Validation stamp available at showroom reception desk.</p>
+            </div>
+            <div class="py-6 md:py-0 md:px-6">
+              <p class="font-bold text-white uppercase tracking-wider mb-1">Public Transit</p>
+              <p class="leading-relaxed">Located directly opposite the Sholinganallur Junction bus stop on Rajiv Gandhi Salai (OMR). 2 minutes walk from OMR Phase-2 metro link.</p>
+            </div>
+            <div class="pt-6 md:pt-0 md:pl-6">
+              <p class="font-bold text-white uppercase tracking-wider mb-1">Outstation Courier Ingestion</p>
+              <p class="leading-relaxed">For outstation hardware, we coordinate secure insured pickup via BlueDart Priority with tamper-evident foam packaging kits.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3 & 4: GENERAL ENQUIRY FORM & REPAIR BOOKING FORM -->
+    <section class="py-16 bg-[#111e26] border-t border-[#233D4C]">
+      <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
+        
+        <!-- General Enquiry Form -->
+        <div class="flex flex-col h-full p-8 rounded-3xl bg-[#172731] border border-[#233D4C] shadow-card-dark">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#FD802E] block">Sales & Fleet Queries</span>
+          <h2 class="text-xl sm:text-2xl font-black text-white mt-1 mb-6">Send an Online Enquiry</h2>
+
+          <form id="contact-enquiry-form" class="flex flex-col flex-1 justify-between space-y-4">
+            <div>
+              <label class="block text-xs font-semibold text-[#9fb3be] mb-1.5">Your Name *</label>
+              <input type="text" name="name" required minlength="3" maxlength="50" pattern="[A-Za-z\s.'-]{3,}" title="Full Name must contain letters only and be at least 3 characters long" placeholder="Full Name" autocomplete="name" class="w-full h-11 px-3.5 rounded-xl bg-[#0e181f] border border-[#233D4C] text-white text-xs focus:border-[#FD802E] focus:outline-none transition-colors box-border">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-[#9fb3be] mb-1.5">Email Address *</label>
+                <input type="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address with '@' and domain (e.g. name@company.com)" placeholder="name@company.com" autocomplete="email" class="w-full h-11 px-3.5 rounded-xl bg-[#0e181f] border border-[#233D4C] text-white text-xs focus:border-[#FD802E] focus:outline-none transition-colors box-border">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#9fb3be] mb-1.5">Phone Number *</label>
+                <input type="tel" name="phone" required minlength="10" maxlength="10" inputmode="numeric" pattern="[6-9][0-9]{9}" title="Mobile Phone must be a valid 10-digit number (digits only)" placeholder="10-digit number" autocomplete="tel" class="w-full h-11 px-3.5 rounded-xl bg-[#0e181f] border border-[#233D4C] text-white text-xs focus:border-[#FD802E] focus:outline-none transition-colors box-border">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-[#9fb3be] mb-1.5">Enquiry Subject</label>
+                <select class="w-full h-11 px-3.5 rounded-xl bg-[#0e181f] border border-[#233D4C] text-white text-xs focus:border-[#FD802E] focus:outline-none box-border">
+                  <option value="buy">Laptop Purchase / Availability</option>
+                  <option value="rental">Corporate Laptop Rental & Leasing</option>
+                  <option value="tradein">Sell / Trade-in Used Laptop</option>
+                  <option value="custom">Workstation Custom Hardware Build</option>
+                  <option value="other">General Customer Support</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#9fb3be] mb-1.5">Preferred Response Via</label>
+                <select class="w-full h-11 px-3.5 rounded-xl bg-[#0e181f] border border-[#233D4C] text-white text-xs focus:border-[#FD802E] focus:outline-none box-border">
+                  <option value="email">Email Response</option>
+                  <option value="phone">Direct Phone Call</option>
+                  <option value="whatsapp">WhatsApp Message</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-[#9fb3be] mb-1.5">Message / Requirements *</label>
+              <textarea rows="4" required placeholder="Tell us how we can assist..." class="w-full h-28 px-3.5 py-3 rounded-xl bg-[#0e181f] border border-[#233D4C] text-white text-xs focus:border-[#FD802E] focus:outline-none resize-none box-border"></textarea>
+            </div>
+
+            <div class="pt-2">
+              <button type="submit" class="w-full h-12 rounded-xl bg-[#FD802E] hover:bg-[#ff9248] text-white font-bold text-xs shadow-md shadow-[#FD802E]/25 transition-all flex items-center justify-center">
+                Submit Message
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Repair Booking Form -->
+        <div class="flex flex-col h-full p-8 rounded-3xl bg-[#172731] border border-[#233D4C] shadow-card-dark">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#FD802E] block">Lab Priority Queue</span>
+          <h2 class="text-xl sm:text-2xl font-black text-white mt-1 mb-6">Book Hardware Service</h2>
+
+          <form class="repair-booking-form flex flex-col flex-1 justify-between space-y-4">
+            <div>
+              <label class="block text-xs font-semibold text-[#9fb3be] mb-1.5">Customer Name *</label>
+              <input type="text" name="name" required minlength="3" maxlength="50" pattern="[A-Za-z\s.'-]{3,}" title="Full Name must contain letters only and be at least 3 characters long" placeholder="Full Name" autocomplete="name" class="w-full h-11 px-3.5 rounded-xl bg-[#0e181f] border border-[#233D4C] text-white text-xs focus:border-[#FD802E] focus:outline-none transition-colors box-border">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-[#9fb3be] mb-1.5">Mobile Phone *</label>
+                <input type="tel" name="phone" required minlength="10" maxlength="10" inputmode="numeric" pattern="[6-9][0-9]{9}" title="Mobile Phone must be a valid 10-digit number (digits only)" placeholder="10-digit number" autocomplete="tel" class="w-full h-11 px-3.5 rounded-xl bg-[#0e181f] border border-[#233D4C] text-white text-xs focus:border-[#FD802E] focus:outline-none transition-colors box-border">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#9fb3be] mb-1.5">Laptop Brand & Model *</label>
+                <input type="text" name="model" required minlength="3" placeholder="e.g. ASUS ROG / MacBook Pro" class="w-full h-11 px-3.5 rounded-xl bg-[#0e181f] border border-[#233D4C] text-white text-xs focus:border-[#FD802E] focus:outline-none transition-colors box-border">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-[#9fb3be] mb-1.5">Primary Problem</label>
+                <select class="w-full h-11 px-3.5 rounded-xl bg-[#0e181f] border border-[#233D4C] text-white text-xs focus:border-[#FD802E] focus:outline-none box-border">
+                  <option value="screen">Screen Cracked / Display No Light</option>
+                  <option value="power">No Power / Red Light Blinking</option>
+                  <option value="liquid">Liquid Ingress / Coffee Spill</option>
+                  <option value="battery">Battery Swelling / Fast Drain</option>
+                  <option value="ssd">NVMe SSD Upgrade & Data Cloning</option>
+                  <option value="hinge">Broken Hinge / Loose Body</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-[#9fb3be] mb-1.5">Preferred Visit / Pickup Date</label>
+                <input type="date" class="w-full h-11 px-3.5 rounded-xl bg-[#0e181f] border border-[#233D4C] text-white text-xs focus:border-[#FD802E] focus:outline-none box-border">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-[#9fb3be] mb-1.5">Fault Symptoms / Additional Details</label>
+              <textarea rows="4" placeholder="Describe symptoms (e.g. overheating, blue screen, flickering, missing keys)..." class="w-full h-28 px-3.5 py-3 rounded-xl bg-[#0e181f] border border-[#233D4C] text-white text-xs focus:border-[#FD802E] focus:outline-none resize-none box-border"></textarea>
+            </div>
+
+            <div class="pt-2">
+              <button type="submit" class="w-full h-12 rounded-xl bg-[#FD802E] hover:bg-[#ff9248] text-white font-bold text-xs shadow-md shadow-[#FD802E]/25 transition-all flex items-center justify-center">
+                Reserve Repair Appointment
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: GOOGLE MAPS LOCATION (CHENNAI OMR) -->
+    <section class="py-16 bg-[#0e181f] border-t border-[#233D4C]">
+      <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+        <div class="mb-8">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#FD802E]">Showroom Map</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Locate Us on Rajiv Gandhi Salai (OMR)</h2>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden border border-[#233D4C] bg-[#172731] aspect-[21/9] min-h-[300px] relative shadow-2xl">
+          <!-- Interactive Google Maps Embed with Chennai Sholinganallur coordinate framing -->
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.752542171203!2d80.22485547514337!3d12.92361838738734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525c56d7815b37%3A0xc3f8e5f769018485!2sSholinganallur%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style="border:0; filter: invert(90%) hue-rotate(180deg);" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            class="w-full h-full object-cover">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6 & 7: WORKING HOURS, FAQ & SOCIAL LINKS -->
+    <section class="py-16 bg-[#111e26] border-t border-[#233D4C]">
+      <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
+        
+        <!-- Left Column: Showroom & Lab Timings -->
+        <div class="flex flex-col h-full space-y-4">
+          <h3 class="text-lg font-bold text-white timing-card-title">Showroom & Lab Timings</h3>
+          <div class="flex flex-col justify-between flex-1 p-6 sm:p-7 rounded-2xl bg-[#172731] border border-[#233D4C] text-xs text-[#9fb3be] shadow-card-dark">
+            <div class="space-y-2.5">
+              <div class="flex justify-between py-2 border-b border-[#233D4C]/50 timing-card-border">
+                <span class="font-bold text-white timing-card-label">Monday – Friday:</span>
+                <span class="font-medium text-[#c2d4df] timing-card-value">9:30 AM – 8:30 PM (Lab Open)</span>
+              </div>
+              <div class="flex justify-between py-2 border-b border-[#233D4C]/50 timing-card-border">
+                <span class="font-bold text-white timing-card-label">Saturday:</span>
+                <span class="font-medium text-[#c2d4df] timing-card-value">9:30 AM – 8:30 PM (Same-Day Upgrades)</span>
+              </div>
+              <div class="flex justify-between py-2">
+                <span class="font-bold text-white timing-card-label">Sunday:</span>
+                <span class="font-medium text-[#c2d4df] timing-card-value">10:00 AM – 6:00 PM (Showroom Only)</span>
+              </div>
+            </div>
+
+            <!-- Lab Intake & Visit Protocols (Fills empty space symmetrically) -->
+            <div class="space-y-2.5 my-3 py-3 border-y border-[#233D4C]/40 timing-card-border">
+              <div class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-[#FD802E] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <p><span class="font-bold text-white timing-card-label">Walk-in Cutoff:</span> <span class="font-medium text-[#c2d4df] timing-card-value">Intake desk accepts drop-offs until 7:45 PM daily</span></p>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-[#FD802E] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                <p><span class="font-bold text-white timing-card-label">Festival Holidays:</span> <span class="font-medium text-[#c2d4df] timing-card-value">Open 11:00 AM – 5:00 PM (Prior booking recommended)</span></p>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-[#FD802E] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                <p><span class="font-bold text-white timing-card-label">24/7 Smart Lockers:</span> <span class="font-medium text-[#c2d4df] timing-card-value">Secure contactless deposit for registered fleet clients</span></p>
+              </div>
+            </div>
+
+            <div class="pt-2 flex items-center justify-between gap-3 text-[11px] text-[#9fb3be] timing-card-note">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0"></span>
+                <span class="font-medium">Cleanroom engineers on-duty during all active operating hours.</span>
+              </div>
+              <span class="text-[11px] text-[#FD802E] font-bold shrink-0">OMR Lab Unit</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Quick Emergency Assistance -->
+        <div class="flex flex-col h-full space-y-4">
+          <h3 class="text-lg font-bold text-white timing-card-title">Quick Emergency Assistance</h3>
+          <div class="flex flex-col justify-between flex-1 p-6 sm:p-7 rounded-2xl bg-[#172731] border border-[#233D4C] text-xs text-[#9fb3be] shadow-card-dark">
+            <p class="leading-relaxed timing-card-value text-xs sm:text-[13px]">
+              Need urgent diagnostic advice for a dropped laptop or sudden liquid spill? Message our master technician directly on WhatsApp for real-time triage and expedited bench priority.
+            </p>
+
+            <!-- Emergency Highlights / Triage Protocol (Fills empty space symmetrically) -->
+            <div class="space-y-2.5 my-3 py-3 border-y border-[#233D4C]/40 timing-card-border">
+              <div class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-[#FD802E] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                <p><span class="font-bold text-white timing-card-label">Priority Triage:</span> <span class="font-medium text-[#c2d4df] timing-card-value">Average WhatsApp response under 5 minutes</span></p>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-[#FD802E] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                <p><span class="font-bold text-white timing-card-label">Express Courier:</span> <span class="font-medium text-[#c2d4df] timing-card-value">Doorstep pickup across OMR, Guindy & Anna Nagar</span></p>
+              </div>
+              <div class="flex items-center gap-2.5">
+                <svg class="w-4 h-4 text-[#FD802E] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                <p><span class="font-bold text-white timing-card-label">Spill Protocol:</span> <span class="font-medium text-[#c2d4df] timing-card-value">Instant step-by-step guidance to prevent logic board shorts</span></p>
+              </div>
+            </div>
+
+            <div class="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <a href="https://wa.me/919840012345" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-6 h-10 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs shadow-md transition-all shrink-0">
+                <svg class="w-4 h-4 text-white fill-current shrink-0" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span class="text-white font-bold">Open WhatsApp Emergency Desk</span>
+              </a>
+              <span class="text-[11px] text-emerald-400 timing-card-status font-bold flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>Active Tech On-Duty</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+    <!-- FOOTER -->
+    <!-- FOOTER (4-COLUMN EDITORIAL TECH FOOTER MATCHING HOOKPOINT REFERENCE) -->
+    <!-- FOOTER (BALANCED 4-COLUMN LAYOUT MATCHING REFERENCE DESIGN) -->
+  <footer id="site-footer" class="footer-dark-lock bg-[#0e181f] border-t border-[#233D4C]/60 pt-16 pb-12 text-[#9fb3be]" style="background-color: #0e181f !important; color: #9fb3be !important;">
+    <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+      
+      <!-- 4 Columns Grid with Equal Vertical Balance -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-12 items-start">
+        
+        <!-- Column 1: Brand Info & Socials (lg:col-span-4) -->
+        <div class="lg:col-span-4 flex flex-col justify-between h-full space-y-5">
+          <div>
+            <a href="index.html" class="inline-block mb-3">
+              <img src="assets/images/logo/logo-dark.svg" data-dark="assets/images/logo/logo-dark.svg" data-light="assets/images/logo/logo-light.svg" alt="LAPNEST – BUY • SELL • REPAIR • RENT" class="brand-logo-img footer-logo h-11 sm:h-12 w-auto transition-transform duration-300 group-hover:scale-105">
+            </a>
+            <p class="text-xs leading-relaxed text-[#9fb3be] pr-4">
+              India's dedicated premier laptop sales, certified refurbishing, corporate rentals, and cleanroom motherboard repair facility. Serving creators, gamers, and enterprises across South India.
+            </p>
+          </div>
+
+          <!-- 4 Circular Social Icon Pills with Colored Borders (WhatsApp, Insta, X, FB) -->
+          <div class="pt-2">
+            <p class="text-[11px] font-bold text-white uppercase tracking-wider mb-2.5">Official Channels</p>
+            <div class="flex items-center gap-3">
+              <!-- WhatsApp (Official Green) -->
+              <a href="https://wa.me/919840012345" target="_blank" rel="noopener noreferrer" 
+                 class="w-10 h-10 rounded-full bg-[#172731] border-2 border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white flex items-center justify-center transition-all hover:scale-110 shadow-md shadow-[#25D366]/25" 
+                 title="WhatsApp Support" aria-label="WhatsApp">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              </a>
+
+              <!-- Instagram (Highlighted Vibrant Magenta) -->
+              <a href="https://instagram.com/lapnestofficial" target="_blank" rel="noopener noreferrer" 
+                 class="w-10 h-10 rounded-full bg-[#172731] border-2 border-[#E4405F] text-[#E4405F] hover:bg-[#E4405F] hover:text-white flex items-center justify-center transition-all hover:scale-110 shadow-md shadow-[#E4405F]/25" 
+                 title="Instagram" aria-label="Instagram">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+
+              <!-- X (Twitter) (Highlighted Clean White) -->
+              <a href="https://x.com/lapnestofficial" target="_blank" rel="noopener noreferrer" 
+                 class="w-10 h-10 rounded-full bg-[#172731] border-2 border-white text-white hover:bg-white hover:text-black flex items-center justify-center transition-all hover:scale-110 shadow-md shadow-white/25" 
+                 title="X (Twitter)" aria-label="X Twitter">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+
+              <!-- Facebook (Highlighted Vibrant Blue) -->
+              <a href="https://facebook.com/lapnestofficial" target="_blank" rel="noopener noreferrer" 
+                 class="w-10 h-10 rounded-full bg-[#172731] border-2 border-[#1877F2] text-[#1877F2] hover:bg-[#1877F2] hover:text-white flex items-center justify-center transition-all hover:scale-110 shadow-md shadow-[#1877F2]/25" 
+                 title="Facebook" aria-label="Facebook">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: CATALOG & STORE (lg:col-span-2) -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-widest">CATALOG & STORE</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html" class="hover:text-[#FD802E] transition-colors">Home 1 (Cinematic Store)</a></li>
+            <li><a href="home-2.html" class="hover:text-[#FD802E] transition-colors">Home 2 (Editorial Tech)</a></li>
+            <li><a href="products.html" class="hover:text-[#FD802E] transition-colors">All Laptop Models</a></li>
+            <li><a href="products.html?cat=gaming" class="hover:text-[#FD802E] transition-colors">Gaming & Workstations</a></li>
+            <li><a href="products.html?cat=refurbished" class="hover:text-[#FD802E] transition-colors">Refurbished ThinkPads</a></li>
+            <li><a href="pricing.html#rentals" class="hover:text-[#FD802E] transition-colors">Monthly Rental Fleet</a></li>
+            <li><a href="products.html?cat=accessories" class="hover:text-[#FD802E] transition-colors">Original OEM Accessories</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: CUSTOMER SUPPORT (lg:col-span-3) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-widest">CUSTOMER SUPPORT</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="order.html" class="text-[#FD802E] font-bold hover:underline transition-colors flex items-center gap-1.5">
+              <span>Your Cart & Orders</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-[#FD802E]/20 text-[#FD802E]">Track</span>
+            </a></li>
+            <li><a href="about.html" class="hover:text-[#FD802E] transition-colors">About Our Brand & Heritage</a></li>
+            <li><a href="faq.html" class="hover:text-[#FD802E] transition-colors">Equipment & Pricing FAQs</a></li>
+            <li><a href="repair-upgrade.html" class="hover:text-[#FD802E] transition-colors">Cleanroom Diagnostic Lab</a></li>
+            <li><a href="blog.html" class="hover:text-[#FD802E] transition-colors">Hardware Buyer Guides</a></li>
+            <li><a href="pricing.html" class="hover:text-[#FD802E] transition-colors">Service & Rental Tariffs</a></li>
+            <li><a href="contact.html" class="hover:text-[#FD802E] transition-colors">Contact Storefront & Dispatch</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: CHENNAI OUTPOST (lg:col-span-3) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-widest">CHENNAI OUTPOST</h4>
+          <div class="space-y-3 text-xs leading-relaxed text-[#9fb3be]">
+            <div class="flex items-start gap-2.5">
+              <svg class="w-4 h-4 text-[#FD802E] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              <div>
+                <p class="font-bold text-white">LAPNEST Tech Plaza — Chennai</p>
+                <p>42 Rajiv Gandhi Salai (OMR), Sholinganallur</p>
+                <p>Chennai, Tamil Nadu 600119, India</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2.5 pt-0.5">
+              <svg class="w-4 h-4 text-[#FD802E] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <p><span class="text-white font-medium">Hours:</span> Mon – Sat: 09:30 AM – 08:30 PM</p>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-[#FD802E] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+              <p><span class="text-white font-medium">Phone:</span> <a href="tel:+919840012345" class="hover:text-[#FD802E] transition-colors">+91 98400 12345</a></p>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-[#FD802E] shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <p><span class="text-white font-medium">WhatsApp:</span> <a href="https://wa.me/919840012345" target="_blank" rel="noopener noreferrer" class="hover:text-[#FD802E] transition-colors">+91 98400 12345</a></p>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-[#FD802E] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              <p><span class="text-white font-medium">Email:</span> <a href="mailto:support@lapnest.in" class="hover:text-[#FD802E] transition-colors">support@lapnest.in</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Horizontal Divider Line Matching Reference -->
+      <div class="w-full border-t border-[#233D4C]/60 my-6"></div>
+
+      <!-- Centered Copyright Matching HookPoint Reference Single Line -->
+      <div class="text-center py-2">
+        <p class="text-xs text-[#9fb3be] tracking-wide">
+          © 2026 LAPNEST — Laptop Sales, Rentals & Cleanroom Lab. All Rights Reserved.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/forms.js"></script>
+    <script src="assets/js/animations.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

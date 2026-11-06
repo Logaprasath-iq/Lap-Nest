@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing & Tariffs – Laptop Sales, Rentals, Repair & Upgrades | LAPNEST</title>
+  <meta name="description" content="Transparent INR pricing for laptop purchases, monthly rentals, component-level repairs and hardware upgrades in Chennai.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+</head>
+<body class="bg-[#0e181f] text-white selection:bg-[#FD802E] selection:text-white antialiased">
+
+  <div id="scroll-progress"></div>
+
+  <!-- NAVBAR -->
+    <!-- STICKY NAVBAR - FLOATING CAPSULE PILL DESIGN (IMAGE 2 AESTHETIC) -->
+    <!-- STICKY NAVBAR (FULL-WIDTH BRAND HEADER) -->
+  <header id="main-navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3.5 bg-[#0e181f]/90 backdrop-blur-md border-b border-[#233D4C]/60">
+    <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 flex items-center justify-between gap-4 lg:gap-6 xl:gap-8">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none shrink-0">
+        <img src="assets/images/logo/logo-dark.svg" 
+             data-dark="assets/images/logo/logo-dark.svg" 
+             data-light="assets/images/logo/logo-light.svg" 
+             alt="LAPNEST – BUY • SELL • REPAIR • RENT" 
+             class="brand-logo-img header-logo h-11 sm:h-12 w-auto transition-transform duration-300 group-hover:scale-105">
+      </a>
+
+      <!-- Desktop Center Navigation Menu (Old Nav Layout - Clean Text Links) -->
+      <nav class="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-8">
+        
+        <!-- Home Dropdown -->
+        <div class="relative group dropdown-container">
+          <button type="button" class="dropdown-btn nav-link-item flex items-center gap-1.5 text-sm font-semibold text-white hover:text-[#FD802E] transition-colors focus:outline-none py-2 whitespace-nowrap" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <svg class="dropdown-arrow-icon w-4 h-4 transition-transform duration-200 group-hover:rotate-180 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="dropdown-menu-wrapper absolute top-full left-0 pt-2 w-56 opacity-0 translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-150 z-50">
+            <div class="rounded-xl bg-[#172731] border border-[#233D4C] shadow-2xl p-2">
+              <a href="index.html" class="flex items-center gap-2.5 px-3 py-2 text-xs font-semibold rounded-lg text-white hover:bg-[#233D4C] hover:text-[#FD802E] transition-colors">
+                <span class="w-2 h-2 rounded-full bg-[#FD802E]"></span>
+                Home 1 – Flagship Store
+              </a>
+              <a href="home-2.html" class="flex items-center gap-2.5 px-3 py-2 text-xs font-semibold rounded-lg text-[#9fb3be] hover:bg-[#233D4C] hover:text-[#FD802E] transition-colors">
+                <span class="w-2 h-2 rounded-full bg-[#233D4C]"></span>
+                Home 2 – Editorial Tech
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">About</a>
+        <a href="products.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Products</a>
+        <a href="pricing.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Pricing</a>
+        <a href="repair-upgrade.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Repair & Upgrade</a>
+        <a href="blog.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Blog</a>
+        <a href="contact.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Contact</a>
+      </nav>
+
+      <!-- Right Controls: RTL Toggle, Theme Toggle, Order CTA -->
+      <div class="flex items-center gap-2 sm:gap-2.5 xl:gap-3 shrink-0">
+        
+        <!-- RTL/LTR Toggle with Clean Arrow -->
+        <button type="button" class="rtl-toggle-btn h-10 px-3 rounded-xl text-xs font-bold border border-[#233D4C] bg-[#172731] text-[#9fb3be] hover:text-[#FD802E] hover:border-[#FD802E] transition-all inline-flex items-center justify-center gap-1.5 shrink-0" title="Toggle RTL / LTR" aria-label="Toggle Text Direction">
+          <svg class="w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+          <span class="dir-badge text-[11px] tracking-wider">RTL</span>
+        </button>
+
+        <!-- Dark/Light Theme Toggle -->
+        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-xl text-[#9fb3be] hover:text-[#FD802E] bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] transition-all inline-flex items-center justify-center shrink-0" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
+          <svg class="sun-icon w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          <svg class="moon-icon w-4 h-4 text-[#FD802E] hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+        </button>
+
+        <!-- Dedicated Order CTA -->
+        <a href="order.html" class="hidden sm:inline-flex items-center justify-center gap-2 h-10 px-4 xl:px-5 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white shadow-lg shadow-[#FD802E]/25 transition-all duration-300 transform hover:-translate-y-0.5 shrink-0 whitespace-nowrap">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+          <span>Order Now</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button id="mobile-menu-btn" type="button" class="lg:hidden w-10 h-10 rounded-xl text-[#9fb3be] hover:text-white bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] inline-flex items-center justify-center shrink-0" aria-label="Open Mobile Menu">
+          <svg class="w-5 h-5 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Backdrop & Menu -->
+  <div id="mobile-drawer-backdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300"></div>
+  <div id="mobile-drawer" class="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-[#0e181f] border-l border-[#233D4C] z-50 transform translate-x-full transition-transform duration-300 flex flex-col p-6 overflow-y-auto">
+    <div class="flex items-center justify-between pb-6 border-b border-[#233D4C]">
+      <img src="assets/images/logo/logo-dark.svg" data-dark="assets/images/logo/logo-dark.svg" data-light="assets/images/logo/logo-light.svg" alt="LAPNEST – BUY • SELL • REPAIR • RENT" class="brand-logo-img mobile-logo h-11 sm:h-12 w-auto">
+      <button id="close-mobile-menu" class="p-2 text-[#9fb3be] hover:text-white" aria-label="Close menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+      </button>
+    </div>
+
+    <nav class="flex-1 py-6 space-y-2">
+      <!-- Mobile Home Accordion -->
+      <div>
+        <button class="mobile-dropdown-trigger w-full flex items-center justify-between py-2.5 px-3 rounded-lg text-white font-medium hover:bg-[#172731]">
+          <span>Home</span>
+          <svg class="dropdown-arrow w-4 h-4 text-[#FD802E] transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+        <div class="hidden pl-4 py-1 space-y-1">
+          <a href="index.html" class="block py-2 px-3 text-sm text-[#FD802E] font-semibold hover:bg-[#172731] rounded-md">• Home 1 (Store)</a>
+          <a href="home-2.html" class="block py-2 px-3 text-sm text-[#9fb3be] hover:text-white hover:bg-[#172731] rounded-md">• Home 2 (Editorial)</a>
+        </div>
+      </div>
+
+      <a href="about.html" class="block py-2.5 px-3 text-white font-medium hover:bg-[#172731] rounded-lg">About Us</a>
+      <a href="products.html" class="block py-2.5 px-3 text-white font-medium hover:bg-[#172731] rounded-lg">Products Catalog</a>
+      <a href="pricing.html" class="block py-2.5 px-3 text-white font-medium hover:bg-[#172731] rounded-lg">Pricing & Rentals</a>
+      <a href="repair-upgrade.html" class="block py-2.5 px-3 text-white font-medium hover:bg-[#172731] rounded-lg">Repair & Upgrade</a>
+      <a href="blog.html" class="block py-2.5 px-3 text-white font-medium hover:bg-[#172731] rounded-lg">Tech Blog</a>
+      <a href="contact.html" class="block py-2.5 px-3 text-white font-medium hover:bg-[#172731] rounded-lg">Contact & Location</a>
+    </nav>
+
+    <div class="pt-6 border-t border-[#233D4C] space-y-3">
+      <a href="order.html" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#FD802E] hover:bg-[#ff9248] text-white font-bold text-sm shadow-lg shadow-[#FD802E]/25">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+        Place Order
+      </a>
+      <p class="text-center text-xs text-[#9fb3be] font-bold tracking-wider">BUY • SELL • REPAIR • RENT</p>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div id="search-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-start justify-center pt-20 px-4 hidden opacity-0 transition-opacity duration-200">
+    <div class="w-full max-w-2xl bg-[#172731] border border-[#233D4C] rounded-2xl p-6 shadow-xl shadow-[#FD802E]/30 relative">
+      <div class="flex items-center justify-between pb-4 border-b border-[#233D4C]">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2"><span class="text-[#FD802E]">LAPNEST</span> Search</h3>
+        <button id="close-search-btn" class="text-gray-400 hover:text-white p-1"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+      </div>
+      <div class="mt-4 relative">
+        <input id="global-search-input" type="text" placeholder="Search Dell, MacBook, Gaming, Screen Repair..." class="w-full bg-[#0e181f] border border-[#233D4C] focus:border-[#FD802E] text-white px-4 py-3 pl-11 rounded-xl focus:outline-none text-sm">
+        <svg class="w-5 h-5 text-gray-400 absolute left-3.5 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+      </div>
+      <div id="global-search-results" class="mt-4 max-h-72 overflow-y-auto"></div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- SECTION 1: PRICING HERO -->
+        <!-- SECTION 1: PRICING HERO WITH DEDICATED IMAGE -->
+        <!-- UNIFIED HERO SECTION: PRICING & TARIFFS -->
+        <!-- COMPACT ENCLOSED HERO SECTION (MATCHING PRODUCT PAGE STYLE) -->
+    <section class="pt-24 pb-8 lg:pt-28 lg:pb-10 bg-[#0e181f]">
+      <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+        
+        <!-- Enclosed Compact Card Container -->
+        <div class="rounded-3xl bg-[#172731] border border-[#233D4C] p-6 sm:p-8 lg:p-9 relative overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-xl">
+          
+          <!-- Subtle Ambient Glow inside Card -->
+          <div class="absolute -right-10 -bottom-10 w-72 h-72 bg-[#FD802E]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+          <!-- Left Content (lg:col-span-7) -->
+          <div class="lg:col-span-7 space-y-3 z-10">
+            <!-- Breadcrumb -->
+            <nav class="flex items-center gap-2 text-xs text-[#9fb3be] font-mono">
+              <a href="index.html" class="hover:text-[#FD802E] transition-colors">Home</a>
+              <span>/</span>
+              <span class="text-[#FD802E] font-semibold">Pricing & Tariffs</span>
+            </nav>
+
+            <!-- Tagline Pill -->
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0e181f] border border-[#233D4C] text-[11px] font-bold text-[#FD802E]">
+              <span class="w-2 h-2 rounded-full bg-[#FD802E] animate-pulse"></span>
+              <span>TRANSPARENT QUOTATIONS • NO HIDDEN CHARGES</span>
+            </div>
+
+            <!-- Heading -->
+            <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
+              Clear, Upfront Pricing for Sales, Rentals & Care.
+            </h1>
+
+            <!-- Description -->
+            <p class="text-xs sm:text-sm text-[#9fb3be] max-w-xl leading-relaxed">
+              Honest component pricing, flexible rental fleet agreements, student discounts, and fixed diagnostic fees with complete warranty backing.
+            </p>
+
+            <!-- Compact Action / Badge Pill -->
+            <div class="pt-1 flex items-center gap-3">
+              <span class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-[#0e181f] border border-[#233D4C] text-[#FD802E]">
+                ₹0 Diagnostic Inspection Fee
+              </span>
+              <a href="#rental-plans" class="text-xs font-semibold text-white hover:text-[#FD802E] flex items-center gap-1 transition-colors">
+                <span>Explore Rental Tariffs</span>
+                <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Image Card (lg:col-span-5) -->
+          <div class="lg:col-span-5 z-10">
+            <div class="relative h-48 sm:h-56 rounded-2xl overflow-hidden border border-[#233D4C] shadow-lg group">
+              <img src="https://i.pinimg.com/1200x/60/ad/6e/60ad6e0b05275bf32bdb67aaf966275f.jpg" alt="Pricing & Tariffs" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#0e181f]/85 via-transparent to-transparent"></div>
+              <span class="absolute bottom-3 left-3 px-3 py-1 rounded-lg text-[11px] font-bold bg-[#0e181f]/90 border border-[#233D4C] text-[#9fb3be] backdrop-blur-md">
+                Fixed Quotation Guarantee
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    
+    <!-- ELEGANT SECTION SEPARATION DIVIDER -->
+    <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-6 sm:py-8">
+      <div class="relative flex items-center justify-center">
+        <div class="w-full border-t border-[#233D4C]"></div>
+        <div class="absolute bg-[#0e181f] px-5 py-1.5 rounded-full border border-[#233D4C] flex items-center gap-2.5 text-[11px] font-mono font-bold tracking-widest text-[#FD802E] uppercase shadow-lg shadow-black/40">
+          <span class="w-2 h-2 rounded-full bg-[#FD802E] animate-pulse"></span>
+          <span>TRANSPARENT TARIFFS & PRICE BANDS</span>
+          <span class="w-2 h-2 rounded-full bg-[#FD802E] animate-pulse"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: LAPTOP SALES CATEGORIES & PRICE BANDS -->
+    <section class="py-16 bg-[#111e26] border-t border-[#233D4C]">
+      <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+        <div class="mb-10 text-center">
+          <h2 class="text-2xl sm:text-3xl font-black text-white">Laptop Sales & Certified Purchase Bands</h2>
+          <p class="text-xs text-[#9fb3be] mt-1">Direct multi-brand sales with 1-Year Lapnest Warranty and free software configuration.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+          
+          <div class="equal-card rounded-2xl bg-[#172731] border border-[#233D4C] p-6 hover:border-[#FD802E] transition-colors">
+            <span class="text-xs font-bold text-[#FD802E] uppercase tracking-wider">Refurbished Tier</span>
+            <h3 class="text-xl font-bold text-white mt-1">Corporate Off-Lease</h3>
+            <p class="text-2xl font-black text-white my-3">From ₹24,990</p>
+            <p class="text-xs text-[#9fb3be] equal-card-body leading-relaxed">ThinkPad T-Series & Latitude business ultrabooks. 40-point tested with 1-Year Warranty.</p>
+            <div class="equal-card-footer">
+              <a href="products.html?category=refurbished" class="w-full block py-2.5 rounded-xl text-center bg-[#0e181f] hover:bg-[#FD802E] text-[#FD802E] hover:text-white border border-[#FD802E]/40 font-bold text-xs transition-colors">Browse Refurbished</a>
+            </div>
+          </div>
+
+          <div class="equal-card rounded-2xl bg-[#172731] border border-[#233D4C] p-6 hover:border-[#FD802E] transition-colors">
+            <span class="text-xs font-bold text-[#FD802E] uppercase tracking-wider">Student Tier</span>
+            <h3 class="text-xl font-bold text-white mt-1">Campus Essentials</h3>
+            <p class="text-2xl font-black text-white my-3">From ₹38,990</p>
+            <p class="text-xs text-[#9fb3be] equal-card-body leading-relaxed">Lightweight laptops with FHD anti-glare screens, 16GB RAM and all-day battery life for college.</p>
+            <div class="equal-card-footer">
+              <a href="products.html?category=student" class="w-full block py-2.5 rounded-xl text-center bg-[#0e181f] hover:bg-[#FD802E] text-[#FD802E] hover:text-white border border-[#FD802E]/40 font-bold text-xs transition-colors">Browse Student</a>
+            </div>
+          </div>
+
+          <div class="equal-card rounded-2xl bg-[#172731] border border-[#FD802E] p-6 shadow-md shadow-[#FD802E]/25 relative overflow-hidden">
+            <span class="absolute top-0 right-0 bg-[#FD802E] text-white text-[10px] font-black uppercase px-3 py-1 rounded-bl-xl">Popular</span>
+            <span class="text-xs font-bold text-[#FD802E] uppercase tracking-wider">Business Pro Tier</span>
+            <h3 class="text-xl font-bold text-white mt-1">Enterprise Ultrabooks</h3>
+            <p class="text-2xl font-black text-white my-3">From ₹54,990</p>
+            <p class="text-xs text-[#9fb3be] equal-card-body leading-relaxed">Dell Inspiron, HP Pavilion, ThinkPad X1 Carbon. Intel Core i5/i7, NVMe PCIe Gen4 SSDs.</p>
+            <div class="equal-card-footer">
+              <a href="products.html?category=business" class="w-full block py-2.5 rounded-xl text-center bg-[#FD802E] hover:bg-[#ff9248] text-white font-bold text-xs transition-all">Browse Business</a>
+            </div>
+          </div>
+
+          <div class="equal-card rounded-2xl bg-[#172731] border border-[#233D4C] p-6 hover:border-[#FD802E] transition-colors">
+            <span class="text-xs font-bold text-[#FD802E] uppercase tracking-wider">Creator & Gaming</span>
+            <h3 class="text-xl font-bold text-white mt-1">Extreme Hardware</h3>
+            <p class="text-2xl font-black text-white my-3">From ₹78,990</p>
+            <p class="text-xs text-[#9fb3be] equal-card-body leading-relaxed">ASUS ROG, Acer Nitro & MacBook Pro M3. Dedicated RTX graphics and 144Hz–240Hz displays.</p>
+            <div class="equal-card-footer">
+              <a href="products.html?category=gaming" class="w-full block py-2.5 rounded-xl text-center bg-[#0e181f] hover:bg-[#FD802E] text-[#FD802E] hover:text-white border border-[#FD802E]/40 font-bold text-xs transition-colors">Browse Extreme</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: LAPTOP RENTAL PLANS (WITH MONTHLY / QUARTERLY TOGGLE) -->
+    <section id="rental" class="py-20 bg-[#111e26] border-t border-[#233D4C]">
+      <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+        
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#FD802E]">Rental Fleet</span>
+          <h2 class="text-2xl sm:text-4xl font-black text-white mt-1">Laptop Rental Subscriptions</h2>
+          <p class="text-xs sm:text-sm text-[#9fb3be] mt-2">Zero capex hardware for software startups, remote contractors and short-term design teams.</p>
+          
+          <!-- Period Toggle Switcher -->
+          <div class="flex items-center justify-center gap-3 mt-6">
+            <span class="text-xs font-bold text-white">Monthly Billing</span>
+            <label class="relative inline-flex items-center cursor-pointer">
+              <input id="rental-billing-toggle" type="checkbox" class="sr-only peer">
+              <div class="w-11 h-6 bg-[#0e181f] border border-[#233D4C] rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-[#FD802E] after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#172731]"></div>
+            </label>
+            <span class="text-xs font-bold text-[#9fb3be] flex items-center gap-1">
+              <span>Quarterly Billing</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-[#FD802E] text-white font-extrabold uppercase">Save 15%</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          
+          <!-- Rental Plan 1: Standard -->
+          <div class="equal-card rounded-2xl bg-[#172731] border border-[#233D4C] p-8 flex flex-col justify-between h-full shadow-card-dark hover:border-[#FD802E]/50 transition-all">
+            <div>
+              <h3 class="text-lg font-bold text-white">Standard Office Fleet</h3>
+              <p class="text-xs text-[#9fb3be] mt-1 min-h-[38px] flex items-center">Dell / Lenovo Core i5, 16GB RAM, 256GB SSD</p>
+              
+              <div class="my-6 pt-4 border-t border-[#233D4C]/60">
+                <span class="rental-price-monthly text-3xl sm:text-4xl font-black text-white">₹1,999 <span class="text-xs font-normal text-[#9fb3be]">/ month</span></span>
+                <span class="rental-price-quarterly text-3xl sm:text-4xl font-black text-white hidden">₹5,099 <span class="text-xs font-normal text-[#9fb3be]">/ quarter</span></span>
+              </div>
+              
+              <ul class="space-y-3.5 text-xs text-[#9fb3be] pb-6">
+                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>4-Hour Onsite Replacement Guarantee</span></li>
+                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Windows 11 Pro Genuine License</span></li>
+                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Includes charger and protective sleeve</span></li>
+                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Zero maintenance & hardware liability</span></li>
+              </ul>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-[#233D4C]/40">
+              <a href="order.html?plan=rental-standard" class="w-full block py-3.5 rounded-xl text-center bg-[#0e181f] hover:bg-[#FD802E] text-[#FD802E] hover:text-white border border-[#FD802E]/40 font-bold text-xs transition-all shadow-sm">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- Rental Plan 2: Engineering Pro (CENTERED MOST POPULAR BADGE) -->
+          <div class="equal-card rounded-2xl bg-[#172731] border-2 border-[#FD802E] p-8 flex flex-col justify-between h-full shadow-lg shadow-[#FD802E]/20 relative">
+            <!-- Horizontally Centered Most Popular Tag -->
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#FD802E] text-white text-[11px] font-black uppercase tracking-wider px-4 py-1 rounded-full shadow-md shadow-[#FD802E]/30 whitespace-nowrap z-10">
+              Most Popular
+            </div>
+
+            <div>
+              <h3 class="text-lg font-bold text-white">Developer Workstation</h3>
+              <p class="text-xs text-[#9fb3be] mt-1 min-h-[38px] flex items-center">Lenovo ThinkPad / HP Core i7, 32GB RAM, 512GB NVMe</p>
+              
+              <div class="my-6 pt-4 border-t border-[#233D4C]/60">
+                <span class="rental-price-monthly text-3xl sm:text-4xl font-black text-white">₹3,499 <span class="text-xs font-normal text-[#9fb3be]">/ month</span></span>
+                <span class="rental-price-quarterly text-3xl sm:text-4xl font-black text-white hidden">₹8,999 <span class="text-xs font-normal text-[#9fb3be]">/ quarter</span></span>
+              </div>
+              
+              <ul class="space-y-3.5 text-xs text-[#9fb3be] pb-6">
+                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Ubuntu LTS / Dual Boot Windows Supported</span></li>
+                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>2-Hour Express Hot Swap Machine Delivery</span></li>
+                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>100% Tested Full Battery Health (>90%)</span></li>
+                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Zero Security Deposit on GST validation</span></li>
+              </ul>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-[#233D4C]/40">
+              <a href="order.html?plan=rental-pro" class="w-full block py-3.5 rounded-xl text-center bg-[#FD802E] hover:bg-[#ff9248] text-white font-bold text-xs shadow-md shadow-[#FD802E]/30 transition-all">Rent This Machine</a>
+            </div>
+          </div>
+
+          <!-- Rental Plan 3: MacBook Studio -->
+          <div class="equal-card rounded-2xl bg-[#172731] border border-[#233D4C] p-8 flex flex-col justify-between h-full shadow-card-dark hover:border-[#FD802E]/50 transition-all">
+            <div>
+              <h3 class="text-lg font-bold text-white">MacBook Studio & Video</h3>
+              <p class="text-xs text-[#9fb3be] mt-1 min-h-[38px] flex items-center">Apple MacBook Pro (M2 / M3 Chip), 16GB/36GB</p>
+              
+              <div class="my-6 pt-4 border-t border-[#233D4C]/60">
+                <span class="rental-price-monthly text-3xl sm:text-4xl font-black text-white">₹4,999 <span class="text-xs font-normal text-[#9fb3be]">/ month</span></span>
+                <span class="rental-price-quarterly text-3xl sm:text-4xl font-black text-white hidden">₹12,749 <span class="text-xs font-normal text-[#9fb3be]">/ quarter</span></span>
+              </div>
+              
+              <ul class="space-y-3.5 text-xs text-[#9fb3be] pb-6">
+                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Liquid Retina XDR color accurate panel</span></li>
+                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Original OEM MagSafe 3 Fast Charger</span></li>
+                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Final Cut Pro & Adobe Creative Cloud ready</span></li>
+                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Comprehensive accidental damage shield</span></li>
+              </ul>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-[#233D4C]/40">
+              <a href="order.html?plan=rental-macbook" class="w-full block py-3.5 rounded-xl text-center bg-[#0e181f] hover:bg-[#FD802E] text-[#FD802E] hover:text-white border border-[#FD802E]/40 font-bold text-xs transition-all shadow-sm">Enquire Now</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: REPAIR PRICING -->
+    <section class="py-20 bg-[#0e181f] border-t border-[#233D4C]">
+      <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-[#FD802E]">Precision Lab</span>
+            <h2 class="text-2xl sm:text-4xl font-black text-white mt-1">Diagnostic & Repair Price List</h2>
+          </div>
+          <p class="text-xs text-[#9fb3be] mt-2 sm:mt-0">All repairs include 100% Genuine OEM components and 180-Day Guarantee.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C] space-y-4">
+            <h3 class="text-base font-bold text-white border-b border-[#233D4C] pb-3">Standard Hardware Diagnostics</h3>
+            <div class="space-y-3 text-xs">
+              <div class="flex justify-between items-center py-2 border-b border-[#233D4C]/50">
+                <span>General Hardware Checkup & Health Audit</span>
+                <span class="font-bold text-[#FD802E]">FREE on repair approval</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-[#233D4C]/50">
+                <span>Basic Software & OS Troubleshooting</span>
+                <span class="font-bold text-white">₹499 onwards</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-[#233D4C]/50">
+                <span>Deep Internal Thermal Clean & Artic MX-4 Repaste</span>
+                <span class="font-bold text-white">₹599 onwards</span>
+              </div>
+              <div class="flex justify-between items-center py-2">
+                <span>Broken Hinge & Top Panel Fabrication</span>
+                <span class="font-bold text-white">₹899 onwards</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C] space-y-4">
+            <h3 class="text-base font-bold text-white border-b border-[#233D4C] pb-3">Complex Component Replacements</h3>
+            <div class="space-y-3 text-xs">
+              <div class="flex justify-between items-center py-2 border-b border-[#233D4C]/50">
+                <span>Laptop Keyboard / Backlit Replacement</span>
+                <span class="font-bold text-white">₹999 onwards</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-[#233D4C]/50">
+                <span>FHD / IPS / 144Hz Screen Replacement</span>
+                <span class="font-bold text-white">₹2,499 onwards</span>
+              </div>
+              <div class="flex justify-between items-center py-2 border-b border-[#233D4C]/50">
+                <span>High-Density OEM Battery Replacement</span>
+                <span class="font-bold text-white">₹1,899 onwards</span>
+              </div>
+              <div class="flex justify-between items-center py-2">
+                <span>Motherboard Micro-Soldering & Power IC Fix</span>
+                <span class="font-bold text-white">₹1,499 onwards</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <a href="repair-upgrade.html#book" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#FD802E] hover:bg-[#ff9248] text-white font-bold text-xs shadow-md shadow-[#FD802E]/25">
+            <span>Book a Repair Slot</span>
+            <svg class="w-4 h-4 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: UPGRADE PRICING -->
+    <section class="py-20 bg-[#111e26] border-t border-[#233D4C]">
+      <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+        <div class="text-center max-w-xl mx-auto mb-12">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#FD802E]">Boost Speed</span>
+          <h2 class="text-2xl sm:text-4xl font-black text-white mt-1">Memory & SSD Upgrade Tariffs</h2>
+          <p class="text-xs sm:text-sm text-[#9fb3be] mt-2">All upgrades include free data backup and Windows/Linux cloning.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C] text-center">
+            <h4 class="font-bold text-white text-base">8GB DDR4 RAM</h4>
+            <p class="text-xs text-[#9fb3be] mt-1">Crucial / Kingston 3200MHz</p>
+            <p class="text-2xl font-black text-white my-3">₹1,499</p>
+            <p class="text-[11px] text-gray-400">Includes 3-Year Manufacturer Warranty</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C] text-center">
+            <h4 class="font-bold text-white text-base">16GB DDR4 / DDR5</h4>
+            <p class="text-xs text-[#9fb3be] mt-1">Dual Channel Kit</p>
+            <p class="text-2xl font-black text-white my-3">₹2,899</p>
+            <p class="text-[11px] text-gray-400">Includes 3-Year Manufacturer Warranty</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C] text-center">
+            <h4 class="font-bold text-white text-base">512GB NVMe SSD</h4>
+            <p class="text-xs text-[#9fb3be] mt-1">Gen4 PCIe 3500MB/s Read</p>
+            <p class="text-2xl font-black text-white my-3">₹1,999</p>
+            <p class="text-[11px] text-gray-400">Includes full OS & Data Migration</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C] text-center">
+            <h4 class="font-bold text-white text-base">1TB High Speed SSD</h4>
+            <p class="text-xs text-[#9fb3be] mt-1">Gen4 PCIe 5000MB/s Read</p>
+            <p class="text-2xl font-black text-white my-3">₹3,999</p>
+            <p class="text-[11px] text-gray-400">Includes full OS & Data Migration</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <!-- SECTION: ITEMIZED HARDWARE REPAIR RATE CARD & TAX DEDUCTIBILITY (NON-IMAGE) -->
+    <section class="py-16 lg:py-20 bg-[#0e181f] border-t border-[#233D4C]">
+      <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#172731] border border-[#233D4C] text-[11px] font-bold text-[#FD802E] uppercase tracking-wider mb-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#FD802E]"></span>
+            <span>Standardized Tariff Sheet</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight">Fixed Hardware Service & Upgrade Rate Card</h2>
+          <p class="text-xs sm:text-sm text-[#9fb3be] mt-2">Transparent bench labor and OEM component tariffs with no hidden charges. All repairs include a 90-day comprehensive warranty.</p>
+        </div>
+
+        <!-- Comprehensive Rate Card Table -->
+        <div class="rounded-2xl border border-[#233D4C] overflow-hidden bg-[#172731] shadow-card-dark mb-12">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs text-[#9fb3be]">
+              <thead class="bg-[#0e181f] text-[#FD802E] uppercase font-mono text-[11px] border-b border-[#233D4C]">
+                <tr>
+                  <th class="py-3.5 px-6 font-bold">Service Category</th>
+                  <th class="py-3.5 px-6 font-bold">Included Work & Inclusions</th>
+                  <th class="py-3.5 px-6 font-bold">Turnaround</th>
+                  <th class="py-3.5 px-6 font-bold text-right">Standard Tariff (INR)</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-[#233D4C]/60">
+                <tr class="hover:bg-[#0e181f]/40 transition-colors">
+                  <td class="py-4 px-6 font-bold text-white">Full Hardware Diagnostics</td>
+                  <td class="py-4 px-6">Power rail impedance check, thermal camera profiling, battery health check, RAM MemTest86.</td>
+                  <td class="py-4 px-6 font-mono text-emerald-400">15 – 30 Mins</td>
+                  <td class="py-4 px-6 text-right font-black text-[#FD802E]">₹0 (Always Free)</td>
+                </tr>
+                <tr class="hover:bg-[#0e181f]/40 transition-colors">
+                  <td class="py-4 px-6 font-bold text-white">High-Speed NVMe SSD 512GB Upgrade</td>
+                  <td class="py-4 px-6">PCIe Gen4 NVMe drive (up to 5,000MB/s) + 100% full bit-for-bit drive cloning & OS preservation.</td>
+                  <td class="py-4 px-6 font-mono">1 – 2 Hours</td>
+                  <td class="py-4 px-6 text-right font-bold text-white">₹2,899</td>
+                </tr>
+                <tr class="hover:bg-[#0e181f]/40 transition-colors">
+                  <td class="py-4 px-6 font-bold text-white">High-Speed NVMe SSD 1TB Upgrade</td>
+                  <td class="py-4 px-6">PCIe Gen4 NVMe 1TB drive (up to 7,000MB/s read) + thermal pad installation + cloning.</td>
+                  <td class="py-4 px-6 font-mono">1 – 2 Hours</td>
+                  <td class="py-4 px-6 text-right font-bold text-white">₹4,999</td>
+                </tr>
+                <tr class="hover:bg-[#0e181f]/40 transition-colors">
+                  <td class="py-4 px-6 font-bold text-white">DDR4 / DDR5 16GB RAM Expansion</td>
+                  <td class="py-4 px-6">Crucial / Kingston 3200MHz DDR4 or 5600MHz DDR5 + MemTest 4-pass verification.</td>
+                  <td class="py-4 px-6 font-mono">30 Mins</td>
+                  <td class="py-4 px-6 text-right font-bold text-white">₹2,999</td>
+                </tr>
+                <tr class="hover:bg-[#0e181f]/40 transition-colors">
+                  <td class="py-4 px-6 font-bold text-white">FHD IPS OEM Screen Replacement</td>
+                  <td class="py-4 px-6">Grade-A anti-glare display panel, zero dead pixels guaranteed, 1-year panel warranty.</td>
+                  <td class="py-4 px-6 font-mono">2 Hours</td>
+                  <td class="py-4 px-6 text-right font-bold text-white">From ₹3,899</td>
+                </tr>
+                <tr class="hover:bg-[#0e181f]/40 transition-colors">
+                  <td class="py-4 px-6 font-bold text-white">Genuine OEM Battery Replacement</td>
+                  <td class="py-4 px-6">Brand-new OEM battery pack with fresh cell cycle count, calibrated gas gauge.</td>
+                  <td class="py-4 px-6 font-mono">1 Hour</td>
+                  <td class="py-4 px-6 text-right font-bold text-white">From ₹2,499</td>
+                </tr>
+                <tr class="hover:bg-[#0e181f]/40 transition-colors">
+                  <td class="py-4 px-6 font-bold text-white">Motherboard Power IC / PWM Repair</td>
+                  <td class="py-4 px-6">Cleanroom component replacement, shorted capacitor clearing, 90-day board warranty.</td>
+                  <td class="py-4 px-6 font-mono">Same Day</td>
+                  <td class="py-4 px-6 text-right font-bold text-white">From ₹2,499</td>
+                </tr>
+                <tr class="hover:bg-[#0e181f]/40 transition-colors">
+                  <td class="py-4 px-6 font-bold text-white">Thermal Overhaul & Fan Deep Clean</td>
+                  <td class="py-4 px-6">Honeywell PTM7950 phase change pad application, ultrasonic fan blade wash, copper heatsink flushes.</td>
+                  <td class="py-4 px-6 font-mono">45 Mins</td>
+                  <td class="py-4 px-6 text-right font-bold text-white">₹899</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Corporate Tax Advantage Block (Non-Image) -->
+        <div class="p-8 rounded-3xl bg-[#172731] border border-[#233D4C]">
+          <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[#233D4C]">
+            <div class="pb-6 md:pb-0 md:pr-6">
+              <div class="text-[#FD802E] font-mono text-xs font-bold mb-1">FINANCIAL ADVANTAGE 01</div>
+              <h4 class="text-base font-bold text-white mb-2">100% OpEx Tax Deductible</h4>
+              <p class="text-xs text-[#9fb3be] leading-relaxed">Unlike purchased laptops that depreciate over 3 years, laptop rentals qualify as 100% deductible operating expenses under Section 37 of the Indian Income Tax Act, directly lowering net corporate taxable income.</p>
+            </div>
+            <div class="py-6 md:py-0 md:px-6">
+              <div class="text-[#FD802E] font-mono text-xs font-bold mb-1">FINANCIAL ADVANTAGE 02</div>
+              <h4 class="text-base font-bold text-white mb-2">Zero Capital Depreciation</h4>
+              <p class="text-xs text-[#9fb3be] leading-relaxed">Avoid writing off declining asset value on balance sheets. Protect your working capital for product engineering, sales hiring, and revenue-generating operations while maintaining state-of-the-art computers.</p>
+            </div>
+            <div class="pt-6 md:pt-0 md:pl-6">
+              <div class="text-[#FD802E] font-mono text-xs font-bold mb-1">FINANCIAL ADVANTAGE 03</div>
+              <h4 class="text-base font-bold text-white mb-2">Predictable Monthly IT Cost</h4>
+              <p class="text-xs text-[#9fb3be] leading-relaxed">All routine maintenance, battery replacements, OS patching, and hardware repairs are included in one predictable flat monthly fee per seat with verified GST input tax credits.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: SERVICE COMPARISON TABLE -->
+    <section class="py-20 bg-[#0e181f] border-t border-[#233D4C]">
+      <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+        <h2 class="text-2xl sm:text-3xl font-black text-white text-center mb-8">How LAPNEST Compares</h2>
+        
+        <div class="rounded-2xl border border-[#233D4C] overflow-x-auto bg-[#172731]">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-[#0e181f] border-b border-[#233D4C] text-[#9fb3be]">
+              <tr>
+                <th class="py-4 px-6 font-bold text-white">Service Metric</th>
+                <th class="py-4 px-6 font-bold text-[#FD802E]">LAPNEST Chennai</th>
+                <th class="py-4 px-6 font-semibold">Authorized Brand Centers</th>
+                <th class="py-4 px-6 font-semibold">Local Unorganized Shops</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[#233D4C] text-[#9fb3be]">
+              <tr>
+                <td class="py-4 px-6 font-medium text-white">Diagnostic Fee</td>
+                <td class="py-4 px-6 text-emerald-400 font-bold">₹0 (Free on diagnosis)</td>
+                <td class="py-4 px-6">₹999 – ₹1,500 non-refundable</td>
+                <td class="py-4 px-6">Unpredictable</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 font-medium text-white">Component vs Full Board Swap</td>
+                <td class="py-4 px-6 text-[#FD802E] font-bold">Micro-solders individual chips</td>
+                <td class="py-4 px-6">Full board swap only (₹25k+)</td>
+                <td class="py-4 px-6">Hit or miss soldering</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 font-medium text-white">Warranty Coverage</td>
+                <td class="py-4 px-6 text-emerald-400 font-bold">Up to 1 Year Comprehensive</td>
+                <td class="py-4 px-6">90 Days only</td>
+                <td class="py-4 px-6">7 to 30 Days</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-6 font-medium text-white">Turnaround Speed</td>
+                <td class="py-4 px-6 text-white font-bold">Same day / 24 Hours</td>
+                <td class="py-4 px-6">7 to 21 Business Days</td>
+                <td class="py-4 px-6">2 to 5 Days</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: INTERACTIVE PRICING FAQS AND CTA -->
+    <section class="py-20 bg-[#111e26] border-t border-[#233D4C]">
+      <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#FD802E]">Transparent Rate Policies</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Frequently Asked Pricing Questions</h2>
+          <p class="text-xs sm:text-sm text-[#9fb3be] mt-2">Clear answers to pricing questions on purchases, rentals, GST input credits, and diagnostic fees.</p>
+        </div>
+
+        <div class="max-w-3xl mx-auto mb-16">
+          <div class="faq-group space-y-4">
+            
+            <div class="faq-item rounded-2xl bg-[#172731] border border-[#233D4C] p-5 transition-all">
+              <button type="button" class="faq-trigger w-full flex items-center justify-between text-left text-sm font-bold text-white hover:text-[#FD802E] transition-colors focus:outline-none">
+                <span>Are your listed rates inclusive or exclusive of GST?</span>
+                <svg class="faq-icon w-4 h-4 text-[#FD802E] transition-transform duration-300 shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </button>
+              <div class="faq-answer mt-3 pt-3 border-t border-[#233D4C] text-xs text-[#9fb3be] leading-relaxed hidden">
+                All consumer laptop sales and repair prices are fully transparent. Corporate rental quotes clearly break down the base rental fee and the 18% GST component so your accounts team can easily file for Input Tax Credit.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-2xl bg-[#172731] border border-[#233D4C] p-5 transition-all">
+              <button type="button" class="faq-trigger w-full flex items-center justify-between text-left text-sm font-bold text-white hover:text-[#FD802E] transition-colors focus:outline-none">
+                <span>Do I have to pay if a motherboard or liquid-damaged laptop cannot be fixed?</span>
+                <svg class="faq-icon w-4 h-4 text-[#FD802E] transition-transform duration-300 shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </button>
+              <div class="faq-answer mt-3 pt-3 border-t border-[#233D4C] text-xs text-[#9fb3be] leading-relaxed hidden">
+                Zero rupees. We abide by our strict "No Fix, No Fee" policy. If our micro-soldering engineers cannot restore your machine to full working condition, diagnostic and bench labor fees are completely waived.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-2xl bg-[#172731] border border-[#233D4C] p-5 transition-all">
+              <button type="button" class="faq-trigger w-full flex items-center justify-between text-left text-sm font-bold text-white hover:text-[#FD802E] transition-colors focus:outline-none">
+                <span>Can I trade in an older laptop to reduce the price of a purchase or lease?</span>
+                <svg class="faq-icon w-4 h-4 text-[#FD802E] transition-transform duration-300 shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </button>
+              <div class="faq-answer mt-3 pt-3 border-t border-[#233D4C] text-xs text-[#9fb3be] leading-relaxed hidden">
+                Yes! We offer instant algorithmic trade-in valuations at our Chennai showroom. The evaluated value of your old machine can be credited directly against your new laptop purchase or deducted from your initial rental payments.
+              </div>
+            </div>
+
+            <div class="faq-item rounded-2xl bg-[#172731] border border-[#233D4C] p-5 transition-all">
+              <button type="button" class="faq-trigger w-full flex items-center justify-between text-left text-sm font-bold text-white hover:text-[#FD802E] transition-colors focus:outline-none">
+                <span>Are there volume discounts for leasing 10 or more laptops?</span>
+                <svg class="faq-icon w-4 h-4 text-[#FD802E] transition-transform duration-300 shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+              </button>
+              <div class="faq-answer mt-3 pt-3 border-t border-[#233D4C] text-xs text-[#9fb3be] leading-relaxed hidden">
+                Yes. Fleets of 10+ machines receive tiered discounts between 10% and 25% off standard monthly rates, along with dedicated on-site standby units and quarterly proactive hardware servicing.
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="text-center max-w-xl mx-auto space-y-4 pt-6 border-t border-[#233D4C]/60">
+          <h3 class="text-xl font-bold text-white">Need a Customized Institutional Quotation?</h3>
+          <p class="text-xs text-[#9fb3be]">Our technical pricing desk provides custom corporate quotations within 30 minutes over WhatsApp and email.</p>
+          <div class="flex flex-wrap justify-center gap-4 pt-2">
+            <a href="contact.html" class="px-6 py-3 rounded-xl bg-[#FD802E] hover:bg-[#ff9248] text-white font-bold text-xs shadow-lg shadow-[#FD802E]/25 transition-all">Get Custom Quotation</a>
+            <a href="faq.html" class="px-6 py-3 rounded-xl bg-[#172731] hover:bg-[#233D4C] text-white border border-[#233D4C] font-semibold text-xs transition-colors">Read All 20+ FAQs</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+    <!-- FOOTER -->
+    <!-- FOOTER (4-COLUMN EDITORIAL TECH FOOTER MATCHING HOOKPOINT REFERENCE) -->
+    <!-- FOOTER (BALANCED 4-COLUMN LAYOUT MATCHING REFERENCE DESIGN) -->
+  <footer id="site-footer" class="footer-dark-lock bg-[#0e181f] border-t border-[#233D4C]/60 pt-16 pb-12 text-[#9fb3be]" style="background-color: #0e181f !important; color: #9fb3be !important;">
+    <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+      
+      <!-- 4 Columns Grid with Equal Vertical Balance -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-12 items-start">
+        
+        <!-- Column 1: Brand Info & Socials (lg:col-span-4) -->
+        <div class="lg:col-span-4 flex flex-col justify-between h-full space-y-5">
+          <div>
+            <a href="index.html" class="inline-block mb-3">
+              <img src="assets/images/logo/logo-dark.svg" data-dark="assets/images/logo/logo-dark.svg" data-light="assets/images/logo/logo-light.svg" alt="LAPNEST – BUY • SELL • REPAIR • RENT" class="brand-logo-img footer-logo h-11 sm:h-12 w-auto transition-transform duration-300 group-hover:scale-105">
+            </a>
+            <p class="text-xs leading-relaxed text-[#9fb3be] pr-4">
+              India's dedicated premier laptop sales, certified refurbishing, corporate rentals, and cleanroom motherboard repair facility. Serving creators, gamers, and enterprises across South India.
+            </p>
+          </div>
+
+          <!-- 4 Circular Social Icon Pills with Colored Borders (WhatsApp, Insta, X, FB) -->
+          <div class="pt-2">
+            <p class="text-[11px] font-bold text-white uppercase tracking-wider mb-2.5">Official Channels</p>
+            <div class="flex items-center gap-3">
+              <!-- WhatsApp (Official Green) -->
+              <a href="https://wa.me/919840012345" target="_blank" rel="noopener noreferrer" 
+                 class="w-10 h-10 rounded-full bg-[#172731] border-2 border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white flex items-center justify-center transition-all hover:scale-110 shadow-md shadow-[#25D366]/25" 
+                 title="WhatsApp Support" aria-label="WhatsApp">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              </a>
+
+              <!-- Instagram (Highlighted Vibrant Magenta) -->
+              <a href="https://instagram.com/lapnestofficial" target="_blank" rel="noopener noreferrer" 
+                 class="w-10 h-10 rounded-full bg-[#172731] border-2 border-[#E4405F] text-[#E4405F] hover:bg-[#E4405F] hover:text-white flex items-center justify-center transition-all hover:scale-110 shadow-md shadow-[#E4405F]/25" 
+                 title="Instagram" aria-label="Instagram">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+
+              <!-- X (Twitter) (Highlighted Clean White) -->
+              <a href="https://x.com/lapnestofficial" target="_blank" rel="noopener noreferrer" 
+                 class="w-10 h-10 rounded-full bg-[#172731] border-2 border-white text-white hover:bg-white hover:text-black flex items-center justify-center transition-all hover:scale-110 shadow-md shadow-white/25" 
+                 title="X (Twitter)" aria-label="X Twitter">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+
+              <!-- Facebook (Highlighted Vibrant Blue) -->
+              <a href="https://facebook.com/lapnestofficial" target="_blank" rel="noopener noreferrer" 
+                 class="w-10 h-10 rounded-full bg-[#172731] border-2 border-[#1877F2] text-[#1877F2] hover:bg-[#1877F2] hover:text-white flex items-center justify-center transition-all hover:scale-110 shadow-md shadow-[#1877F2]/25" 
+                 title="Facebook" aria-label="Facebook">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: CATALOG & STORE (lg:col-span-2) -->
+        <div class="lg:col-span-2 space-y-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-widest">CATALOG & STORE</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="index.html" class="hover:text-[#FD802E] transition-colors">Home 1 (Cinematic Store)</a></li>
+            <li><a href="home-2.html" class="hover:text-[#FD802E] transition-colors">Home 2 (Editorial Tech)</a></li>
+            <li><a href="products.html" class="hover:text-[#FD802E] transition-colors">All Laptop Models</a></li>
+            <li><a href="products.html?cat=gaming" class="hover:text-[#FD802E] transition-colors">Gaming & Workstations</a></li>
+            <li><a href="products.html?cat=refurbished" class="hover:text-[#FD802E] transition-colors">Refurbished ThinkPads</a></li>
+            <li><a href="pricing.html#rentals" class="hover:text-[#FD802E] transition-colors">Monthly Rental Fleet</a></li>
+            <li><a href="products.html?cat=accessories" class="hover:text-[#FD802E] transition-colors">Original OEM Accessories</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: CUSTOMER SUPPORT (lg:col-span-3) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-widest">CUSTOMER SUPPORT</h4>
+          <ul class="space-y-2.5 text-xs">
+            <li><a href="order.html" class="text-[#FD802E] font-bold hover:underline transition-colors flex items-center gap-1.5">
+              <span>Your Cart & Orders</span>
+              <span class="text-[10px] px-1.5 py-0.5 rounded bg-[#FD802E]/20 text-[#FD802E]">Track</span>
+            </a></li>
+            <li><a href="about.html" class="hover:text-[#FD802E] transition-colors">About Our Brand & Heritage</a></li>
+            <li><a href="faq.html" class="hover:text-[#FD802E] transition-colors">Equipment & Pricing FAQs</a></li>
+            <li><a href="repair-upgrade.html" class="hover:text-[#FD802E] transition-colors">Cleanroom Diagnostic Lab</a></li>
+            <li><a href="blog.html" class="hover:text-[#FD802E] transition-colors">Hardware Buyer Guides</a></li>
+            <li><a href="pricing.html" class="hover:text-[#FD802E] transition-colors">Service & Rental Tariffs</a></li>
+            <li><a href="contact.html" class="hover:text-[#FD802E] transition-colors">Contact Storefront & Dispatch</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: CHENNAI OUTPOST (lg:col-span-3) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="text-xs font-bold text-white uppercase tracking-widest">CHENNAI OUTPOST</h4>
+          <div class="space-y-3 text-xs leading-relaxed text-[#9fb3be]">
+            <div class="flex items-start gap-2.5">
+              <svg class="w-4 h-4 text-[#FD802E] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+              <div>
+                <p class="font-bold text-white">LAPNEST Tech Plaza — Chennai</p>
+                <p>42 Rajiv Gandhi Salai (OMR), Sholinganallur</p>
+                <p>Chennai, Tamil Nadu 600119, India</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2.5 pt-0.5">
+              <svg class="w-4 h-4 text-[#FD802E] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              <p><span class="text-white font-medium">Hours:</span> Mon – Sat: 09:30 AM – 08:30 PM</p>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-[#FD802E] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+              <p><span class="text-white font-medium">Phone:</span> <a href="tel:+919840012345" class="hover:text-[#FD802E] transition-colors">+91 98400 12345</a></p>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-[#FD802E] shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <p><span class="text-white font-medium">WhatsApp:</span> <a href="https://wa.me/919840012345" target="_blank" rel="noopener noreferrer" class="hover:text-[#FD802E] transition-colors">+91 98400 12345</a></p>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <svg class="w-4 h-4 text-[#FD802E] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              <p><span class="text-white font-medium">Email:</span> <a href="mailto:support@lapnest.in" class="hover:text-[#FD802E] transition-colors">support@lapnest.in</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Horizontal Divider Line Matching Reference -->
+      <div class="w-full border-t border-[#233D4C]/60 my-6"></div>
+
+      <!-- Centered Copyright Matching HookPoint Reference Single Line -->
+      <div class="text-center py-2">
+        <p class="text-xs text-[#9fb3be] tracking-wide">
+          © 2026 LAPNEST — Laptop Sales, Rentals & Cleanroom Lab. All Rights Reserved.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/rtl.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/three-d.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/forms.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

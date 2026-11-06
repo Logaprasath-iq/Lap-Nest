@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Settings – LAPNEST Dashboard</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-[#111e26] text-white selection:bg-[#d29f22] selection:text-[#111e26] antialiased">
+
+  <div class="min-h-screen flex">
+    
+    <aside id="dash-sidebar" class="fixed inset-y-0 left-0 z-40 w-64 bg-[#172731] border-r border-[#233D4C] transform -translate-x-full lg:translate-x-0 transition-transform duration-300 flex flex-col justify-between">
+      <div>
+        <div class="h-16 flex items-center justify-between px-6 border-b border-[#233D4C]">
+          <a href="../index.html"><img src="../assets/images/logo/logo-dark.svg" alt="LAPNEST" class="brand-logo-img h-8 w-auto"></a>
+          <button id="dash-sidebar-close" class="lg:hidden text-gray-400 hover:text-white"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+        </div>
+        <nav class="p-4 space-y-1 text-xs font-semibold">
+          <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Overview</a>
+          <a href="products.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Products</a>
+          <a href="orders.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Orders</a>
+          <a href="services.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Services</a>
+          <a href="bookings.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Repair Bookings</a>
+          <a href="blogs.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Blog Manager</a>
+          <a href="customers.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Customers</a>
+          <a href="enquiries.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Enquiries</a>
+          <a href="settings.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-[#d29f22] text-[#111e26] font-bold">Settings</a>
+        </nav>
+      </div>
+      <div class="p-4 border-t border-[#233D4C]">
+        <a href="../index.html" class="w-full flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-[#111e26] border border-[#233D4C] text-xs font-bold text-white">View Live Website ↗</a>
+      </div>
+    </aside>
+
+    <div class="flex-1 lg:pl-64 flex flex-col min-w-0">
+      <header class="h-16 bg-[#172731] border-b border-[#233D4C] px-4 sm:px-8 flex items-center justify-between sticky top-0 z-30">
+        <div class="flex items-center gap-4">
+          <button id="dash-sidebar-toggle" class="lg:hidden p-2 rounded-lg text-gray-400 bg-[#111e26]"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+          <h2 class="text-sm sm:text-base font-bold text-white">System Brand & Operation Settings</h2>
+        </div>
+      </header>
+
+      <main class="p-4 sm:p-8 space-y-6 flex-1 max-w-3xl">
+        
+        <div class="p-6 sm:p-8 rounded-3xl bg-[#172731] border border-[#233D4C] shadow-card-dark space-y-6">
+          <h3 class="text-base font-bold text-white border-b border-[#233D4C] pb-3">Showroom & Business Configuration</h3>
+
+          <div class="space-y-4 text-xs">
+            <div>
+              <label class="block font-semibold text-[#9fb3be] mb-1">Brand Name</label>
+              <input type="text" value="LAPNEST" class="w-full px-3.5 py-2.5 rounded-xl bg-[#111e26] border border-[#233D4C] text-white focus:border-[#d29f22] focus:outline-none">
+            </div>
+
+            <div>
+              <label class="block font-semibold text-[#9fb3be] mb-1">Official Tagline</label>
+              <input type="text" value="BUY • SELL • REPAIR • RENT" class="w-full px-3.5 py-2.5 rounded-xl bg-[#111e26] border border-[#233D4C] text-white focus:border-[#d29f22] focus:outline-none">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block font-semibold text-[#9fb3be] mb-1">Chennai Helpline Mobile</label>
+                <input type="text" value="+91 98400 12345" class="w-full px-3.5 py-2.5 rounded-xl bg-[#111e26] border border-[#233D4C] text-white focus:border-[#d29f22] focus:outline-none">
+              </div>
+              <div>
+                <label class="block font-semibold text-[#9fb3be] mb-1">WhatsApp Dispatch Desk</label>
+                <input type="text" value="https://wa.me/919840012345" class="w-full px-3.5 py-2.5 rounded-xl bg-[#111e26] border border-[#233D4C] text-white focus:border-[#d29f22] focus:outline-none">
+              </div>
+            </div>
+
+            <div>
+              <label class="block font-semibold text-[#9fb3be] mb-1">Showroom Street Address</label>
+              <input type="text" value="LAPNEST Tech Plaza, 42 Rajiv Gandhi Salai (OMR), Sholinganallur, Chennai, Tamil Nadu 600119" class="w-full px-3.5 py-2.5 rounded-xl bg-[#111e26] border border-[#233D4C] text-white focus:border-[#d29f22] focus:outline-none">
+            </div>
+
+            <div>
+              <label class="block font-semibold text-[#9fb3be] mb-1">Default Interface Theme</label>
+              <select class="w-full px-3.5 py-2.5 rounded-xl bg-[#111e26] border border-[#233D4C] text-white focus:border-[#d29f22] focus:outline-none">
+                <option value="dark" selected>Dark Mode (#111e26 & #172731) - Default</option>
+                <option value="light">Light Mode (#f7f6f2 & #ffffff)</option>
+              </select>
+            </div>
+
+            <div class="pt-4 border-t border-[#233D4C]">
+              <button type="button" onclick="window.showToast('Settings saved successfully (Demo)!')" class="px-6 py-3 rounded-xl bg-[#d29f22] hover:bg-[#e5b232] text-[#111e26] font-bold text-xs shadow-gold-sm transition-all">
+                Save Changes
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/forms.js"></script>
+</body>
+</html>

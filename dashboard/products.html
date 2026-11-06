@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Products – LAPNEST Dashboard</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-[#111e26] text-white selection:bg-[#d29f22] selection:text-[#111e26] antialiased">
+
+  <div class="min-h-screen flex">
+    
+    <!-- Sidebar -->
+    <aside id="dash-sidebar" class="fixed inset-y-0 left-0 z-40 w-64 bg-[#172731] border-r border-[#233D4C] transform -translate-x-full lg:translate-x-0 transition-transform duration-300 flex flex-col justify-between">
+      <div>
+        <div class="h-16 flex items-center justify-between px-6 border-b border-[#233D4C]">
+          <a href="../index.html"><img src="../assets/images/logo/logo-dark.svg" alt="LAPNEST" class="brand-logo-img h-8 w-auto"></a>
+          <button id="dash-sidebar-close" class="lg:hidden text-gray-400 hover:text-white"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+        </div>
+        <nav class="p-4 space-y-1 text-xs font-semibold">
+          <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Overview</a>
+          <a href="products.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-[#d29f22] text-[#111e26] font-bold">Products</a>
+          <a href="orders.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Orders</a>
+          <a href="services.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Services</a>
+          <a href="bookings.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Repair Bookings</a>
+          <a href="blogs.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Blog Manager</a>
+          <a href="customers.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Customers</a>
+          <a href="enquiries.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Enquiries</a>
+          <a href="settings.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Settings</a>
+        </nav>
+      </div>
+      <div class="p-4 border-t border-[#233D4C]">
+        <a href="../index.html" class="w-full flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-[#111e26] border border-[#233D4C] text-xs font-bold text-white">View Live Website ↗</a>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <div class="flex-1 lg:pl-64 flex flex-col min-w-0">
+      <header class="h-16 bg-[#172731] border-b border-[#233D4C] px-4 sm:px-8 flex items-center justify-between sticky top-0 z-30">
+        <div class="flex items-center gap-4">
+          <button id="dash-sidebar-toggle" class="lg:hidden p-2 rounded-lg text-gray-400 bg-[#111e26]"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+          <h2 class="text-sm sm:text-base font-bold text-white">Products Catalog Management</h2>
+        </div>
+        <button data-open-modal="add-product-modal" class="px-4 py-2 rounded-xl bg-[#d29f22] hover:bg-[#e5b232] text-[#111e26] font-bold text-xs shadow-gold-sm transition-all flex items-center gap-2">
+          <span>+ Add Laptop</span>
+        </button>
+      </header>
+
+      <main class="p-4 sm:p-8 space-y-6 flex-1">
+        
+        <!-- Controls: Search & Category Filter -->
+        <div class="p-4 rounded-2xl bg-[#172731] border border-[#233D4C] flex flex-wrap items-center justify-between gap-4">
+          <input type="text" placeholder="Search catalog..." class="dashboard-table-search px-3.5 py-2 rounded-xl bg-[#111e26] border border-[#233D4C] text-xs text-white focus:border-[#d29f22] focus:outline-none w-64" data-table="#products-table">
+          <span class="text-xs text-[#9fb3be]">Showing active showroom inventory</span>
+        </div>
+
+        <!-- Products Table -->
+        <div class="p-6 rounded-3xl bg-[#172731] border border-[#233D4C] shadow-card-dark overflow-x-auto">
+          <table id="products-table" class="w-full text-left text-xs">
+            <thead class="bg-[#111e26] text-[#9fb3be] border-b border-[#233D4C]">
+              <tr>
+                <th class="py-3 px-4 font-semibold">Model & Spec</th>
+                <th class="py-3 px-4 font-semibold">Category</th>
+                <th class="py-3 px-4 font-semibold">Price (INR)</th>
+                <th class="py-3 px-4 font-semibold">Stock</th>
+                <th class="py-3 px-4 font-semibold text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[#233D4C] text-[#9fb3be]">
+              <tr>
+                <td class="py-3.5 px-4 flex items-center gap-3">
+                  <img src="../assets/images/products/dell-inspiron.jpg" alt="Dell" class="w-10 h-10 rounded-lg object-cover">
+                  <div>
+                    <p class="font-bold text-white">Dell Inspiron 15 3520</p>
+                    <p class="text-[11px] text-gray-400">Core i5 12th Gen • 16GB • 512GB SSD</p>
+                  </div>
+                </td>
+                <td class="py-3.5 px-4">Business Laptops</td>
+                <td class="py-3.5 px-4 font-bold text-white">₹54,990</td>
+                <td class="py-3.5 px-4"><span class="px-2 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-400 font-bold">14 In Stock</span></td>
+                <td class="py-3.5 px-4 text-right space-x-2">
+                  <button class="text-xs text-sky-400 hover:underline">Edit</button>
+                  <button class="demo-delete-btn text-xs text-rose-400 hover:underline">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 flex items-center gap-3">
+                  <img src="../assets/images/products/hp-pavilion.jpg" alt="HP" class="w-10 h-10 rounded-lg object-cover">
+                  <div>
+                    <p class="font-bold text-white">HP Pavilion Gaming 15</p>
+                    <p class="text-[11px] text-gray-400">Ryzen 7 5800H • RTX 3050 • 16GB</p>
+                  </div>
+                </td>
+                <td class="py-3.5 px-4">Gaming Laptops</td>
+                <td class="py-3.5 px-4 font-bold text-white">₹72,490</td>
+                <td class="py-3.5 px-4"><span class="px-2 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-400 font-bold">8 In Stock</span></td>
+                <td class="py-3.5 px-4 text-right space-x-2">
+                  <button class="text-xs text-sky-400 hover:underline">Edit</button>
+                  <button class="demo-delete-btn text-xs text-rose-400 hover:underline">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 flex items-center gap-3">
+                  <img src="../assets/images/products/asus-rog.jpg" alt="ASUS" class="w-10 h-10 rounded-lg object-cover">
+                  <div>
+                    <p class="font-bold text-white">ASUS ROG Strix G16 (2024)</p>
+                    <p class="text-[11px] text-gray-400">Core i9 13980HX • RTX 4070 • 32GB</p>
+                  </div>
+                </td>
+                <td class="py-3.5 px-4">Gaming Laptops</td>
+                <td class="py-3.5 px-4 font-bold text-white">₹1,59,990</td>
+                <td class="py-3.5 px-4"><span class="px-2 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-400 font-bold">4 In Stock</span></td>
+                <td class="py-3.5 px-4 text-right space-x-2">
+                  <button class="text-xs text-sky-400 hover:underline">Edit</button>
+                  <button class="demo-delete-btn text-xs text-rose-400 hover:underline">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 flex items-center gap-3">
+                  <img src="../assets/images/products/apple-macbook.jpg" alt="Apple" class="w-10 h-10 rounded-lg object-cover">
+                  <div>
+                    <p class="font-bold text-white">Apple MacBook Pro 16" (M3 Pro)</p>
+                    <p class="text-[11px] text-gray-400">12-Core CPU • 36GB Unified • 1TB SSD</p>
+                  </div>
+                </td>
+                <td class="py-3.5 px-4">Professional Laptops</td>
+                <td class="py-3.5 px-4 font-bold text-white">₹2,49,900</td>
+                <td class="py-3.5 px-4"><span class="px-2 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-400 font-bold">6 In Stock</span></td>
+                <td class="py-3.5 px-4 text-right space-x-2">
+                  <button class="text-xs text-sky-400 hover:underline">Edit</button>
+                  <button class="demo-delete-btn text-xs text-rose-400 hover:underline">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <!-- ADD PRODUCT MODAL -->
+  <div id="add-product-modal" class="dashboard-modal fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+    <div class="bg-[#172731] border border-[#233D4C] rounded-3xl p-6 sm:p-8 max-w-lg w-full shadow-gold-lg space-y-4">
+      <div class="flex items-center justify-between border-b border-[#233D4C] pb-3">
+        <h3 class="text-base font-bold text-white">Add New Laptop to Catalog</h3>
+        <button data-close-modal class="text-gray-400 hover:text-white p-1"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+      </div>
+
+      <form id="add-product-form" class="space-y-4 text-xs">
+        <div>
+          <label class="block font-semibold text-[#9fb3be] mb-1">Brand & Model Name *</label>
+          <input type="text" required placeholder="e.g. Lenovo Legion Pro 5" class="w-full px-3.5 py-2.5 rounded-xl bg-[#111e26] border border-[#233D4C] text-white focus:border-[#d29f22] focus:outline-none">
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-[#9fb3be] mb-1">Category *</label>
+            <select required class="w-full px-3.5 py-2.5 rounded-xl bg-[#111e26] border border-[#233D4C] text-white focus:border-[#d29f22] focus:outline-none">
+              <option value="gaming">Gaming Laptops</option>
+              <option value="business">Business Laptops</option>
+              <option value="student">Student Laptops</option>
+              <option value="pro">Professional Laptops</option>
+              <option value="refurb">Refurbished</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-semibold text-[#9fb3be] mb-1">Price in INR (₹) *</label>
+            <input type="number" required placeholder="64990" class="w-full px-3.5 py-2.5 rounded-xl bg-[#111e26] border border-[#233D4C] text-white focus:border-[#d29f22] focus:outline-none">
+          </div>
+        </div>
+        <div>
+          <label class="block font-semibold text-[#9fb3be] mb-1">Processor, RAM & SSD Specs *</label>
+          <input type="text" required placeholder="AMD Ryzen 7 7745HX | 16GB DDR5 | 1TB NVMe" class="w-full px-3.5 py-2.5 rounded-xl bg-[#111e26] border border-[#233D4C] text-white focus:border-[#d29f22] focus:outline-none">
+        </div>
+        <button type="submit" class="w-full py-3 rounded-xl bg-[#d29f22] hover:bg-[#e5b232] text-[#111e26] font-bold text-xs shadow-gold-sm transition-all">
+          Save Laptop to Inventory
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

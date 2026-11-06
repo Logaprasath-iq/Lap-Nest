@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LAPNEST Engineering Documentation – Architecture & System Guide</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-[#111e26] text-white selection:bg-[#d29f22] selection:text-[#111e26] antialiased">
+
+  <div id="scroll-progress"></div>
+
+  <!-- Documentation Header -->
+  <header class="py-5 px-6 sm:px-12 border-b border-[#233D4C] bg-[#172731] sticky top-0 z-30 flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <a href="../index.html">
+        <img src="../assets/images/logo/logo-dark.svg" data-dark="../assets/images/logo/logo-dark.svg" data-light="../assets/images/logo/logo-light.svg" alt="LAPNEST" class="brand-logo-img h-9 w-auto">
+      </a>
+      <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-[#d29f22] text-[#111e26] uppercase">Docs v1.0</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="../index.html" class="text-xs font-semibold text-[#9fb3be] hover:text-[#d29f22]">← Live Website</a>
+      <a href="../dashboard/index.html" class="text-xs font-bold text-[#d29f22] hover:underline">Admin Portal ↗</a>
+    </div>
+  </header>
+
+  <main class="py-12 bg-[#111e26]">
+    <div class="w-full max-w-5xl mx-auto px-4 sm:px-6 space-y-12">
+      
+      <!-- Doc Title -->
+      <div class="space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#d29f22]">Project Architecture</span>
+        <h1 class="text-3xl sm:text-5xl font-black text-white">LAPNEST Technical Documentation</h1>
+        <p class="text-xs sm:text-sm text-[#9fb3be] max-w-2xl leading-relaxed">
+          Comprehensive reference guide for developers and designers detailing the vanilla stack, 3D physics engine, Tailwind build pipeline, design tokens and responsive breakpoints.
+        </p>
+      </div>
+
+      <!-- Quick Index -->
+      <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C] grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
+        <a href="#tech-stack" class="text-[#d29f22] hover:underline font-bold">1. Tech Stack</a>
+        <a href="#brand-tokens" class="text-[#d29f22] hover:underline font-bold">2. Brand & Colors</a>
+        <a href="#three-d-engine" class="text-[#d29f22] hover:underline font-bold">3. 3D Transforms</a>
+        <a href="#equal-height" class="text-[#d29f22] hover:underline font-bold">4. Equal Height Cards</a>
+        <a href="#build-workflow" class="text-[#d29f22] hover:underline font-bold">5. Tailwind CLI Build</a>
+        <a href="#pages-index" class="text-[#d29f22] hover:underline font-bold">6. Multi-Page Sitemap</a>
+        <a href="#dashboard-spec" class="text-[#d29f22] hover:underline font-bold">7. Admin Dashboard</a>
+        <a href="#responsive-qa" class="text-[#d29f22] hover:underline font-bold">8. Responsive QA</a>
+      </div>
+
+      <!-- Section 1: Tech Stack -->
+      <section id="tech-stack" class="p-8 rounded-3xl bg-[#172731] border border-[#233D4C] space-y-4">
+        <h2 class="text-xl font-bold text-white flex items-center gap-2">
+          <span class="text-[#d29f22]">01.</span> Strict Technology Stack
+        </h2>
+        <p class="text-xs text-[#9fb3be] leading-relaxed">
+          The project is engineered exclusively using semantic HTML5, production compiled Tailwind CSS v3.4 CLI, and Vanilla JavaScript (ES6+). Zero heavy frontend frameworks (no React, Next.js, Vue, or JSX).
+        </p>
+        <ul class="list-disc pl-5 text-xs text-[#9fb3be] space-y-1">
+          <li><strong>Markup:</strong> Semantic HTML5 with micro-data, meta tags and ARIA labels.</li>
+          <li><strong>Styling:</strong> Tailwind CSS compiled via Node CLI (<code>npm run build:css</code>), utilizing CSS custom variables.</li>
+          <li><strong>Animation:</strong> GSAP 3.12, ScrollTrigger, and custom CSS 3D matrix transformations.</li>
+          <li><strong>Charts:</strong> Chart.js with custom gold-accented area gradients for dashboard metrics.</li>
+        </ul>
+      </section>
+
+      <!-- Section 2: Brand Tokens -->
+      <section id="brand-tokens" class="p-8 rounded-3xl bg-[#172731] border border-[#233D4C] space-y-4">
+        <h2 class="text-xl font-bold text-white flex items-center gap-2">
+          <span class="text-[#d29f22]">02.</span> Brand Identity & Color Tokens
+        </h2>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs font-mono">
+          <div class="p-4 rounded-xl bg-[#111e26] border border-[#233D4C]">
+            <span class="block w-6 h-6 rounded-md bg-[#111e26] border border-white/20 mb-2"></span>
+            <p class="text-white font-bold">#111e26</p>
+            <p class="text-[10px] text-gray-400">Primary Background</p>
+          </div>
+          <div class="p-4 rounded-xl bg-[#111e26] border border-[#233D4C]">
+            <span class="block w-6 h-6 rounded-md bg-[#d29f22] mb-2"></span>
+            <p class="text-[#d29f22] font-bold">#d29f22</p>
+            <p class="text-[10px] text-gray-400">Golden Accent</p>
+          </div>
+          <div class="p-4 rounded-xl bg-[#111e26] border border-[#233D4C]">
+            <span class="block w-6 h-6 rounded-md bg-[#172731] border border-white/20 mb-2"></span>
+            <p class="text-white font-bold">#172731</p>
+            <p class="text-[10px] text-gray-400">Card Background</p>
+          </div>
+          <div class="p-4 rounded-xl bg-[#111e26] border border-[#233D4C]">
+            <span class="block w-6 h-6 rounded-md bg-[#f7f6f2] mb-2"></span>
+            <p class="text-white font-bold">#f7f6f2</p>
+            <p class="text-[10px] text-gray-400">Light Theme BG</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: 3D Engine -->
+      <section id="three-d-engine" class="p-8 rounded-3xl bg-[#172731] border border-[#233D4C] space-y-4">
+        <h2 class="text-xl font-bold text-white flex items-center gap-2">
+          <span class="text-[#d29f22]">03.</span> 3D Transformations & Physics Engine
+        </h2>
+        <p class="text-xs text-[#9fb3be] leading-relaxed">
+          Implemented in <code>assets/js/three-d.js</code> without three.js overhead, using native GPU-accelerated CSS 3D properties:
+        </p>
+        <ul class="list-disc pl-5 text-xs text-[#9fb3be] space-y-2">
+          <li><strong>Hero Laptop 3D Stage:</strong> <code>.laptop-3d-model</code> uses <code>perspective: 1600px</code>, <code>rotateX</code>, <code>rotateY</code>, and smooth linear interpolation (lerp) tracking cursor coordinates across the hero section.</li>
+          <li><strong>Interactive Card Tilt:</strong> Cards with class <code>.tilt-card</code> tilt up to ±12 degrees dynamically with an active radial specular reflection highlight.</li>
+          <li><strong>Micro-Particle Mesh:</strong> HTML5 canvas rendering floating gold particles with auto-connective lines and mouse repulsion forces.</li>
+          <li><strong>Accessibility & Touch Safety:</strong> Touch screens and users with <code>prefers-reduced-motion</code> automatically have tilt disabled to conserve GPU memory and ensure comfortable viewing.</li>
+        </ul>
+      </section>
+
+      <!-- Section 4: Equal Height Cards -->
+      <section id="equal-height" class="p-8 rounded-3xl bg-[#172731] border border-[#233D4C] space-y-4">
+        <h2 class="text-xl font-bold text-white flex items-center gap-2">
+          <span class="text-[#d29f22]">04.</span> Equal-Height Grid System
+        </h2>
+        <p class="text-xs text-[#9fb3be] leading-relaxed">
+          Strict adherence to uniform card heights across every grid row. The layout enforces:
+        </p>
+        <div class="bg-[#111e26] p-4 rounded-xl font-mono text-[11px] text-gray-300 overflow-x-auto">
+&lt;div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch"&gt;<br>
+&nbsp;&nbsp;&lt;article class="tilt-card equal-card rounded-2xl bg-[#172731] flex flex-col"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="aspect-[16/10] overflow-hidden"&gt;&lt;img ... /&gt;&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="p-6 equal-card-body flex-1 flex flex-col"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3 class="line-clamp-1"&gt;Model&lt;/h3&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p class="line-clamp-3"&gt;Description&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="equal-card-footer mt-auto pt-4"&gt;Action Buttons&lt;/div&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+&nbsp;&nbsp;&lt;/article&gt;<br>
+&lt;/div&gt;
+        </div>
+      </section>
+
+      <!-- Section 5: Build Workflow -->
+      <section id="build-workflow" class="p-8 rounded-3xl bg-[#172731] border border-[#233D4C] space-y-4">
+        <h2 class="text-xl font-bold text-white flex items-center gap-2">
+          <span class="text-[#d29f22]">05.</span> Tailwind CSS CLI Build Pipeline
+        </h2>
+        <p class="text-xs text-[#9fb3be] leading-relaxed">
+          The production stylesheet is generated via standard npm scripts in <code>package.json</code>:
+        </p>
+        <div class="bg-[#111e26] p-4 rounded-xl font-mono text-xs text-[#d29f22] space-y-2">
+          <p># Production build with minification</p>
+          <p class="text-white">npm run build:css</p>
+          <p class="pt-2"># Development watcher</p>
+          <p class="text-white">npm run watch:css</p>
+        </div>
+      </section>
+
+      <!-- Section 6: Multi-Page Sitemap -->
+      <section id="pages-index" class="p-8 rounded-3xl bg-[#172731] border border-[#233D4C] space-y-4">
+        <h2 class="text-xl font-bold text-white flex items-center gap-2">
+          <span class="text-[#d29f22]">06.</span> Complete Website Sitemap (28 Files)
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-[#9fb3be]">
+          <div>
+            <p class="font-bold text-white mb-1">Public Pages:</p>
+            <ul class="space-y-1">
+              <li>• <a href="../index.html" class="text-[#d29f22] hover:underline">index.html</a> (Home Page 1)</li>
+              <li>• <a href="../home-2.html" class="text-[#d29f22] hover:underline">home-2.html</a> (Home Page 2)</li>
+              <li>• <a href="../about.html" class="text-[#d29f22] hover:underline">about.html</a> (About Us)</li>
+              <li>• <a href="../products.html" class="text-[#d29f22] hover:underline">products.html</a> (Products Catalog)</li>
+              <li>• <a href="../product-details.html" class="text-[#d29f22] hover:underline">product-details.html</a> (Details)</li>
+              <li>• <a href="../pricing.html" class="text-[#d29f22] hover:underline">pricing.html</a> (Pricing & Tariffs)</li>
+              <li>• <a href="../repair-upgrade.html" class="text-[#d29f22] hover:underline">repair-upgrade.html</a> (Repairs)</li>
+              <li>• <a href="../service-details.html" class="text-[#d29f22] hover:underline">service-details.html</a> (Service Specs)</li>
+              <li>• <a href="../order.html" class="text-[#d29f22] hover:underline">order.html</a> (Order & Checkout)</li>
+              <li>• <a href="../blog.html" class="text-[#d29f22] hover:underline">blog.html</a> (Blog Articles)</li>
+              <li>• <a href="../blog-details.html" class="text-[#d29f22] hover:underline">blog-details.html</a> (Article Details)</li>
+              <li>• <a href="../contact.html" class="text-[#d29f22] hover:underline">contact.html</a> (Contact & Maps)</li>
+              <li>• <a href="../faq.html" class="text-[#d29f22] hover:underline">faq.html</a> (FAQ Accordion)</li>
+              <li>• <a href="../privacy-policy.html" class="text-[#d29f22] hover:underline">privacy-policy.html</a> (Privacy)</li>
+              <li>• <a href="../terms.html" class="text-[#d29f22] hover:underline">terms.html</a> (Terms & Warranty)</li>
+              <li>• <a href="../404.html" class="text-[#d29f22] hover:underline">404.html</a> (Error Page)</li>
+              <li>• <a href="../coming-soon.html" class="text-[#d29f22] hover:underline">coming-soon.html</a> (Countdown)</li>
+              <li>• <a href="../maintenance.html" class="text-[#d29f22] hover:underline">maintenance.html</a> (Status)</li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-bold text-white mb-1">Admin Dashboard:</p>
+            <ul class="space-y-1">
+              <li>• <a href="../dashboard/index.html" class="text-[#d29f22] hover:underline">dashboard/index.html</a> (Overview)</li>
+              <li>• <a href="../dashboard/products.html" class="text-[#d29f22] hover:underline">dashboard/products.html</a> (Products Table)</li>
+              <li>• <a href="../dashboard/orders.html" class="text-[#d29f22] hover:underline">dashboard/orders.html</a> (Orders Pipeline)</li>
+              <li>• <a href="../dashboard/services.html" class="text-[#d29f22] hover:underline">dashboard/services.html</a> (Services)</li>
+              <li>• <a href="../dashboard/bookings.html" class="text-[#d29f22] hover:underline">dashboard/bookings.html</a> (Bookings)</li>
+              <li>• <a href="../dashboard/blogs.html" class="text-[#d29f22] hover:underline">dashboard/blogs.html</a> (Blog CMS)</li>
+              <li>• <a href="../dashboard/customers.html" class="text-[#d29f22] hover:underline">dashboard/customers.html</a> (Customers)</li>
+              <li>• <a href="../dashboard/enquiries.html" class="text-[#d29f22] hover:underline">dashboard/enquiries.html</a> (Enquiries)</li>
+              <li>• <a href="../dashboard/settings.html" class="text-[#d29f22] hover:underline">dashboard/settings.html</a> (Settings)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="py-8 bg-[#121013] border-t border-[#233D4C] text-center text-xs text-[#9fb3be]">
+    © 2026 LAPNEST Inc. BUY • SELL • REPAIR • RENT ®
+  </footer>
+
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+</body>
+</html>

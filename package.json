@@ -1,0 +1,24 @@
+{
+  "name": "lapnest",
+  "version": "1.0.0",
+  "description": "LAPNEST - Premium Laptop Sales, Rental, Repair & Upgrade Website",
+  "scripts": {
+    "build:css": "node --max-old-space-size=256 ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/input.css -o ./assets/css/style.css --minify",
+    "watch:css": "node --max-old-space-size=256 ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/input.css -o ./assets/css/style.css --watch"
+  },
+  "keywords": [
+    "laptop",
+    "ecommerce",
+    "repair",
+    "rental",
+    "tailwind",
+    "gsap"
+  ],
+  "author": "Lapnest",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17"
+  }
+}

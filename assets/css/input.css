@@ -1,0 +1,1069 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   LAPNEST BRAND PALETTE: PUMPKIN (#FD802E) & CHARCOAL (#233D4C)
+   ========================================================================== */
+
+:root {
+  --bg-primary: #0e181f;
+  --bg-secondary: #111e26;
+  --bg-tertiary: #172731;
+  --accent-gold: #FD802E;
+  --accent-gold-hover: #ff9248;
+  --accent-gold-glow: rgba(253, 128, 46, 0.35);
+  --text-primary: #ffffff;
+  --text-secondary: #9fb3be;
+  --text-muted: #7fa2b6;
+  --border-color: #233D4C;
+  --card-bg: #172731;
+  --card-border: rgba(35, 61, 76, 0.7);
+  --header-bg: rgba(14, 24, 31, 0.95);
+  --shadow-color: rgba(14, 24, 31, 0.8);
+  --gold-gradient: linear-gradient(135deg, #FD802E 0%, #ffb174 50%, #e5651a 100%);
+}
+
+.light-theme, html.light {
+  --bg-primary: #f3f6f8;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #e5ecf1;
+  --accent-gold: #FD802E;
+  --accent-gold-hover: #e5651a;
+  --accent-gold-glow: rgba(253, 128, 46, 0.25);
+  --text-primary: #111e26;
+  --text-secondary: #3a596c;
+  --text-muted: #5c869d;
+  --border-color: rgba(35, 61, 76, 0.2);
+  --card-bg: #ffffff;
+  --card-border: rgba(35, 61, 76, 0.15);
+  --header-bg: rgba(255, 255, 255, 0.95);
+  --shadow-color: rgba(35, 61, 76, 0.08);
+  --gold-gradient: linear-gradient(135deg, #FD802E 0%, #ff8e3e 100%);
+}
+
+/* Global resets & typography */
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: clip;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+/* Sticky Sidebar Filter */
+.sticky-filter-sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 6.5rem;
+  max-height: calc(100vh - 8rem);
+  overflow-y: auto;
+}
+.sticky-filter-sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+.sticky-filter-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sticky-filter-sidebar::-webkit-scrollbar-thumb {
+  background: #233D4C;
+  border-radius: 4px;
+}
+.sticky-filter-sidebar::-webkit-scrollbar-thumb:hover {
+  background: #FD802E;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #233D4C;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FD802E;
+}
+
+/* Accent Gradient Text */
+.gold-gradient-text, .pumpkin-gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #ffe8d5 35%, #FD802E 70%, #e5651a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html.light .gold-gradient-text, html.light .pumpkin-gradient-text {
+  background: linear-gradient(135deg, #111e26 0%, #233D4C 40%, #FD802E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg, .pumpkin-gradient-bg {
+  background: linear-gradient(135deg, #FD802E 0%, #e5651a 100%);
+}
+
+.gold-border-glow, .pumpkin-border-glow {
+  box-shadow: 0 0 18px rgba(253, 128, 46, 0.35);
+  border-color: rgba(253, 128, 46, 0.6);
+}
+
+/* 3D Transform Utilities */
+.perspective-800 { perspective: 800px; }
+.perspective-1000 { perspective: 1000px; }
+.perspective-1500 { perspective: 1500px; }
+.perspective-2000 { perspective: 2000px; }
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* 3D Tilt Card Base */
+.tilt-card {
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out, box-shadow 0.25s ease;
+  will-change: transform;
+  position: relative;
+}
+
+.tilt-card-inner {
+  transform: translateZ(30px);
+  transform-style: preserve-3d;
+}
+
+.tilt-card-deep {
+  transform: translateZ(50px);
+}
+
+.tilt-card-reflection {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+  z-index: 10;
+}
+
+/* Floating animation */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(0.8deg); }
+}
+
+.animate-float-y, .animate-float-slow {
+  animation: floatY 5.5s ease-in-out infinite;
+}
+
+/* Cinematic 3D Floating and Rotating Animation */
+@keyframes floatAndRotate {
+  0% {
+    transform: translateY(0px) rotateY(-10deg) rotateX(4deg) rotateZ(-1deg);
+  }
+  25% {
+    transform: translateY(-16px) rotateY(2deg) rotateX(-2deg) rotateZ(1deg);
+  }
+  50% {
+    transform: translateY(-24px) rotateY(12deg) rotateX(-5deg) rotateZ(2deg);
+  }
+  75% {
+    transform: translateY(-8px) rotateY(0deg) rotateX(2deg) rotateZ(-0.5deg);
+  }
+  100% {
+    transform: translateY(0px) rotateY(-10deg) rotateX(4deg) rotateZ(-1deg);
+  }
+}
+
+.animate-float-rotate {
+  animation: floatAndRotate 7.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  text-align: right;
+}
+
+[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .dropdown-menu {
+  right: auto;
+  left: 0;
+}
+
+/* Equal Height Grid utility helpers */
+.equal-card-grid {
+  display: grid;
+  align-items: stretch;
+}
+
+.equal-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.equal-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.equal-card-footer {
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(23, 39, 49, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(35, 61, 76, 0.6);
+}
+
+.glass-gold, .glass-pumpkin {
+  background: rgba(253, 128, 46, 0.12);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(253, 128, 46, 0.35);
+}
+
+/* Scroll progress bar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #FD802E, #ffd0aa, #e5651a);
+  z-index: 9999;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* Line clamp helpers */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   ROBUST LIGHT MODE OVERRIDES
+   ========================================================================== */
+
+html.light body,
+html.light {
+  background-color: #f3f6f8 !important;
+  color: #111e26 !important;
+}
+
+html.light .bg-\[\#0e181f\]:not(footer):not(footer *):not(.footer-dark-lock):not(#site-footer),
+html.light .bg-\[\#111e26\]:not(footer):not(footer *):not(.footer-dark-lock):not(#site-footer),
+html.light .bg-\[\#051F20\]:not(footer):not(footer *):not(.footer-dark-lock):not(#site-footer),
+html.light .bg-\[\#19171b\]:not(footer):not(footer *):not(.footer-dark-lock):not(#site-footer),
+html.light .bg-brand-bg:not(footer):not(footer *):not(.footer-dark-lock):not(#site-footer) {
+  background-color: #f3f6f8 !important;
+  color: #111e26 !important;
+}
+
+html.light .bg-\[\#172731\]:not(footer *):not(.footer-dark-lock *),
+html.light .bg-\[\#163832\],
+html.light .bg-\[\#252628\],
+html.light .bg-brand-card {
+  background-color: #ffffff !important;
+  color: #111e26 !important;
+  border-color: rgba(35, 61, 76, 0.18) !important;
+  box-shadow: 0 10px 25px -5px rgba(35, 61, 76, 0.06) !important;
+}
+
+html.light .bg-\[\#233D4C\]:not(footer *):not(.footer-dark-lock *) {
+  background-color: #e5ecf1 !important;
+  color: #111e26 !important;
+}
+
+html.light .text-white:not(footer *):not(.footer-dark-lock *):not(.product-dark-badge):not(.product-dark-badge *):not(.rating-pill-dark):not(.rating-pill-dark *):not([class*="bg-black"]):not([class*="bg-black"] *) {
+  color: #111e26 !important;
+}
+
+html.light .text-\[\#9fb3be\]:not(footer):not(footer *):not(.footer-dark-lock *),
+html.light .text-\[\#DAF1DE\],
+html.light .text-\[\#b5b5b5\],
+html.light .text-gray-400:not(footer *):not(.footer-dark-lock *),
+html.light .text-gray-300:not(footer *):not(.footer-dark-lock *) {
+  color: #3a596c !important;
+}
+
+html.light .border-\[\#233D4C\]:not(footer *):not(.footer-dark-lock *),
+html.light .border-\[\#353639\] {
+  border-color: rgba(35, 61, 76, 0.18) !important;
+}
+
+html.light .glass-panel {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(35, 61, 76, 0.18) !important;
+  color: #111e26 !important;
+}
+
+/* Crisp, visible navbar separation line in dark & light modes */
+#main-navbar,
+header#main-navbar {
+  border-bottom: 1px solid rgba(35, 61, 76, 0.8) !important;
+}
+
+html.light header.sticky,
+html.light #main-navbar,
+html.light #main-navbar.backdrop-blur-md {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid rgba(35, 61, 76, 0.28) !important;
+}
+
+/* Precise Equal-Height Navbar Control Buttons */
+#main-navbar .rtl-toggle-btn,
+#main-navbar .theme-toggle-btn,
+#main-navbar a[href*="order.html"] {
+  height: 40px !important;
+  max-height: 40px !important;
+  min-height: 40px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  line-height: 1 !important;
+}
+
+#main-navbar .theme-toggle-btn {
+  width: 40px !important;
+  min-width: 40px !important;
+}
+
+/* Mobile Menu Hamburger: Strictly Hidden on Desktop (>= 1024px), Equal 40px on Mobile (< 1024px) */
+#main-navbar #mobile-menu-btn {
+  height: 40px !important;
+  max-height: 40px !important;
+  min-height: 40px !important;
+  width: 40px !important;
+  min-width: 40px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  line-height: 1 !important;
+}
+
+@media (min-width: 1024px) {
+  #main-navbar #mobile-menu-btn {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  #main-navbar #mobile-menu-btn {
+    display: inline-flex !important;
+  }
+}
+
+/* Showroom & Emergency Cards High-Contrast Rules for Light Mode */
+html.light .timing-card-title {
+  color: #111e26 !important;
+}
+
+html.light .timing-card-label {
+  color: #111e26 !important;
+  font-weight: 700 !important;
+}
+
+html.light .timing-card-value {
+  color: #1f3544 !important;
+  font-weight: 600 !important;
+}
+
+html.light .timing-card-note {
+  color: #1f3544 !important;
+  font-weight: 600 !important;
+}
+
+html.light .timing-card-border {
+  border-color: rgba(35, 61, 76, 0.16) !important;
+}
+
+html.light .timing-card-status {
+  color: #047857 !important;
+  font-weight: 700 !important;
+}
+
+/* Crisp, visible section separation lines site-wide in dark & light modes */
+section.border-t,
+section.border-b,
+section[class*="border-t"],
+section[class*="border-b"],
+.section-divider {
+  border-color: rgba(35, 61, 76, 0.75) !important;
+}
+
+html.light section.border-t,
+html.light section.border-b,
+html.light section[class*="border-t"],
+html.light section[class*="border-b"],
+html.light .section-divider {
+  border-color: rgba(35, 61, 76, 0.28) !important;
+}
+
+html.light input,
+html.light select,
+html.light textarea {
+  background-color: #ffffff !important;
+  color: #111e26 !important;
+  border-color: rgba(35, 61, 76, 0.25) !important;
+}
+
+/* Footer always stays sleek dark tech in both modes for brand authority, like HookPoint */
+footer {
+  background-color: #0e181f !important;
+  color: #9fb3be !important;
+}
+
+footer .text-white {
+  color: #ffffff !important;
+}
+
+/* Persistent Dropdown & Invisible Hover Bridge */
+.dropdown-container {
+  position: relative;
+}
+.dropdown-container .dropdown-menu-wrapper {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.dropdown-container:hover .dropdown-menu-wrapper,
+.dropdown-container.is-open .dropdown-menu-wrapper {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
+}
+.dropdown-container:hover .dropdown-arrow-icon,
+.dropdown-container.is-open .dropdown-arrow-icon {
+  transform: rotate(180deg) !important;
+}
+.dropdown-menu-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 14px;
+}
+
+/* Dropdown Menu Container (Dark & Light Modes) */
+.dropdown-menu-wrapper > div {
+  transition: all 0.2s ease;
+}
+
+html.light .dropdown-menu-wrapper > div,
+.light .dropdown-menu-wrapper > div {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.12), 0 5px 15px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Inactive Dropdown Link in Light Mode */
+html.light .dropdown-menu-wrapper a,
+.light .dropdown-menu-wrapper a {
+  color: #334155 !important;
+  font-weight: 600 !important;
+  background-color: transparent !important;
+}
+
+/* Inactive Dot in Light Mode */
+html.light .dropdown-menu-wrapper a span.bg-\[\#233D4C\],
+.light .dropdown-menu-wrapper a span.bg-\[\#233D4C\],
+html.light .dropdown-menu-wrapper a .inactive-dot,
+.light .dropdown-menu-wrapper a .inactive-dot {
+  background-color: #94a3b8 !important;
+}
+
+/* Active Dropdown Link in Light Mode: Crisp Brand Orange Text with Subtle Tint */
+html.light .dropdown-menu-wrapper a.is-active-home,
+.light .dropdown-menu-wrapper a.is-active-home,
+html.light .dropdown-menu-wrapper a:has(.bg-\[\#FD802E\]),
+.light .dropdown-menu-wrapper a:has(.bg-\[\#FD802E\]) {
+  color: #FD802E !important;
+  font-weight: 700 !important;
+  background-color: rgba(253, 128, 46, 0.1) !important;
+}
+
+/* Active Dot in Light Mode */
+html.light .dropdown-menu-wrapper a span.bg-\[\#FD802E\],
+.light .dropdown-menu-wrapper a span.bg-\[\#FD802E\],
+html.light .dropdown-menu-wrapper a .active-dot,
+.light .dropdown-menu-wrapper a .active-dot {
+  background-color: #FD802E !important;
+}
+
+/* Dropdown Hover State in Light Mode: Clean Light Gray Pill with Brand Orange Text */
+html.light .dropdown-menu-wrapper a:hover,
+.light .dropdown-menu-wrapper a:hover {
+  background-color: #f1f5f9 !important;
+  color: #FD802E !important;
+}
+
+html.light .dropdown-menu-wrapper a:hover span.rounded-full,
+.light .dropdown-menu-wrapper a:hover span.rounded-full {
+  background-color: #FD802E !important;
+}
+
+/* Mobile Drawer Accordion in Light Mode */
+html.light .mobile-dropdown-trigger + div a,
+.light .mobile-dropdown-trigger + div a {
+  color: #334155 !important;
+}
+
+html.light .mobile-dropdown-trigger + div a:hover,
+.light .mobile-dropdown-trigger + div a:hover {
+  background-color: #f1f5f9 !important;
+  color: #FD802E !important;
+}
+
+/* Horizontal Showcase & Smooth Animation Utilities */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes bounceX {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+}
+.animate-bounce-x {
+  animation: bounceX 1.5s infinite ease-in-out;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+}
+
+.will-change-transform {
+  will-change: transform;
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .tilt-card {
+    transform: none !important;
+  }
+  .animate-float-slow, .animate-float-y {
+    animation: none !important;
+  }
+}
+
+/* 3D Rotating & Floating Laptop Showcase Animation */
+@keyframes laptop3DSpin {
+  0% {
+    transform: perspective(1000px) rotateY(-14deg) rotateX(8deg) translateY(0px);
+  }
+  25% {
+    transform: perspective(1000px) rotateY(-2deg) rotateX(14deg) translateY(-8px);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(14deg) rotateX(8deg) translateY(0px);
+  }
+  75% {
+    transform: perspective(1000px) rotateY(-2deg) rotateX(4deg) translateY(8px);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(-14deg) rotateX(8deg) translateY(0px);
+  }
+}
+
+.animate-laptop-spin {
+  animation: laptop3DSpin 9s ease-in-out infinite;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* ==========================================================================
+   CREATIVE 3D ROTATING LAPTOP ANIMATIONS (BENCH 1 & 2)
+   ========================================================================== */
+@keyframes creativeLaptopOrbit1 {
+  0% {
+    transform: perspective(1000px) rotateY(-18deg) rotateX(10deg) translateY(0px) rotateZ(-2deg);
+  }
+  25% {
+    transform: perspective(1000px) rotateY(-3deg) rotateX(15deg) translateY(-8px) rotateZ(1deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(16deg) rotateX(10deg) translateY(0px) rotateZ(2deg);
+  }
+  75% {
+    transform: perspective(1000px) rotateY(-2deg) rotateX(5deg) translateY(8px) rotateZ(-1deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(-18deg) rotateX(10deg) translateY(0px) rotateZ(-2deg);
+  }
+}
+
+@keyframes creativeLaptopOrbit2 {
+  0% {
+    transform: perspective(1000px) rotateY(16deg) rotateX(10deg) translateY(0px) rotateZ(2deg);
+  }
+  25% {
+    transform: perspective(1000px) rotateY(2deg) rotateX(14deg) translateY(8px) rotateZ(-1deg);
+  }
+  50% {
+    transform: perspective(1000px) rotateY(-18deg) rotateX(8deg) translateY(0px) rotateZ(-2deg);
+  }
+  75% {
+    transform: perspective(1000px) rotateY(-2deg) rotateX(12deg) translateY(-8px) rotateZ(1deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(16deg) rotateX(10deg) translateY(0px) rotateZ(2deg);
+  }
+}
+
+.animate-laptop-creative-1 {
+  animation: creativeLaptopOrbit1 9s ease-in-out infinite;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.animate-laptop-creative-2 {
+  animation: creativeLaptopOrbit2 10s ease-in-out infinite;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* ==========================================================================
+   LIGHT MODE FIXES: PRODUCT CARDS, FOOTER DARK LOCK & NEWSLETTER CTA
+   ========================================================================== */
+/* 1. Footers across the website STAY DARK ONLY in both light & dark mode */
+footer,
+#site-footer,
+html.light footer,
+html.light #site-footer,
+html.light footer.bg-\[\#0e181f\],
+html.light .footer-dark-lock,
+html.light footer.footer-dark-lock,
+html.light body footer,
+.light footer,
+.light #site-footer,
+.light footer.bg-\[\#0e181f\],
+.light .footer-dark-lock,
+.light footer.footer-dark-lock,
+.light body footer {
+  background-color: #0e181f !important;
+  color: #9fb3be !important;
+  border-top: 1px solid rgba(35, 61, 76, 0.6) !important;
+}
+
+html.light footer h1,
+html.light footer h2,
+html.light footer h3,
+html.light footer h4,
+html.light footer h5,
+html.light footer h6,
+html.light footer .text-white,
+.light footer h1,
+.light footer h2,
+.light footer h3,
+.light footer h4,
+.light footer h5,
+.light footer h6,
+.light footer .text-white {
+  color: #ffffff !important;
+}
+
+html.light footer p,
+html.light footer li,
+html.light footer span:not(.text-\[\#FD802E\]):not(.bg-\[\#FD802E\]),
+.light footer p,
+.light footer li,
+.light footer span:not(.text-\[\#FD802E\]):not(.bg-\[\#FD802E\]) {
+  color: #9fb3be !important;
+}
+
+html.light footer a:not(.bg-\[\#FD802E\]):not(.border-\[\#25D366\]):not(.border-\[\#E4405F\]):not(.border-white):not(.border-\[\#1877F2\]),
+.light footer a:not(.bg-\[\#FD802E\]):not(.border-\[\#25D366\]):not(.border-\[\#E4405F\]):not(.border-white):not(.border-\[\#1877F2\]) {
+  color: #9fb3be !important;
+}
+
+html.light footer a:hover,
+.light footer a:hover {
+  color: #FD802E !important;
+}
+
+html.light footer .bg-\[\#172731\],
+.light footer .bg-\[\#172731\] {
+  background-color: #172731 !important;
+}
+
+/* Maintain social channels colored border highlights in footer */
+html.light footer .border-\[\#25D366\], .light footer .border-\[\#25D366\] {
+  border-color: #25D366 !important;
+  color: #25D366 !important;
+}
+html.light footer .border-\[\#E4405F\], .light footer .border-\[\#E4405F\] {
+  border-color: #E4405F !important;
+  color: #E4405F !important;
+}
+html.light footer .border-white, .light footer .border-white {
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+}
+html.light footer .border-\[\#1877F2\], .light footer .border-\[\#1877F2\] {
+  border-color: #1877F2 !important;
+  color: #1877F2 !important;
+}
+
+html.light footer .border-\[\#233D4C\]\/60,
+html.light footer .border-\[\#233D4C\],
+.light footer .border-\[\#233D4C\]\/60,
+.light footer .border-\[\#233D4C\] {
+  border-color: rgba(35, 61, 76, 0.6) !important;
+}
+
+/* 2. Newsletter CTA Section in Light Mode (Seamless, clean, high-contrast) */
+html.light #newsletter,
+.light #newsletter,
+html.light #newsletter-cta-section,
+.light #newsletter-cta-section,
+html.light .newsletter-section,
+.light .newsletter-section {
+  background-color: #f3f6f8 !important;
+  background-image: none !important;
+  border-top-color: rgba(35, 61, 76, 0.18) !important;
+}
+
+html.light #newsletter h2,
+.light #newsletter h2,
+html.light #newsletter-cta-section h2,
+.light #newsletter-cta-section h2,
+html.light .newsletter-section h2,
+.light .newsletter-section h2 {
+  color: #111e26 !important;
+}
+
+html.light #newsletter p,
+.light #newsletter p,
+html.light #newsletter-cta-section p,
+.light #newsletter-cta-section p,
+html.light .newsletter-section p,
+.light .newsletter-section p,
+html.light #newsletter .text-\[\#9fb3be\],
+.light #newsletter .text-\[\#9fb3be\],
+html.light #newsletter-cta-section .text-\[\#9fb3be\],
+.light #newsletter-cta-section .text-\[\#9fb3be\] {
+  color: #476d83 !important;
+}
+
+html.light #newsletter input,
+.light #newsletter input,
+html.light #newsletter-cta-section input,
+.light #newsletter-cta-section input,
+html.light .newsletter-section input,
+.light .newsletter-section input {
+  background-color: #ffffff !important;
+  color: #111e26 !important;
+  border: 1px solid rgba(35, 61, 76, 0.25) !important;
+  box-shadow: 0 2px 6px rgba(35, 61, 76, 0.05) !important;
+}
+
+html.light #newsletter input::placeholder,
+.light #newsletter input::placeholder,
+html.light #newsletter-cta-section input::placeholder,
+.light #newsletter-cta-section input::placeholder {
+  color: #7fa2b6 !important;
+}
+
+html.light #newsletter a.text-white,
+.light #newsletter a.text-white,
+html.light #newsletter-cta-section a.text-white,
+.light #newsletter-cta-section a.text-white,
+html.light .newsletter-section a.text-white,
+.light .newsletter-section a.text-white {
+  color: #111e26 !important;
+}
+
+html.light #newsletter a.text-white:hover,
+.light #newsletter a.text-white:hover,
+html.light #newsletter-cta-section a.text-white:hover,
+.light #newsletter-cta-section a.text-white:hover {
+  color: #FD802E !important;
+}
+
+html.light #newsletter .border-t,
+.light #newsletter .border-t,
+html.light #newsletter-cta-section .border-t,
+.light #newsletter-cta-section .border-t,
+html.light .newsletter-section .border-t,
+.light .newsletter-section .border-t {
+  border-color: rgba(35, 61, 76, 0.15) !important;
+}
+
+html.light #newsletter span:not([class*="text-[#FD802E]"]):not(.text-pumpkin),
+.light #newsletter span:not([class*="text-[#FD802E]"]):not(.text-pumpkin) {
+  color: #476d83 !important;
+}
+
+/* Light Mode Dark Gradients Conversion (Converts dark hero cards/boxes to clean white cards) */
+html.light .rounded-3xl.bg-gradient-to-r.from-\[\#0e181f\],
+html.light .rounded-3xl.bg-gradient-to-r.from-\[\#172731\],
+html.light .rounded-2xl.bg-gradient-to-b.from-\[\#172731\],
+.light .rounded-3xl.bg-gradient-to-r.from-\[\#0e181f\],
+.light .rounded-3xl.bg-gradient-to-r.from-\[\#172731\],
+.light .rounded-2xl.bg-gradient-to-b.from-\[\#172731\] {
+  background-image: none !important;
+  background-color: #ffffff !important;
+  border-color: rgba(35, 61, 76, 0.18) !important;
+  box-shadow: 0 10px 25px -5px rgba(35, 61, 76, 0.06) !important;
+}
+
+/* Eliminate whitish fade over images and videos in light mode - keep them 100% crystal clear & unclouded */
+html.light .bg-gradient-to-t.from-\[\#172731\],
+.light .bg-gradient-to-t.from-\[\#172731\],
+html.light .bg-gradient-to-t.from-\[\#172731\]\/80,
+.light .bg-gradient-to-t.from-\[\#172731\]\/80,
+html.light .bg-gradient-to-t.from-\[\#0e181f\]\/30,
+.light .bg-gradient-to-t.from-\[\#0e181f\]\/30,
+html.light #diagnostic-card-phase-1-2 .bg-gradient-to-t,
+html.light #diagnostic-card-phase-3-4 .bg-gradient-to-t,
+.light #diagnostic-card-phase-1-2 .bg-gradient-to-t,
+.light #diagnostic-card-phase-3-4 .bg-gradient-to-t {
+  display: none !important;
+  background-image: none !important;
+  opacity: 0 !important;
+}
+
+/* 3. Product Cards in Light Mode (Crisp high-contrast spec boxes & text) */
+html.light .bg-\[\#0e181f\]\/60,
+.light .bg-\[\#0e181f\]\/60,
+html.light .product-spec-pill,
+.light .product-spec-pill {
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #475569 !important;
+}
+
+html.light .bg-\[\#0e181f\]\/60 span.text-white,
+.light .bg-\[\#0e181f\]\/60 span.text-white,
+html.light .bg-\[\#0e181f\]\/60 .font-bold,
+.light .bg-\[\#0e181f\]\/60 .font-bold,
+html.light .bg-\[\#0e181f\]\/60 .font-semibold,
+.light .bg-\[\#0e181f\]\/60 .font-semibold {
+  color: #0f172a !important;
+}
+
+/* 4. Orange buttons always maintain bright white text in both modes */
+html.light .bg-\[\#FD802E\],
+.light .bg-\[\#FD802E\],
+html.light a.bg-\[\#FD802E\],
+.light a.bg-\[\#FD802E\],
+html.light button.bg-\[\#FD802E\],
+.light button.bg-\[\#FD802E\] {
+  background-color: #FD802E !important;
+  color: #ffffff !important;
+}
+
+html.light .bg-\[\#FD802E\] *,
+.light .bg-\[\#FD802E\] * {
+  color: #ffffff !important;
+}
+
+/* WhatsApp Green Buttons: Always Maintain Crisp White Text & Icons in Both Modes */
+html.light .bg-\[\#25D366\],
+.light .bg-\[\#25D366\],
+html.light a.bg-\[\#25D366\],
+.light a.bg-\[\#25D366\],
+html.light button.bg-\[\#25D366\],
+.light button.bg-\[\#25D366\] {
+  background-color: #25D366 !important;
+  color: #ffffff !important;
+}
+
+html.light .bg-\[\#25D366\] *,
+.light .bg-\[\#25D366\] * {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* Dark Floating Badges & Rating Pills Over Images (Always Crisp Bright White in Both Modes) */
+html.light [class*="bg-black/"],
+.light [class*="bg-black/"],
+html.light [class*="bg-black"],
+.light [class*="bg-black"],
+html.light .product-dark-badge,
+.light .product-dark-badge,
+html.light .rating-pill-dark,
+.light .rating-pill-dark,
+.product-dark-badge,
+.rating-pill-dark {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+html.light .product-dark-badge,
+.light .product-dark-badge,
+html.light .product-dark-badge span,
+.light .product-dark-badge span,
+html.light .rating-pill-dark span,
+.light .rating-pill-dark span,
+html.light .rating-pill-dark .rating-score,
+.light .rating-pill-dark .rating-score,
+.product-dark-badge,
+.rating-pill-dark span,
+.rating-pill-dark .rating-score {
+  color: #ffffff !important;
+}
+
+html.light .rating-pill-dark .rating-count,
+.light .rating-pill-dark .rating-count,
+.rating-pill-dark .rating-count {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Rating Star: ALWAYS Vibrant Brand Orange (#FD802E) in both Dark & Light modes */
+html.light .rating-pill-dark svg,
+.light .rating-pill-dark svg,
+.rating-pill-dark svg,
+html.light .rating-pill-dark svg path,
+.light .rating-pill-dark svg path,
+.rating-pill-dark svg path {
+  color: #FD802E !important;
+  fill: #FD802E !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-laptop-creative-1,
+  .animate-laptop-creative-2 {
+    animation: none !important;
+  }
+}
+
+/* SLA Guarantee Cards & Number Badges in Light Mode */
+html.light .w-10.h-10.bg-\[\#0e181f\],
+.light .w-10.h-10.bg-\[\#0e181f\] {
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #FD802E !important;
+}
+
+html.light #service-guarantees .equal-card,
+.light #service-guarantees .equal-card {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* ==========================================================================
+   TOAST NOTIFICATIONS (DARK & LIGHT MODES HIGH CONTRAST)
+   ========================================================================== */
+.toast-item {
+  box-sizing: border-box;
+}
+
+/* Dark Mode Default Toast */
+.toast-item.toast-success {
+  background-color: #172731 !important;
+  color: #ffffff !important;
+  border: 1.5px solid #FD802E !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6), 0 0 15px rgba(253, 128, 46, 0.25) !important;
+}
+
+.toast-item.toast-success span,
+.toast-item.toast-success .toast-text {
+  color: #ffffff !important;
+}
+
+.toast-item.toast-error {
+  background-color: #450a0a !important;
+  color: #ffffff !important;
+  border: 1.5px solid #ef4444 !important;
+}
+
+.toast-item.toast-error span,
+.toast-item.toast-error .toast-text {
+  color: #ffffff !important;
+}
+
+/* Light Mode Toast (Crisp White Card with Dark Charcoal Text & Orange Accent) */
+html.light .toast-item.toast-success,
+.light .toast-item.toast-success {
+  background-color: #ffffff !important;
+  color: #111e26 !important;
+  border: 1.5px solid #FD802E !important;
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.18), 0 4px 14px rgba(253, 128, 46, 0.2) !important;
+}
+
+html.light .toast-item.toast-success span,
+html.light .toast-item.toast-success .toast-text,
+.light .toast-item.toast-success span,
+.light .toast-item.toast-success .toast-text {
+  color: #111e26 !important;
+  font-weight: 600 !important;
+}
+
+html.light .toast-item.toast-error,
+.light .toast-item.toast-error {
+  background-color: #ffffff !important;
+  color: #991b1b !important;
+  border: 1.5px solid #ef4444 !important;
+  box-shadow: 0 15px 35px -5px rgba(239, 68, 68, 0.18) !important;
+}
+
+html.light .toast-item.toast-error span,
+html.light .toast-item.toast-error .toast-text,
+.light .toast-item.toast-error span,
+.light .toast-item.toast-error .toast-text {
+  color: #991b1b !important;
+  font-weight: 600 !important;
+}

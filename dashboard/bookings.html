@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Repair Bookings – LAPNEST Dashboard</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-[#111e26] text-white selection:bg-[#d29f22] selection:text-[#111e26] antialiased">
+
+  <div class="min-h-screen flex">
+    
+    <aside id="dash-sidebar" class="fixed inset-y-0 left-0 z-40 w-64 bg-[#172731] border-r border-[#233D4C] transform -translate-x-full lg:translate-x-0 transition-transform duration-300 flex flex-col justify-between">
+      <div>
+        <div class="h-16 flex items-center justify-between px-6 border-b border-[#233D4C]">
+          <a href="../index.html"><img src="../assets/images/logo/logo-dark.svg" alt="LAPNEST" class="brand-logo-img h-8 w-auto"></a>
+          <button id="dash-sidebar-close" class="lg:hidden text-gray-400 hover:text-white"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+        </div>
+        <nav class="p-4 space-y-1 text-xs font-semibold">
+          <a href="index.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Overview</a>
+          <a href="products.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Products</a>
+          <a href="orders.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Orders</a>
+          <a href="services.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Services</a>
+          <a href="bookings.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl bg-[#d29f22] text-[#111e26] font-bold">Repair Bookings</a>
+          <a href="blogs.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Blog Manager</a>
+          <a href="customers.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Customers</a>
+          <a href="enquiries.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Enquiries</a>
+          <a href="settings.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-[#9fb3be] hover:text-white hover:bg-[#111e26]">Settings</a>
+        </nav>
+      </div>
+      <div class="p-4 border-t border-[#233D4C]">
+        <a href="../index.html" class="w-full flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl bg-[#111e26] border border-[#233D4C] text-xs font-bold text-white">View Live Website ↗</a>
+      </div>
+    </aside>
+
+    <div class="flex-1 lg:pl-64 flex flex-col min-w-0">
+      <header class="h-16 bg-[#172731] border-b border-[#233D4C] px-4 sm:px-8 flex items-center justify-between sticky top-0 z-30">
+        <div class="flex items-center gap-4">
+          <button id="dash-sidebar-toggle" class="lg:hidden p-2 rounded-lg text-gray-400 bg-[#111e26]"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+          <h2 class="text-sm sm:text-base font-bold text-white">Repair Appointments Queue</h2>
+        </div>
+      </header>
+
+      <main class="p-4 sm:p-8 space-y-6 flex-1">
+        
+        <div class="p-6 rounded-3xl bg-[#172731] border border-[#233D4C] shadow-card-dark overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-[#111e26] text-[#9fb3be] border-b border-[#233D4C]">
+              <tr>
+                <th class="py-3 px-4 font-semibold">Ticket ID</th>
+                <th class="py-3 px-4 font-semibold">Customer</th>
+                <th class="py-3 px-4 font-semibold">Laptop Model</th>
+                <th class="py-3 px-4 font-semibold">Service</th>
+                <th class="py-3 px-4 font-semibold">Booking Date</th>
+                <th class="py-3 px-4 font-semibold">Status</th>
+                <th class="py-3 px-4 font-semibold text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[#233D4C] text-[#9fb3be]">
+              <tr>
+                <td class="py-3.5 px-4 font-mono font-bold text-white">#REP-4102</td>
+                <td class="py-3.5 px-4 text-white font-medium">Vikram Anand (98401 99887)</td>
+                <td class="py-3.5 px-4">MacBook Pro 14" (2023)</td>
+                <td class="py-3.5 px-4">Liquid Damage Cleanroom Ultrasonic Bath</td>
+                <td class="py-3.5 px-4">Nov 04, 2026</td>
+                <td class="py-3.5 px-4"><span class="px-2 py-0.5 rounded text-[10px] bg-sky-500/20 text-sky-400 font-bold">In Cleanroom</span></td>
+                <td class="py-3.5 px-4 text-right space-x-2">
+                  <button class="text-[#d29f22] hover:underline">Update</button>
+                  <button class="demo-delete-btn text-rose-400 hover:underline">Close</button>
+                </td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-mono font-bold text-white">#REP-4101</td>
+                <td class="py-3.5 px-4 text-white font-medium">Suresh Babu (98400 44332)</td>
+                <td class="py-3.5 px-4">Dell Inspiron 15 3520</td>
+                <td class="py-3.5 px-4">FHD Screen Replacement</td>
+                <td class="py-3.5 px-4">Nov 03, 2026</td>
+                <td class="py-3.5 px-4"><span class="px-2 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-400 font-bold">Ready for Pickup</span></td>
+                <td class="py-3.5 px-4 text-right space-x-2">
+                  <button class="text-[#d29f22] hover:underline">Update</button>
+                  <button class="demo-delete-btn text-rose-400 hover:underline">Close</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </main>
+    </div>
+
+  </div>
+
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>
