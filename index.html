@@ -16,7 +16,7 @@
   <link rel="preload" href="assets/videos/home1.mp4" as="video" type="video/mp4">
   
   <!-- Compiled Tailwind & Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=2.2">
+  <link rel="stylesheet" href="assets/css/style.css?v=4.4">
 </head>
 <body class="bg-[#0e181f] text-white selection:bg-[#FD802E] selection:text-white antialiased overflow-x-hidden min-h-screen flex flex-col">
 
@@ -25,7 +25,7 @@
 
   <!-- STICKY NAVBAR (FULL-WIDTH BRAND HEADER) -->
   <header id="main-navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3.5 bg-[#0e181f]/90 backdrop-blur-md border-b border-[#233D4C]/60">
-    <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 flex items-center justify-between gap-4 lg:gap-6 xl:gap-8">
+    <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-4 xl:px-8 flex items-center justify-between gap-3 lg:gap-3.5 xl:gap-6 2xl:gap-8">
       
       <!-- Brand Logo -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none shrink-0">
@@ -33,15 +33,15 @@
              data-dark="assets/images/logo/logo-dark.svg" 
              data-light="assets/images/logo/logo-light.svg" 
              alt="LAPNEST – BUY • SELL • REPAIR • RENT" 
-             class="brand-logo-img header-logo h-9 sm:h-11 md:h-12 w-auto max-w-[150px] sm:max-w-none transition-transform duration-300 group-hover:scale-105">
+             class="brand-logo-img header-logo h-10 sm:h-11 lg:h-9 xl:h-11 w-auto max-w-[190px] sm:max-w-none lg:max-w-[170px] xl:max-w-none transition-transform duration-300 group-hover:scale-105">
       </a>
 
       <!-- Desktop Center Navigation Menu (Old Nav Layout - Clean Text Links) -->
-      <nav class="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-8">
+      <nav class="hidden lg:flex items-center gap-2 lg:gap-2.5 xl:gap-5 2xl:gap-7">
         
         <!-- Home Dropdown -->
         <div class="relative group dropdown-container">
-          <button type="button" class="dropdown-btn nav-link-item flex items-center gap-1.5 text-sm font-semibold text-white hover:text-[#FD802E] transition-colors focus:outline-none py-2 whitespace-nowrap" aria-expanded="false" aria-haspopup="true">
+          <button type="button" class="dropdown-btn nav-link-item flex items-center gap-1.5 text-xs xl:text-sm font-semibold text-white hover:text-[#FD802E] transition-colors focus:outline-none py-2 whitespace-nowrap" aria-expanded="false" aria-haspopup="true">
             <span>Home</span>
             <svg class="dropdown-arrow-icon w-4 h-4 transition-transform duration-200 group-hover:rotate-180 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </button>
@@ -59,31 +59,31 @@
           </div>
         </div>
 
-        <a href="about.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">About</a>
-        <a href="products.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Products</a>
-        <a href="pricing.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Pricing</a>
-        <a href="repair-upgrade.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Repair & Upgrade</a>
-        <a href="blog.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Blog</a>
-        <a href="contact.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Contact</a>
+        <a href="about.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">About</a>
+        <a href="products.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Products</a>
+        <a href="pricing.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Pricing</a>
+        <a href="repair-upgrade.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Repair & Upgrade</a>
+        <a href="blog.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Blog</a>
+        <a href="contact.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Contact</a>
       </nav>
 
       <!-- Right Controls: RTL Toggle, Theme Toggle, Order CTA -->
-      <div class="flex items-center gap-2 sm:gap-2.5 xl:gap-3 shrink-0">
+      <div class="flex items-center gap-1.5 lg:gap-2 xl:gap-3 shrink-0">
         
         <!-- RTL/LTR Toggle with Clean Arrow -->
-        <button type="button" class="rtl-toggle-btn h-10 px-3 rounded-xl text-xs font-bold border border-[#233D4C] bg-[#172731] text-[#9fb3be] hover:text-[#FD802E] hover:border-[#FD802E] transition-all hidden sm:inline-flex items-center justify-center gap-1.5 shrink-0" title="Toggle RTL / LTR" aria-label="Toggle Text Direction">
+        <button type="button" class="rtl-toggle-btn h-9 xl:h-10 px-2.5 xl:px-3 rounded-xl text-[11px] xl:text-xs font-bold border border-[#233D4C] bg-[#172731] text-[#9fb3be] hover:text-[#FD802E] hover:border-[#FD802E] transition-all hidden lg:inline-flex items-center justify-center gap-1.5 shrink-0" title="Toggle RTL / LTR" aria-label="Toggle Text Direction">
           <svg class="w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
           <span class="dir-badge text-[11px] tracking-wider">RTL</span>
         </button>
 
         <!-- Dark/Light Theme Toggle -->
-        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-xl text-[#9fb3be] hover:text-[#FD802E] bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] transition-all hidden sm:inline-flex items-center justify-center shrink-0" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
+        <button type="button" class="theme-toggle-btn w-9 h-9 xl:w-10 xl:h-10 rounded-xl text-[#9fb3be] hover:text-[#FD802E] bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] transition-all hidden lg:inline-flex items-center justify-center shrink-0" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
           <svg class="sun-icon w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
           <svg class="moon-icon w-4 h-4 text-[#FD802E] hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
         </button>
 
         <!-- Dedicated Order CTA -->
-        <a href="order.html" class="hidden sm:inline-flex items-center justify-center gap-2 h-10 px-4 xl:px-5 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white shadow-lg shadow-[#FD802E]/25 transition-all duration-300 transform hover:-translate-y-0.5 shrink-0 whitespace-nowrap">
+        <a href="order.html" class="hidden lg:inline-flex items-center justify-center gap-1.5 xl:gap-2 h-9 xl:h-10 px-3.5 xl:px-5 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white shadow-lg shadow-[#FD802E]/25 transition-all duration-300 transform hover:-translate-y-0.5 shrink-0 whitespace-nowrap">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
           <span>Order Now</span>
         </a>
@@ -287,7 +287,7 @@
             <div class="equal-card-body p-5 flex flex-col flex-1">
               <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">Gaming Laptops</h3>
               <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">GeForce RTX 40-Series power with 165Hz+ high refresh displays for elite gamers.</p>
-              <div class="equal-card-footer mt-auto pt-4">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C]">
                 <a href="products.html?cat=gaming" class="category-explore-btn w-full py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all">
                   <span>Explore Gaming</span>
                   <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
@@ -306,7 +306,7 @@
             <div class="equal-card-body p-5 flex flex-col flex-1">
               <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">Business Laptops</h3>
               <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Mil-spec durability, TPM 2.0 security, and all-day battery life for corporate leaders.</p>
-              <div class="equal-card-footer mt-auto pt-4">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C]">
                 <a href="products.html?cat=business" class="category-explore-btn w-full py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all">
                   <span>Explore Business</span>
                   <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
@@ -325,7 +325,7 @@
             <div class="equal-card-body p-5 flex flex-col flex-1">
               <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">Student Laptops</h3>
               <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Lightweight laptops with fast SSDs for coding, campus coursework, and daily study.</p>
-              <div class="equal-card-footer mt-auto pt-4">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C]">
                 <a href="products.html?cat=student" class="category-explore-btn w-full py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all">
                   <span>Explore Student</span>
                   <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
@@ -344,7 +344,7 @@
             <div class="equal-card-body p-5 flex flex-col flex-1">
               <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">Professional Workstations</h3>
               <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Color-accurate displays with ECC RAM support for 3D renderers and video editors.</p>
-              <div class="equal-card-footer mt-auto pt-4">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C]">
                 <a href="products.html?cat=professional" class="category-explore-btn w-full py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all">
                   <span>Explore Creator</span>
                   <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
@@ -363,7 +363,7 @@
             <div class="equal-card-body p-5 flex flex-col flex-1">
               <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">Laptop Accessories</h3>
               <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Original USB-C GaN adapters, mechanical keyboards, precision stands, and sleeves.</p>
-              <div class="equal-card-footer mt-auto pt-4">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C]">
                 <a href="products.html?cat=accessories" class="category-explore-btn w-full py-2.5 px-4 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all">
                   <span>Explore Gear</span>
                   <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
@@ -415,17 +415,17 @@
                 <span>Inspiron 15 3530</span>
               </div>
               <h3 class="text-lg font-bold text-white mt-2 group-hover:text-[#FD802E] transition-colors">Dell Inspiron 15 Slim</h3>
-              <div class="grid grid-cols-3 gap-2 my-4 p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C]/40">
-                <div><span class="block text-white font-semibold">Core i5</span>13th Gen</div>
-                <div><span class="block text-white font-semibold">16GB</span>DDR4</div>
-                <div><span class="block text-white font-semibold">512GB</span>NVMe SSD</div>
+              <div class="grid grid-cols-3 my-4 p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C]">
+                <div class="pr-2 border-r border-[#233D4C]"><span class="block text-white font-semibold">Core i5</span>13th Gen</div>
+                <div class="px-2 border-r border-[#233D4C]"><span class="block text-white font-semibold">16GB</span>DDR4</div>
+                <div class="pl-2"><span class="block text-white font-semibold">512GB</span>NVMe SSD</div>
               </div>
               <div class="flex items-baseline gap-2 mb-4">
                 <span class="text-2xl font-black text-white">₹58,990</span>
                 <span class="text-xs text-gray-400 line-through">₹66,990</span>
                 <span class="text-[11px] text-[#FD802E] font-semibold ml-auto">Free Bag + Mouse</span>
               </div>
-              <div class="equal-card-footer grid grid-cols-2 gap-3">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C] grid grid-cols-2 gap-3">
                 <a href="product-details.html?id=1" class="py-2.5 px-3 rounded-xl text-xs font-semibold bg-[#233D4C] hover:bg-[#111e26] text-white text-center transition-colors">View Details</a>
                 <a href="order.html?product=dell-inspiron" class="py-2.5 px-3 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white text-center transition-colors shadow-sm">Order Now</a>
               </div>
@@ -447,17 +447,17 @@
                 <span>Pavilion Plus 14</span>
               </div>
               <h3 class="text-lg font-bold text-white mt-2 group-hover:text-[#FD802E] transition-colors">HP Pavilion 14 OLED</h3>
-              <div class="grid grid-cols-3 gap-2 my-4 p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C]/40">
-                <div><span class="block text-white font-semibold">Ryzen 7</span>7840U</div>
-                <div><span class="block text-white font-semibold">16GB</span>LPDDR5</div>
-                <div><span class="block text-white font-semibold">1TB</span>PCIe Gen4</div>
+              <div class="grid grid-cols-3 my-4 p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C]">
+                <div class="pr-2 border-r border-[#233D4C]"><span class="block text-white font-semibold">Ryzen 7</span>7840U</div>
+                <div class="px-2 border-r border-[#233D4C]"><span class="block text-white font-semibold">16GB</span>LPDDR5</div>
+                <div class="pl-2"><span class="block text-white font-semibold">1TB</span>PCIe Gen4</div>
               </div>
               <div class="flex items-baseline gap-2 mb-4">
                 <span class="text-2xl font-black text-white">₹72,490</span>
                 <span class="text-xs text-gray-400 line-through">₹84,990</span>
                 <span class="text-[11px] text-[#FD802E] font-semibold ml-auto">OLED 2.8K</span>
               </div>
-              <div class="equal-card-footer grid grid-cols-2 gap-3">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C] grid grid-cols-2 gap-3">
                 <a href="product-details.html?id=2" class="py-2.5 px-3 rounded-xl text-xs font-semibold bg-[#233D4C] hover:bg-[#111e26] text-white text-center transition-colors">View Details</a>
                 <a href="order.html?product=hp-pavilion" class="py-2.5 px-3 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white text-center transition-colors shadow-sm">Order Now</a>
               </div>
@@ -479,17 +479,17 @@
                 <span>ThinkPad E14 Gen 5</span>
               </div>
               <h3 class="text-lg font-bold text-white mt-2 group-hover:text-[#FD802E] transition-colors">Lenovo ThinkPad Pro</h3>
-              <div class="grid grid-cols-3 gap-2 my-4 p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C]/40">
-                <div><span class="block text-white font-semibold">Core i7</span>1355U</div>
-                <div><span class="block text-white font-semibold">24GB</span>Dual Ch.</div>
-                <div><span class="block text-white font-semibold">1TB</span>NVMe M.2</div>
+              <div class="grid grid-cols-3 my-4 p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C]">
+                <div class="pr-2 border-r border-[#233D4C]"><span class="block text-white font-semibold">Core i7</span>1355U</div>
+                <div class="px-2 border-r border-[#233D4C]"><span class="block text-white font-semibold">24GB</span>Dual Ch.</div>
+                <div class="pl-2"><span class="block text-white font-semibold">1TB</span>NVMe M.2</div>
               </div>
               <div class="flex items-baseline gap-2 mb-4">
                 <span class="text-2xl font-black text-white">₹79,990</span>
                 <span class="text-xs text-gray-400 line-through">₹92,000</span>
                 <span class="text-[11px] text-[#FD802E] font-semibold ml-auto">3-Yr Onsite</span>
               </div>
-              <div class="equal-card-footer grid grid-cols-2 gap-3">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C] grid grid-cols-2 gap-3">
                 <a href="product-details.html?id=3" class="py-2.5 px-3 rounded-xl text-xs font-semibold bg-[#233D4C] hover:bg-[#111e26] text-white text-center transition-colors">View Details</a>
                 <a href="order.html?product=lenovo-thinkpad" class="py-2.5 px-3 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white text-center transition-colors shadow-sm">Order Now</a>
               </div>
@@ -511,17 +511,17 @@
                 <span>ROG Strix G16 (2024)</span>
               </div>
               <h3 class="text-lg font-bold text-white mt-2 group-hover:text-[#FD802E] transition-colors">ASUS ROG Strix G16</h3>
-              <div class="grid grid-cols-3 gap-2 my-4 p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C]/40">
-                <div><span class="block text-white font-semibold">i9-13980HX</span>24-Core</div>
-                <div><span class="block text-white font-semibold">RTX 4070</span>8GB VRAM</div>
-                <div><span class="block text-white font-semibold">32GB</span>DDR5 5600</div>
+              <div class="grid grid-cols-3 my-4 p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C]">
+                <div class="pr-2 border-r border-[#233D4C]"><span class="block text-white font-semibold">i9-13980HX</span>24-Core</div>
+                <div class="px-2 border-r border-[#233D4C]"><span class="block text-white font-semibold">RTX 4070</span>8GB VRAM</div>
+                <div class="pl-2"><span class="block text-white font-semibold">32GB</span>DDR5 5600</div>
               </div>
               <div class="flex items-baseline gap-2 mb-4">
                 <span class="text-2xl font-black text-white">₹1,54,990</span>
                 <span class="text-xs text-gray-400 line-through">₹1,74,990</span>
                 <span class="text-[11px] text-[#FD802E] font-semibold ml-auto">240Hz Nebula</span>
               </div>
-              <div class="equal-card-footer grid grid-cols-2 gap-3">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C] grid grid-cols-2 gap-3">
                 <a href="product-details.html?id=4" class="py-2.5 px-3 rounded-xl text-xs font-semibold bg-[#233D4C] hover:bg-[#111e26] text-white text-center transition-colors">View Details</a>
                 <a href="order.html?product=asus-rog" class="py-2.5 px-3 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white text-center transition-colors shadow-sm">Order Now</a>
               </div>
@@ -543,17 +543,17 @@
                 <span>Nitro V 15 ANV15</span>
               </div>
               <h3 class="text-lg font-bold text-white mt-2 group-hover:text-[#FD802E] transition-colors">Acer Nitro V 15</h3>
-              <div class="grid grid-cols-3 gap-2 my-4 p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C]/40">
-                <div><span class="block text-white font-semibold">Core i5</span>13420H</div>
-                <div><span class="block text-white font-semibold">RTX 4050</span>6GB GDDR6</div>
-                <div><span class="block text-white font-semibold">16GB</span>DDR5</div>
+              <div class="grid grid-cols-3 my-4 p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C]">
+                <div class="pr-2 border-r border-[#233D4C]"><span class="block text-white font-semibold">Core i5</span>13420H</div>
+                <div class="px-2 border-r border-[#233D4C]"><span class="block text-white font-semibold">RTX 4050</span>6GB GDDR6</div>
+                <div class="pl-2"><span class="block text-white font-semibold">16GB</span>DDR5</div>
               </div>
               <div class="flex items-baseline gap-2 mb-4">
                 <span class="text-2xl font-black text-white">₹73,990</span>
                 <span class="text-xs text-gray-400 line-through">₹86,990</span>
                 <span class="text-[11px] text-[#FD802E] font-semibold ml-auto">144Hz IPS</span>
               </div>
-              <div class="equal-card-footer grid grid-cols-2 gap-3">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C] grid grid-cols-2 gap-3">
                 <a href="product-details.html?id=5" class="py-2.5 px-3 rounded-xl text-xs font-semibold bg-[#233D4C] hover:bg-[#111e26] text-white text-center transition-colors">View Details</a>
                 <a href="order.html?product=acer-nitro" class="py-2.5 px-3 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white text-center transition-colors shadow-sm">Order Now</a>
               </div>
@@ -575,17 +575,17 @@
                 <span>MacBook Air 13-inch</span>
               </div>
               <h3 class="text-lg font-bold text-white mt-2 group-hover:text-[#FD802E] transition-colors">Apple MacBook Air M2</h3>
-              <div class="grid grid-cols-3 gap-2 my-4 p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C]/40">
-                <div><span class="block text-white font-semibold">Apple M2</span>8-Core CPU</div>
-                <div><span class="block text-white font-semibold">16GB</span>Unified</div>
-                <div><span class="block text-white font-semibold">512GB</span>Fast SSD</div>
+              <div class="grid grid-cols-3 my-4 p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C]">
+                <div class="pr-2 border-r border-[#233D4C]"><span class="block text-white font-semibold">Apple M2</span>8-Core CPU</div>
+                <div class="px-2 border-r border-[#233D4C]"><span class="block text-white font-semibold">16GB</span>Unified</div>
+                <div class="pl-2"><span class="block text-white font-semibold">512GB</span>Fast SSD</div>
               </div>
               <div class="flex items-baseline gap-2 mb-4">
                 <span class="text-2xl font-black text-white">₹1,07,990</span>
                 <span class="text-xs text-gray-400 line-through">₹1,19,900</span>
                 <span class="text-[11px] text-[#FD802E] font-semibold ml-auto">18 Hr Battery</span>
               </div>
-              <div class="equal-card-footer grid grid-cols-2 gap-3">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C] grid grid-cols-2 gap-3">
                 <a href="product-details.html?id=6" class="py-2.5 px-3 rounded-xl text-xs font-semibold bg-[#233D4C] hover:bg-[#111e26] text-white text-center transition-colors">View Details</a>
                 <a href="order.html?product=apple-macbook" class="py-2.5 px-3 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white text-center transition-colors shadow-sm">Order Now</a>
               </div>
@@ -626,12 +626,12 @@
               </div>
               <h3 class="text-xl font-black text-white group-hover:text-[#FD802E] transition-colors">Apple MacBook Pro 16″</h3>
               <p class="text-xs text-[#9fb3be] mt-1 mb-4 min-h-[36px] flex items-center">Apple M3 Max (16-Core CPU, 40-Core GPU) • 48GB Unified RAM • 1TB SSD</p>
-              <div class="grid grid-cols-2 gap-2 text-[11px] text-[#9fb3be] bg-[#0e181f]/60 p-3 rounded-xl border border-[#233D4C]/40 mb-4 min-h-[58px]">
-                <div><span class="text-white font-bold block">120Hz ProMotion</span>Color Reference</div>
-                <div><span class="text-white font-bold block">22 Hr Battery</span>MagSafe 3 Fast</div>
+              <div class="grid grid-cols-2 my-4 p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C] mb-4 min-h-[58px]">
+                <div class="pr-2 border-r border-[#233D4C]"><span class="text-white font-bold block">120Hz ProMotion</span>Color Reference</div>
+                <div class="pl-2"><span class="text-white font-bold block">22 Hr Battery</span>MagSafe 3 Fast</div>
               </div>
             </div>
-            <div class="pt-4 border-t border-[#233D4C]/60 flex items-center justify-between mt-auto">
+            <div class="pt-4 border-t border-[#233D4C] flex items-center justify-between mt-auto">
               <div>
                 <span class="text-xs text-[#9fb3be] block">Direct Showroom Price</span>
                 <span class="text-2xl font-black text-white">₹3,49,900</span>
@@ -653,12 +653,12 @@
               </div>
               <h3 class="text-xl font-black text-white group-hover:text-[#FD802E] transition-colors">ASUS ROG Strix SCAR 18</h3>
               <p class="text-xs text-[#9fb3be] mt-1 mb-4 min-h-[36px] flex items-center">Intel Core i9-14900HX • 64GB DDR5 5600MHz • 2TB PCIe 4.0 RAID 0</p>
-              <div class="grid grid-cols-2 gap-2 text-[11px] text-[#9fb3be] bg-[#0e181f]/60 p-3 rounded-xl border border-[#233D4C]/40 mb-4 min-h-[58px]">
-                <div><span class="text-white font-bold block">18″ 2.5K 240Hz</span>Mini-LED HDR 1100</div>
-                <div><span class="text-white font-bold block">Tri-Fan Tech</span>Liquid Metal Conduct</div>
+              <div class="grid grid-cols-2 my-4 p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C] mb-4 min-h-[58px]">
+                <div class="pr-2 border-r border-[#233D4C]"><span class="text-white font-bold block">18″ 2.5K 240Hz</span>Mini-LED HDR 1100</div>
+                <div class="pl-2"><span class="text-white font-bold block">Tri-Fan Tech</span>Liquid Metal Conduct</div>
               </div>
             </div>
-            <div class="pt-4 border-t border-[#233D4C]/60 flex items-center justify-between mt-auto">
+            <div class="pt-4 border-t border-[#233D4C] flex items-center justify-between mt-auto">
               <div>
                 <span class="text-xs text-[#9fb3be] block">Direct Showroom Price</span>
                 <span class="text-2xl font-black text-white">₹3,79,990</span>
@@ -680,12 +680,12 @@
               </div>
               <h3 class="text-xl font-black text-white group-hover:text-[#FD802E] transition-colors">ThinkPad X1 Carbon Gen 11</h3>
               <p class="text-xs text-[#9fb3be] mt-1 mb-4 min-h-[36px] flex items-center">Intel Core i7-1365U vPro • 32GB LPDDR5 • 1TB Performance SSD</p>
-              <div class="grid grid-cols-2 gap-2 text-[11px] text-[#9fb3be] bg-[#0e181f]/60 p-3 rounded-xl border border-[#233D4C]/40 mb-4 min-h-[58px]">
-                <div><span class="text-white font-bold block">2.8K OLED Display</span>100% DCI-P3 Anti-Glare</div>
-                <div><span class="text-white font-bold block">MIL-STD-810H</span>Military Tested Frame</div>
+              <div class="grid grid-cols-2 my-4 p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C] mb-4 min-h-[58px]">
+                <div class="pr-2 border-r border-[#233D4C]"><span class="text-white font-bold block">2.8K OLED Display</span>100% DCI-P3 Anti-Glare</div>
+                <div class="pl-2"><span class="text-white font-bold block">MIL-STD-810H</span>Military Tested Frame</div>
               </div>
             </div>
-            <div class="pt-4 border-t border-[#233D4C]/60 flex items-center justify-between mt-auto">
+            <div class="pt-4 border-t border-[#233D4C] flex items-center justify-between mt-auto">
               <div>
                 <span class="text-xs text-[#9fb3be] block">Direct Showroom Price</span>
                 <span class="text-2xl font-black text-white">₹1,94,990</span>
@@ -800,7 +800,7 @@
             <div class="equal-card-body p-6 flex flex-col flex-1">
               <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">Screen & Panel Replacement</h3>
               <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Fix cracked displays, flickering backlights, vertical lines, and color distortions with genuine FHD, OLED, and 144Hz IPS panels.</p>
-              <div class="equal-card-footer mt-auto pt-4 flex items-center justify-between">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C] flex items-center justify-between">
                 <span class="text-xs text-[#FD802E] font-semibold">From ₹2,499</span>
                 <a href="service-details.html?service=screen" class="inline-flex items-center gap-1.5 text-xs font-bold text-white group-hover:text-[#FD802E] transition-colors">
                   <span>Learn More</span>
@@ -820,7 +820,7 @@
             <div class="equal-card-body p-6 flex flex-col flex-1">
               <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">Battery Replacement</h3>
               <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Resolve battery drain, swelling, and charge failure with high-capacity Grade-A OEM lithium cells with 1-year warranty.</p>
-              <div class="equal-card-footer mt-auto pt-4 flex items-center justify-between">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C] flex items-center justify-between">
                 <span class="text-xs text-[#FD802E] font-semibold">From ₹1,899</span>
                 <a href="service-details.html?service=battery" class="inline-flex items-center gap-1.5 text-xs font-bold text-white group-hover:text-[#FD802E] transition-colors">
                   <span>Learn More</span>
@@ -840,7 +840,7 @@
             <div class="equal-card-body p-6 flex flex-col flex-1">
               <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">RAM Memory Upgrades</h3>
               <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Boost multitasking and eliminate stutter with dual-channel high-speed DDR4 (3200MHz) and DDR5 (5600MHz) expansions.</p>
-              <div class="equal-card-footer mt-auto pt-4 flex items-center justify-between">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C] flex items-center justify-between">
                 <span class="text-xs text-[#FD802E] font-semibold">From ₹1,499</span>
                 <a href="service-details.html?service=ram" class="inline-flex items-center gap-1.5 text-xs font-bold text-white group-hover:text-[#FD802E] transition-colors">
                   <span>Learn More</span>
@@ -860,7 +860,7 @@
             <div class="equal-card-body p-6 flex flex-col flex-1">
               <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">NVMe SSD Storage Expansion</h3>
               <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Multiply system boot speeds by 10x with blazing-fast PCIe Gen4 NVMe drives (500GB / 1TB / 2TB) with complete OS cloning.</p>
-              <div class="equal-card-footer mt-auto pt-4 flex items-center justify-between">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C] flex items-center justify-between">
                 <span class="text-xs text-[#FD802E] font-semibold">From ₹1,999</span>
                 <a href="service-details.html?service=ssd" class="inline-flex items-center gap-1.5 text-xs font-bold text-white group-hover:text-[#FD802E] transition-colors">
                   <span>Learn More</span>
@@ -880,7 +880,7 @@
             <div class="equal-card-body p-6 flex flex-col flex-1">
               <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">Keyboard & Trackpad Repair</h3>
               <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Fix liquid-spill damaged keys, unresponsive trackpads, and malfunctioning backlights with genuine factory-fitted keyboards.</p>
-              <div class="equal-card-footer mt-auto pt-4 flex items-center justify-between">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C] flex items-center justify-between">
                 <span class="text-xs text-[#FD802E] font-semibold">From ₹1,299</span>
                 <a href="service-details.html?service=keyboard" class="inline-flex items-center gap-1.5 text-xs font-bold text-white group-hover:text-[#FD802E] transition-colors">
                   <span>Learn More</span>
@@ -900,7 +900,7 @@
             <div class="equal-card-body p-6 flex flex-col flex-1">
               <h3 class="text-base sm:text-lg font-bold text-white group-hover:text-[#FD802E] transition-colors min-h-[3.25rem] flex items-center">Logic Board & Chip Repair</h3>
               <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Revive dead laptops with specialized short-circuit hunting, power IC replacement, BIOS re-programming, and GPU reballing.</p>
-              <div class="equal-card-footer mt-auto pt-4 flex items-center justify-between">
+              <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C] flex items-center justify-between">
                 <span class="text-xs text-[#FD802E] font-semibold">From ₹2,999</span>
                 <a href="service-details.html?service=motherboard" class="inline-flex items-center gap-1.5 text-xs font-bold text-white group-hover:text-[#FD802E] transition-colors">
                   <span>Learn More</span>
@@ -1248,16 +1248,16 @@
           <div class="equal-card p-6 sm:p-7 rounded-2xl bg-[#172731] border border-[#233D4C] hover:border-[#FD802E]/60 transition-all duration-300 shadow-xl tilt-card flex flex-col justify-between text-left">
             <div>
               <div class="w-10 h-10 rounded-xl bg-[#0e181f] border border-[#233D4C] text-[#FD802E] flex items-center justify-center font-mono font-bold text-sm mb-4">01</div>
-              <h3 class="text-base font-black text-white mb-2 text-left">Showroom Sales & Retail</h3>
-              <p class="text-xs text-[#9fb3be] mb-4 leading-relaxed text-left min-h-[36px] flex items-center">Multi-brand laptop inventory with zero grey-market imports.</p>
-              <ul class="space-y-2.5 text-xs text-[#9fb3be] text-left">
-                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>1-Year Pan-India Onsite Warranty</span></li>
-                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>7-Day Zero-Questions Hardware Exchange</span></li>
-                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Free Old Laptop Data Migration</span></li>
-                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>100% Original Brand Power Bricks</span></li>
+              <h3 class="text-base font-black text-white mb-2 text-left min-h-[3rem] flex items-center">Showroom Sales & Retail</h3>
+              <p class="text-xs text-[#9fb3be] mb-4 leading-relaxed text-left min-h-[2.5rem] flex items-center">Multi-brand laptop inventory with zero grey-market imports.</p>
+              <ul class="space-y-2 text-xs text-[#9fb3be] text-left">
+                <li class="min-h-[2.75rem] flex items-center gap-2.5 leading-snug"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>1-Year Pan-India Onsite Warranty</span></li>
+                <li class="min-h-[2.75rem] flex items-center gap-2.5 leading-snug"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>7-Day Zero-Questions Hardware Exchange</span></li>
+                <li class="min-h-[2.75rem] flex items-center gap-2.5 leading-snug"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Free Old Laptop Data Migration</span></li>
+                <li class="min-h-[2.75rem] flex items-center gap-2.5 leading-snug"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>100% Original Brand Power Bricks</span></li>
               </ul>
             </div>
-            <div class="mt-auto pt-6 border-t border-[#233D4C]/60 text-left">
+            <div class="mt-auto pt-6 border-t border-[#233D4C] text-left">
               <span class="inline-block text-[11px] font-mono text-[#FD802E] font-bold bg-[#FD802E]/10 px-2.5 py-1 rounded-md border border-[#FD802E]/30">SLA: Same-Day Store Handover</span>
             </div>
           </div>
@@ -1266,16 +1266,16 @@
           <div class="equal-card p-6 sm:p-7 rounded-2xl bg-[#172731] border border-[#233D4C] hover:border-[#FD802E]/60 transition-all duration-300 shadow-xl tilt-card flex flex-col justify-between text-left">
             <div>
               <div class="w-10 h-10 rounded-xl bg-[#0e181f] border border-[#233D4C] text-[#FD802E] flex items-center justify-center font-mono font-bold text-sm mb-4">02</div>
-              <h3 class="text-base font-black text-white mb-2 text-left">Corporate Fleet Leasing</h3>
-              <p class="text-xs text-[#9fb3be] mb-4 leading-relaxed text-left min-h-[36px] flex items-center">Turnkey computing infrastructure for IT corridors & startups.</p>
-              <ul class="space-y-2.5 text-xs text-[#9fb3be] text-left">
-                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>2-Hour Hot-Swap Machine Delivery in OMR</span></li>
-                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>₹0 Security Deposit for GST Registered Firms</span></li>
-                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Hardware Refresh Every 18 Months</span></li>
-                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Pre-Imaged with Custom Corporate MDM</span></li>
+              <h3 class="text-base font-black text-white mb-2 text-left min-h-[3rem] flex items-center">Corporate Fleet Leasing</h3>
+              <p class="text-xs text-[#9fb3be] mb-4 leading-relaxed text-left min-h-[2.5rem] flex items-center">Turnkey computing infrastructure for IT corridors & startups.</p>
+              <ul class="space-y-2 text-xs text-[#9fb3be] text-left">
+                <li class="min-h-[2.75rem] flex items-center gap-2.5 leading-snug"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>2-Hour Hot-Swap Machine Delivery in OMR</span></li>
+                <li class="min-h-[2.75rem] flex items-center gap-2.5 leading-snug"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>₹0 Security Deposit for GST Registered Firms</span></li>
+                <li class="min-h-[2.75rem] flex items-center gap-2.5 leading-snug"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Hardware Refresh Every 18 Months</span></li>
+                <li class="min-h-[2.75rem] flex items-center gap-2.5 leading-snug"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Pre-Imaged with Custom Corporate MDM</span></li>
               </ul>
             </div>
-            <div class="mt-auto pt-6 border-t border-[#233D4C]/60 text-left">
+            <div class="mt-auto pt-6 border-t border-[#233D4C] text-left">
               <span class="inline-block text-[11px] font-mono text-[#FD802E] font-bold bg-[#FD802E]/10 px-2.5 py-1 rounded-md border border-[#FD802E]/30">SLA: 99.8% Fleet Uptime</span>
             </div>
           </div>
@@ -1284,16 +1284,16 @@
           <div class="equal-card p-6 sm:p-7 rounded-2xl bg-[#172731] border border-[#233D4C] hover:border-[#FD802E]/60 transition-all duration-300 shadow-xl tilt-card flex flex-col justify-between text-left">
             <div>
               <div class="w-10 h-10 rounded-xl bg-[#0e181f] border border-[#233D4C] text-[#FD802E] flex items-center justify-center font-mono font-bold text-sm mb-4">03</div>
-              <h3 class="text-base font-black text-white mb-2 text-left">Cleanroom Micro-Repair</h3>
-              <p class="text-xs text-[#9fb3be] mb-4 leading-relaxed text-left min-h-[36px] flex items-center">ISO-standard motherboard micro-soldering & component repair.</p>
-              <ul class="space-y-2.5 text-xs text-[#9fb3be] text-left">
-                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>₹0 Diagnostic & Inspection Fee</span></li>
-                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>90-Day Comprehensive Repair Warranty</span></li>
-                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Strict Zero Data Access Privacy Protocol</span></li>
-                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Component-Level Fix over Board Replacement</span></li>
+              <h3 class="text-base font-black text-white mb-2 text-left min-h-[3rem] flex items-center">Cleanroom Micro-Repair</h3>
+              <p class="text-xs text-[#9fb3be] mb-4 leading-relaxed text-left min-h-[2.5rem] flex items-center">ISO-standard motherboard micro-soldering & component repair.</p>
+              <ul class="space-y-2 text-xs text-[#9fb3be] text-left">
+                <li class="min-h-[2.75rem] flex items-center gap-2.5 leading-snug"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>₹0 Diagnostic & Inspection Fee</span></li>
+                <li class="min-h-[2.75rem] flex items-center gap-2.5 leading-snug"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>90-Day Comprehensive Repair Warranty</span></li>
+                <li class="min-h-[2.75rem] flex items-center gap-2.5 leading-snug"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Strict Zero Data Access Privacy Protocol</span></li>
+                <li class="min-h-[2.75rem] flex items-center gap-2.5 leading-snug"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Component-Level Fix over Board Replacement</span></li>
               </ul>
             </div>
-            <div class="mt-auto pt-6 border-t border-[#233D4C]/60 text-left">
+            <div class="mt-auto pt-6 border-t border-[#233D4C] text-left">
               <span class="inline-block text-[11px] font-mono text-[#FD802E] font-bold bg-[#FD802E]/10 px-2.5 py-1 rounded-md border border-[#FD802E]/30">SLA: 4-Hour Express Bench</span>
             </div>
           </div>
@@ -1302,16 +1302,16 @@
           <div class="equal-card p-6 sm:p-7 rounded-2xl bg-[#172731] border border-[#233D4C] hover:border-[#FD802E]/60 transition-all duration-300 shadow-xl tilt-card flex flex-col justify-between text-left">
             <div>
               <div class="w-10 h-10 rounded-xl bg-[#0e181f] border border-[#233D4C] text-[#FD802E] flex items-center justify-center font-mono font-bold text-sm mb-4">04</div>
-              <h3 class="text-base font-black text-white mb-2 text-left">Instant Buyback & Exchange</h3>
-              <p class="text-xs text-[#9fb3be] mb-4 leading-relaxed text-left min-h-[36px] flex items-center">Transparent algorithmic device valuation with immediate payout.</p>
-              <ul class="space-y-2.5 text-xs text-[#9fb3be] text-left">
-                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>15-Minute Instant UPI / Bank Settlement</span></li>
-                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>DoD 5220.22-M Certified Data Destruction</span></li>
-                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Up to 65% Value Retention on 1-Yr Devices</span></li>
-                <li class="flex items-start gap-2.5"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Exchange Bonus on Store Laptop Purchases</span></li>
+              <h3 class="text-base font-black text-white mb-2 text-left min-h-[3rem] flex items-center">Instant Buyback & Exchange</h3>
+              <p class="text-xs text-[#9fb3be] mb-4 leading-relaxed text-left min-h-[2.5rem] flex items-center">Transparent algorithmic device valuation with immediate payout.</p>
+              <ul class="space-y-2 text-xs text-[#9fb3be] text-left">
+                <li class="min-h-[2.75rem] flex items-center gap-2.5 leading-snug"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>15-Minute Instant UPI / Bank Settlement</span></li>
+                <li class="min-h-[2.75rem] flex items-center gap-2.5 leading-snug"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>DoD 5220.22-M Certified Data Destruction</span></li>
+                <li class="min-h-[2.75rem] flex items-center gap-2.5 leading-snug"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Up to 65% Value Retention on 1-Yr Devices</span></li>
+                <li class="min-h-[2.75rem] flex items-center gap-2.5 leading-snug"><span class="text-[#FD802E] font-bold shrink-0">✓</span><span>Exchange Bonus on Store Laptop Purchases</span></li>
               </ul>
             </div>
-            <div class="mt-auto pt-6 border-t border-[#233D4C]/60 text-left">
+            <div class="mt-auto pt-6 border-t border-[#233D4C] text-left">
               <span class="inline-block text-[11px] font-mono text-[#FD802E] font-bold bg-[#FD802E]/10 px-2.5 py-1 rounded-md border border-[#FD802E]/30">SLA: Instant Paperless Payout</span>
             </div>
           </div>
@@ -1546,7 +1546,7 @@
 
               <!-- X (Twitter) (Highlighted Clean White) -->
               <a href="https://x.com/lapnestofficial" target="_blank" rel="noopener noreferrer" 
-                 class="w-10 h-10 rounded-full bg-[#172731] border-2 border-white text-white hover:bg-white hover:text-black flex items-center justify-center transition-all hover:scale-110 shadow-md shadow-white/25" 
+                 class="social-x-btn w-10 h-10 rounded-full bg-[#172731] border-2 border-white text-white hover:bg-white hover:text-black flex items-center justify-center transition-all hover:scale-110 shadow-md shadow-white/25" 
                  title="X (Twitter)" aria-label="X Twitter">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               </a>

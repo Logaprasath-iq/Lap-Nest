@@ -17,22 +17,23 @@ const LAPNEST_SERVICES = {
     symptoms: [
       'Spiderweb impact cracks from dropped laptops',
       'Vertical color lines or flickering backlight strips',
-      '"Black Screen" with faint image visible under torchlight',
+      '"Black Screen" with faint image under torchlight',
       'Bleeding ink stains spreading across the matrix',
       'Hinge tear causing EDP cable severed connection'
     ],
     procedures: [
-      '1. Battery isolation to prevent motherboard backlight fuse blowout',
-      '2. Ultrasonic bezel separation with heat pad',
-      '3. Exact panel model number & 30-pin/40-pin EDP verification',
-      '4. OEM adhesive pull-tape alignment',
-      '5. Color uniformity & RGB calibration check'
+      'Battery isolation to protect backlight rail fuse',
+      'Ultrasonic bezel separation with thermal pad',
+      'Exact panel model & 30/40-pin EDP verification',
+      'Factory-grade pull-tab adhesive alignment',
+      'True-tone RGB color calibration & pixel check'
     ],
     pricing: [
       { label: 'Standard 15.6" HD / FHD Panel:', price: '₹2,499 – ₹3,499' },
       { label: '144Hz IPS High Refresh Gaming:', price: '₹4,200 – ₹5,800' },
       { label: 'MacBook Air Retina Assembly:', price: '₹7,990 onwards' },
-      { label: 'Touch Screen Digitizer Units:', price: 'Custom Quote' }
+      { label: 'Touch Screen Digitizer Units:', price: 'Custom Quote' },
+      { label: 'Zero Dead-Pixel Diagnostic:', price: 'Included (FREE)' }
     ]
   },
 
@@ -47,24 +48,25 @@ const LAPNEST_SERVICES = {
     image: 'assets/images/services/battery-replace.jpg',
     imageAlt: 'Battery Replacement Service',
     symptoms: [
-      'Battery percentage stuck at 0% or dropping rapidly within minutes',
-      'Swollen battery lifting trackpad or separating laptop bottom chassis',
-      'Laptop instantly cuts off the moment the AC power adapter is disconnected',
-      '"Plugged in, Not Charging" status alert in Windows or macOS power menu',
-      'Loose or burnt USB-C charging port requiring cable bending to charge'
+      'Battery percentage stuck at 0% or dropping rapidly',
+      'Swollen battery lifting trackpad or chassis casing',
+      'Laptop cuts off instantly when charger unplugged',
+      '"Plugged in, Not Charging" status alert in OS',
+      'Loose or burnt USB-C port requiring cable bending'
     ],
     procedures: [
-      '1. Battery SMBus communication and cycle count health telemetry audit',
-      '2. Thermal detachment of OEM battery adhesive pull-tabs using ESD-safe tools',
-      '3. Power rail voltage verification (19V/20V, 3.3V, and 5V standby rails)',
-      '4. Installation of brand-new Grade-A certified OEM replacement cell',
-      '5. 0% to 100% full charge/discharge benchmark and thermal telemetry audit'
+      'SMBus communication & cycle telemetry audit',
+      'Thermal detachment of OEM battery adhesive tabs',
+      'Power rail voltage audit (19V, 3.3V, 5V standby)',
+      'Certified Grade-A OEM replacement cell install',
+      'Full charge/discharge benchmark & gas calibration'
     ],
     pricing: [
-      { label: 'Standard 3-Cell / 4-Cell Internal Battery:', price: '₹1,899 – ₹2,999' },
-      { label: 'High-Capacity MacBook Retina Battery:', price: '₹3,800 – ₹5,400' },
-      { label: 'Charging IC / MOSFET Logic Board Fix:', price: '₹1,499 – ₹2,200' },
-      { label: 'USB-C PD Port Micro-Soldering:', price: '₹1,299 – ₹1,899' }
+      { label: 'Standard 3-Cell / 4-Cell Battery:', price: '₹1,899 – ₹2,999' },
+      { label: 'High-Capacity MacBook Retina:', price: '₹3,800 – ₹5,400' },
+      { label: 'Charging IC / MOSFET Logic Fix:', price: '₹1,499 – ₹2,200' },
+      { label: 'USB-C PD Port Micro-Soldering:', price: '₹1,299 – ₹1,899' },
+      { label: 'Electrochemical Impedance Audit:', price: 'Included (FREE)' }
     ]
   },
 
@@ -79,24 +81,25 @@ const LAPNEST_SERVICES = {
     image: 'assets/images/services/motherboard-repair.jpg',
     imageAlt: 'Motherboard Micro-Soldering Service',
     symptoms: [
-      'Laptop completely dead with zero LED activity (0.00A current draw)',
-      'Power light turns on but screen remains completely blank (No POST)',
-      'Sudden shutdown or reboot under GPU / CPU heavy loads',
-      'Corrosion residues or burn marks from liquid spills on circuit traces',
-      'Stuck in infinite reboot loop or frozen on manufacturer splash logo'
+      'Completely dead with zero LED (0.00A current draw)',
+      'Power light active but screen remains blank',
+      'Sudden shutdown or reboot under GPU/CPU loads',
+      'Liquid spill residue or corrosion on circuit traces',
+      'Infinite reboot loop or frozen on splash logo'
     ],
     procedures: [
-      '1. FLIR thermal camera scan to pinpoint shorted ceramic capacitors & ICs',
-      '2. Precision Hakko / Weller micro-soldering station component swap',
-      '3. Ultrasonic bath cleaning with circuit cleaner to remove flux and corrosion',
-      '4. High-speed hardware SPI programmer for clean BIOS ME region flashing',
-      '5. 4-Hour AIDA64 & FurMark stress test to certify voltage stability'
+      'FLIR thermal scan to pinpoint shorted capacitors',
+      'Hakko / Weller micro-soldering component swap',
+      'Ultrasonic chemical bath to eliminate corrosion',
+      'Hardware SPI programmer for clean ME flashing',
+      '4-Hour AIDA64 stress certification report'
     ],
     pricing: [
-      { label: 'Main Power Rail Short-Circuit Repair:', price: '₹1,499 – ₹2,499' },
-      { label: 'Corrupted BIOS ROM Hardware Reflashing:', price: '₹1,299 – ₹1,899' },
-      { label: 'Liquid Damage Ultrasonic Restoration:', price: '₹2,499 – ₹3,800' },
-      { label: 'GPU / CPU Dedicated VRAM BGA Reballing:', price: '₹3,999 – ₹5,999' }
+      { label: 'Main Rail Short-Circuit Repair:', price: '₹1,499 – ₹2,499' },
+      { label: 'Corrupted BIOS SPI Reflashing:', price: '₹1,299 – ₹1,899' },
+      { label: 'Liquid Ultrasonic Deoxidation:', price: '₹2,499 – ₹3,800' },
+      { label: 'GPU/VRAM Optical BGA Reballing:', price: '₹3,999 – ₹5,999' },
+      { label: '40-Point Cleanroom Telemetry:', price: 'Included (FREE)' }
     ]
   },
 
@@ -111,24 +114,25 @@ const LAPNEST_SERVICES = {
     image: 'assets/images/services/ssd-upgrade.jpg',
     imageAlt: 'RAM & SSD Hardware Upgrade',
     symptoms: [
-      '100% disk usage causing severe Windows / macOS freezing and lag',
-      'Boot time taking over 2 to 5 minutes on legacy mechanical hard drives',
-      'Out of memory warnings in Chrome, Photoshop, Premiere, or developer IDEs',
-      'SMART disk read errors and imminent drive crash warnings',
-      'Sluggish application launch times on 3-to-5 year old laptops'
+      '100% disk usage causing severe OS freezes and lag',
+      'Boot time taking over 2 to 5 minutes on hard disk',
+      'Out of memory alerts in Chrome, CAD, or IDEs',
+      'SMART disk read errors & imminent crash warnings',
+      'Sluggish application launch times on older machines'
     ],
     procedures: [
-      '1. Sector-level SMART health check and disk clone compatibility audit',
-      '2. High-speed bit-for-bit cloning of all OS files, apps, and bookmarks',
-      '3. Clean installation of high-speed Gen4 NVMe SSD with thermal pads',
-      '4. Matched dual-channel RAM kit installation & dual-rank validation',
-      '5. CrystalDiskMark read/write verification benchmark (up to 7000MB/s)'
+      'Sector-level SMART health check & clone audit',
+      'High-speed bit-for-bit cloning of all OS files',
+      'Clean installation of Gen4 NVMe with thermal foil',
+      'Matched dual-channel RAM kit installation',
+      'CrystalDiskMark read/write verification test'
     ],
     pricing: [
-      { label: '512GB Gen4 NVMe SSD + Free OS Clone:', price: '₹2,499 – ₹3,299' },
-      { label: '1TB Ultra-Fast Gen4 SSD + Free OS Clone:', price: '₹4,499 – ₹5,999' },
-      { label: '8GB / 16GB High-Speed DDR4/DDR5 RAM:', price: '₹1,699 – ₹3,499' },
-      { label: 'Bit-for-Bit Disk Cloning Only:', price: '₹799 (FREE with SSD)' }
+      { label: '512GB Gen4 NVMe + Free Clone:', price: '₹2,499 – ₹3,299' },
+      { label: '1TB Ultra-Fast Gen4 + Free Clone:', price: '₹4,499 – ₹5,999' },
+      { label: '8GB / 16GB High-Speed DDR4/DDR5:', price: '₹1,699 – ₹3,499' },
+      { label: 'Bit-for-Bit Disk Cloning Only:', price: '₹799 (FREE with SSD)' },
+      { label: 'Speed Benchmark & Verification:', price: 'Included (FREE)' }
     ]
   },
 
@@ -143,24 +147,25 @@ const LAPNEST_SERVICES = {
     image: 'assets/images/services/keyboard-repair.jpg',
     imageAlt: 'Keyboard Replacement Service',
     symptoms: [
-      'Specific keys typing wrong characters or repeating uncontrollably',
-      'Spilled liquid causing sticky, gummy, or completely dead keys',
-      'Trackpad cursor drifting, erratically jumping, or failing to click',
-      'Keycap physically detached or broken scissor-mechanism clip',
+      'Specific keys typing wrong characters or repeating',
+      'Spilled drink causing sticky or dead keys',
+      'Trackpad cursor drifting or failing to click',
+      'Keycap physically detached or broken scissor clip',
       'Keyboard backlight completely unlit or flickering'
     ],
     procedures: [
-      '1. Frame disassembly and plastic rivet extraction using ultrasonic cutter',
-      '2. OEM replacement keyboard alignment with chassis reinforcement plate',
-      '3. Precision hot-melt staking to ensure zero keyboard deck flex',
-      '4. Trackpad ribbon cable testing and grounding calibration',
-      '5. Full keyboard tester software check across all 84–108 keys'
+      'Frame disassembly & ultrasonic rivet extraction',
+      'OEM keyboard alignment with chassis backplate',
+      'Precision hot-melt staking to eliminate deck flex',
+      'Trackpad ribbon cable testing & grounding audit',
+      'Full keyboard tester check across all keys'
     ],
     pricing: [
-      { label: 'Standard Chiclet Non-Backlit Keyboard:', price: '₹1,299 – ₹1,899' },
-      { label: 'Gaming RGB / Backlit Keyboard Unit:', price: '₹1,899 – ₹2,999' },
-      { label: 'ThinkPad Classic / Latitude OEM Keyboard:', price: '₹1,699 – ₹2,499' },
-      { label: 'Precision Glass Trackpad Replacement:', price: '₹1,499 – ₹2,699' }
+      { label: 'Standard Chiclet Keyboard:', price: '₹1,299 – ₹1,899' },
+      { label: 'Gaming RGB / Backlit Keyboard:', price: '₹1,899 – ₹2,999' },
+      { label: 'ThinkPad OEM Keyboard Unit:', price: '₹1,699 – ₹2,499' },
+      { label: 'Precision Glass Trackpad Fix:', price: '₹1,499 – ₹2,699' },
+      { label: 'Key-Matrix & Sensor Calibration:', price: 'Included (FREE)' }
     ]
   },
 
@@ -175,24 +180,25 @@ const LAPNEST_SERVICES = {
     image: 'assets/images/services/motherboard-repair.jpg',
     imageAlt: 'Liquid Damage Ultrasonic Restoration',
     symptoms: [
-      'Coffee, tea, juice, or water accidentally spilled on keyboard or vents',
+      'Spilled coffee, tea, juice, or water on keyboard',
       'Laptop turned off immediately after liquid contact',
-      'Green/white corrosion crust visible on PCB copper traces',
-      'Laptop will not turn on or charger light shuts off when plugged in',
-      'Sticky keys, erratic fan spinning, and sudden thermal shutdowns'
+      'Green/white corrosion crust on PCB copper traces',
+      'Laptop will not charge or adapter LED cuts off',
+      'Sticky keys, erratic fans, and thermal shutdowns'
     ],
     procedures: [
-      '1. Immediate battery disconnection to prevent active electrochemical erosion',
-      '2. Complete logic board removal and ultrasonic tank bath with solvent',
-      '3. Controlled oven dehydration at 65°C to eliminate micro-moisture',
-      '4. Microscope inspection of eroded copper traces and jumper bridge repair',
-      '5. Low-current bench power injection testing to ensure safe booting'
+      'Immediate battery isolation to prevent erosion',
+      'Complete logic board ultrasonic tank wash',
+      '65°C controlled oven dehydration treatment',
+      'Microscope micro-trace jumper reconstruction',
+      'Low-current bench power injection testing'
     ],
     pricing: [
-      { label: 'Ultrasonic Bath Decontamination & Dry:', price: '₹1,899 – ₹2,499' },
-      { label: 'Trace Reconstruction & Micro-Soldering:', price: '₹2,499 – ₹3,800' },
+      { label: 'Ultrasonic Decontamination & Dry:', price: '₹1,899 – ₹2,499' },
+      { label: 'Trace Jumping & Micro-Soldering:', price: '₹2,499 – ₹3,800' },
       { label: 'Keyboard Ingress Replacement:', price: '₹1,499 – ₹2,999' },
-      { label: 'Diagnostic & Feasibility Inspection:', price: '₹0 (Free)' }
+      { label: 'Diagnostic & Feasibility Check:', price: '₹0 (FREE)' },
+      { label: '90-Day Cleanroom Warranty:', price: 'Included (FREE)' }
     ]
   }
 };
@@ -236,26 +242,36 @@ function renderServiceDetails(serviceKey) {
     imgEl.alt = service.imageAlt || service.title;
   }
 
-  // Symptoms List
+  // Symptoms List (Calibrated equal row height min-h-[3.25rem])
   const symptomsEl = document.getElementById('service-symptoms-list');
   if (symptomsEl) {
-    symptomsEl.innerHTML = service.symptoms.map(s => `<li>• ${s}</li>`).join('');
+    symptomsEl.innerHTML = service.symptoms.map(s => `
+      <li class="min-h-[3.25rem] flex items-center gap-2.5 py-2 border-b border-[#233D4C]/40 last:border-b-0 leading-snug">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#FD802E] shrink-0"></span>
+        <span>${s}</span>
+      </li>
+    `).join('');
   }
 
-  // Technical Procedures List
+  // Technical Procedures List (Calibrated equal row height min-h-[3.25rem])
   const proceduresEl = document.getElementById('service-procedures-list');
   if (proceduresEl) {
-    proceduresEl.innerHTML = service.procedures.map(p => `<li>${p}</li>`).join('');
+    proceduresEl.innerHTML = service.procedures.map((p, idx) => `
+      <li class="min-h-[3.25rem] flex items-center gap-2.5 py-2 border-b border-[#233D4C]/40 last:border-b-0 leading-snug">
+        <span class="text-[10px] font-mono font-bold text-[#FD802E] bg-[#0e181f] px-1.5 py-0.5 rounded border border-[#233D4C] shrink-0">0${idx + 1}</span>
+        <span>${p}</span>
+      </li>
+    `).join('');
   }
 
-  // Pricing & Turnaround
+  // Pricing & Turnaround (Calibrated equal row height min-h-[3.25rem])
   const pricingEl = document.getElementById('service-pricing-list');
   if (pricingEl) {
-    pricingEl.innerHTML = service.pricing.map((item, idx) => `
-      <p class="flex justify-between ${idx < service.pricing.length - 1 ? 'border-b border-[#233D4C]/50 pb-1.5' : ''}">
-        <span>${item.label}</span>
-        <strong class="text-white">${item.price}</strong>
-      </p>
+    pricingEl.innerHTML = service.pricing.map(item => `
+      <div class="min-h-[3.25rem] flex items-center justify-between gap-3 py-2 border-b border-[#233D4C]/40 last:border-b-0 leading-snug">
+        <span class="text-[#9fb3be]">${item.label}</span>
+        <strong class="text-white text-right shrink-0">${item.price}</strong>
+      </div>
     `).join('');
   }
 

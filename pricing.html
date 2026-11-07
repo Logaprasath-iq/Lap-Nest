@@ -7,7 +7,7 @@
   <meta name="description" content="Transparent INR pricing for laptop purchases, monthly rentals, component-level repairs and hardware upgrades in Chennai.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=4.4">
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
@@ -20,7 +20,7 @@
     <!-- STICKY NAVBAR - FLOATING CAPSULE PILL DESIGN (IMAGE 2 AESTHETIC) -->
     <!-- STICKY NAVBAR (FULL-WIDTH BRAND HEADER) -->
   <header id="main-navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3.5 bg-[#0e181f]/90 backdrop-blur-md border-b border-[#233D4C]/60">
-    <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 flex items-center justify-between gap-4 lg:gap-6 xl:gap-8">
+    <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-4 xl:px-8 flex items-center justify-between gap-3 lg:gap-3.5 xl:gap-6 2xl:gap-8">
       
       <!-- Brand Logo -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none shrink-0">
@@ -28,15 +28,15 @@
              data-dark="assets/images/logo/logo-dark.svg" 
              data-light="assets/images/logo/logo-light.svg" 
              alt="LAPNEST – BUY • SELL • REPAIR • RENT" 
-             class="brand-logo-img header-logo h-9 sm:h-11 md:h-12 w-auto max-w-[150px] sm:max-w-none transition-transform duration-300 group-hover:scale-105">
+             class="brand-logo-img header-logo h-10 sm:h-11 lg:h-9 xl:h-11 w-auto max-w-[190px] sm:max-w-none lg:max-w-[170px] xl:max-w-none transition-transform duration-300 group-hover:scale-105">
       </a>
 
       <!-- Desktop Center Navigation Menu (Old Nav Layout - Clean Text Links) -->
-      <nav class="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-8">
+      <nav class="hidden lg:flex items-center gap-2 lg:gap-2.5 xl:gap-5 2xl:gap-7">
         
         <!-- Home Dropdown -->
         <div class="relative group dropdown-container">
-          <button type="button" class="dropdown-btn nav-link-item flex items-center gap-1.5 text-sm font-semibold text-white hover:text-[#FD802E] transition-colors focus:outline-none py-2 whitespace-nowrap" aria-expanded="false" aria-haspopup="true">
+          <button type="button" class="dropdown-btn nav-link-item flex items-center gap-1.5 text-xs xl:text-sm font-semibold text-white hover:text-[#FD802E] transition-colors focus:outline-none py-2 whitespace-nowrap" aria-expanded="false" aria-haspopup="true">
             <span>Home</span>
             <svg class="dropdown-arrow-icon w-4 h-4 transition-transform duration-200 group-hover:rotate-180 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </button>
@@ -54,31 +54,31 @@
           </div>
         </div>
 
-        <a href="about.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">About</a>
-        <a href="products.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Products</a>
-        <a href="pricing.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Pricing</a>
-        <a href="repair-upgrade.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Repair & Upgrade</a>
-        <a href="blog.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Blog</a>
-        <a href="contact.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Contact</a>
+        <a href="about.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">About</a>
+        <a href="products.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Products</a>
+        <a href="pricing.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Pricing</a>
+        <a href="repair-upgrade.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Repair & Upgrade</a>
+        <a href="blog.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Blog</a>
+        <a href="contact.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Contact</a>
       </nav>
 
       <!-- Right Controls: RTL Toggle, Theme Toggle, Order CTA -->
-      <div class="flex items-center gap-2 sm:gap-2.5 xl:gap-3 shrink-0">
+      <div class="flex items-center gap-1.5 lg:gap-2 xl:gap-3 shrink-0">
         
         <!-- RTL/LTR Toggle with Clean Arrow -->
-        <button type="button" class="rtl-toggle-btn h-10 px-3 rounded-xl text-xs font-bold border border-[#233D4C] bg-[#172731] text-[#9fb3be] hover:text-[#FD802E] hover:border-[#FD802E] transition-all hidden sm:inline-flex items-center justify-center gap-1.5 shrink-0" title="Toggle RTL / LTR" aria-label="Toggle Text Direction">
+        <button type="button" class="rtl-toggle-btn h-9 xl:h-10 px-2.5 xl:px-3 rounded-xl text-[11px] xl:text-xs font-bold border border-[#233D4C] bg-[#172731] text-[#9fb3be] hover:text-[#FD802E] hover:border-[#FD802E] transition-all hidden lg:inline-flex items-center justify-center gap-1.5 shrink-0" title="Toggle RTL / LTR" aria-label="Toggle Text Direction">
           <svg class="w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
           <span class="dir-badge text-[11px] tracking-wider">RTL</span>
         </button>
 
         <!-- Dark/Light Theme Toggle -->
-        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-xl text-[#9fb3be] hover:text-[#FD802E] bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] transition-all hidden sm:inline-flex items-center justify-center shrink-0" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
+        <button type="button" class="theme-toggle-btn w-9 h-9 xl:w-10 xl:h-10 rounded-xl text-[#9fb3be] hover:text-[#FD802E] bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] transition-all hidden lg:inline-flex items-center justify-center shrink-0" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
           <svg class="sun-icon w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
           <svg class="moon-icon w-4 h-4 text-[#FD802E] hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
         </button>
 
         <!-- Dedicated Order CTA -->
-        <a href="order.html" class="hidden sm:inline-flex items-center justify-center gap-2 h-10 px-4 xl:px-5 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white shadow-lg shadow-[#FD802E]/25 transition-all duration-300 transform hover:-translate-y-0.5 shrink-0 whitespace-nowrap">
+        <a href="order.html" class="hidden lg:inline-flex items-center justify-center gap-1.5 xl:gap-2 h-9 xl:h-10 px-3.5 xl:px-5 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white shadow-lg shadow-[#FD802E]/25 transition-all duration-300 transform hover:-translate-y-0.5 shrink-0 whitespace-nowrap">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
           <span>Order Now</span>
         </a>
@@ -208,7 +208,7 @@
               <span class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-[#0e181f] border border-[#233D4C] text-[#FD802E]">
                 ₹0 Diagnostic Inspection Fee
               </span>
-              <a href="#rental-plans" class="text-xs font-semibold text-white hover:text-[#FD802E] flex items-center gap-1 transition-colors">
+              <a href="#rental" class="text-xs font-semibold text-white hover:text-[#FD802E] flex items-center gap-1 transition-colors">
                 <span>Explore Rental Tariffs</span>
                 <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
               </a>
@@ -220,8 +220,9 @@
             <div class="relative h-48 sm:h-56 rounded-2xl overflow-hidden border border-[#233D4C] shadow-lg group">
               <img src="https://i.pinimg.com/1200x/60/ad/6e/60ad6e0b05275bf32bdb67aaf966275f.jpg" alt="Pricing & Tariffs" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
               <div class="absolute inset-0 bg-gradient-to-t from-[#0e181f]/85 via-transparent to-transparent"></div>
-              <span class="absolute bottom-3 left-3 px-3 py-1 rounded-lg text-[11px] font-bold bg-[#0e181f]/90 border border-[#233D4C] text-[#9fb3be] backdrop-blur-md">
-                Fixed Quotation Guarantee
+              <span class="hero-image-badge dark-badge-lock absolute bottom-3 left-3 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-[#0e181f]/90 border border-white/20 text-white backdrop-blur-md shadow-lg flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#FD802E] animate-pulse"></span>
+                <span>Fixed Quotation Guarantee</span>
               </span>
             </div>
           </div>
@@ -274,8 +275,11 @@
             </div>
           </div>
 
-          <div class="equal-card rounded-2xl bg-[#172731] border border-[#FD802E] p-6 shadow-md shadow-[#FD802E]/25 relative overflow-hidden">
-            <span class="absolute top-0 right-0 bg-[#FD802E] text-white text-[10px] font-black uppercase px-3 py-1 rounded-bl-xl">Popular</span>
+          <div class="equal-card rounded-2xl bg-[#172731] border-2 border-[#FD802E] p-6 shadow-xl shadow-[#FD802E]/15 relative">
+            <!-- Horizontally Centered Most Popular Tag -->
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#FD802E] text-white text-[10px] font-black tracking-widest uppercase px-3.5 py-0.5 rounded-full shadow-md shadow-[#FD802E]/30 whitespace-nowrap z-10">
+              Most Popular
+            </div>
             <span class="text-xs font-bold text-[#FD802E] uppercase tracking-wider">Business Pro Tier</span>
             <h3 class="text-xl font-bold text-white mt-1">Enterprise Ultrabooks</h3>
             <p class="text-2xl font-black text-white my-3">From ₹54,990</p>
@@ -300,7 +304,8 @@
     </section>
 
     <!-- SECTION 3: LAPTOP RENTAL PLANS (WITH MONTHLY / QUARTERLY TOGGLE) -->
-    <section id="rental" class="py-20 bg-[#111e26] border-t border-[#233D4C]">
+    <section id="rental" class="py-20 bg-[#111e26] border-t border-[#233D4C] relative">
+      <div id="rental-plans" class="absolute -top-24"></div>
       <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
         
         <div class="text-center max-w-xl mx-auto mb-10">
@@ -530,62 +535,62 @@
         <!-- Comprehensive Rate Card Table -->
         <div class="rounded-2xl border border-[#233D4C] overflow-hidden bg-[#172731] shadow-card-dark mb-12">
           <div class="overflow-x-auto">
-            <table class="w-full text-left text-xs text-[#9fb3be]">
+            <table class="w-full text-left text-xs text-[#9fb3be] border-collapse">
               <thead class="bg-[#0e181f] text-[#FD802E] uppercase font-mono text-[11px] border-b border-[#233D4C]">
                 <tr>
-                  <th class="py-3.5 px-6 font-bold">Service Category</th>
-                  <th class="py-3.5 px-6 font-bold">Included Work & Inclusions</th>
-                  <th class="py-3.5 px-6 font-bold">Turnaround</th>
+                  <th class="py-3.5 px-6 font-bold border-r border-[#233D4C]">Service Category</th>
+                  <th class="py-3.5 px-6 font-bold border-r border-[#233D4C]">Included Work & Inclusions</th>
+                  <th class="py-3.5 px-6 font-bold border-r border-[#233D4C]">Turnaround</th>
                   <th class="py-3.5 px-6 font-bold text-right">Standard Tariff (INR)</th>
                 </tr>
               </thead>
               <tbody class="divide-y divide-[#233D4C]/60">
                 <tr class="hover:bg-[#0e181f]/40 transition-colors">
-                  <td class="py-4 px-6 font-bold text-white">Full Hardware Diagnostics</td>
-                  <td class="py-4 px-6">Power rail impedance check, thermal camera profiling, battery health check, RAM MemTest86.</td>
-                  <td class="py-4 px-6 font-mono text-emerald-400">15 – 30 Mins</td>
+                  <td class="py-4 px-6 font-bold text-white border-r border-[#233D4C]/60">Full Hardware Diagnostics</td>
+                  <td class="py-4 px-6 border-r border-[#233D4C]/60">Power rail impedance check, thermal camera profiling, battery health check, RAM MemTest86.</td>
+                  <td class="py-4 px-6 font-mono text-emerald-400 border-r border-[#233D4C]/60">15 – 30 Mins</td>
                   <td class="py-4 px-6 text-right font-black text-[#FD802E]">₹0 (Always Free)</td>
                 </tr>
                 <tr class="hover:bg-[#0e181f]/40 transition-colors">
-                  <td class="py-4 px-6 font-bold text-white">High-Speed NVMe SSD 512GB Upgrade</td>
-                  <td class="py-4 px-6">PCIe Gen4 NVMe drive (up to 5,000MB/s) + 100% full bit-for-bit drive cloning & OS preservation.</td>
-                  <td class="py-4 px-6 font-mono">1 – 2 Hours</td>
+                  <td class="py-4 px-6 font-bold text-white border-r border-[#233D4C]/60">High-Speed NVMe SSD 512GB Upgrade</td>
+                  <td class="py-4 px-6 border-r border-[#233D4C]/60">PCIe Gen4 NVMe drive (up to 5,000MB/s) + 100% full bit-for-bit drive cloning & OS preservation.</td>
+                  <td class="py-4 px-6 font-mono border-r border-[#233D4C]/60">1 – 2 Hours</td>
                   <td class="py-4 px-6 text-right font-bold text-white">₹2,899</td>
                 </tr>
                 <tr class="hover:bg-[#0e181f]/40 transition-colors">
-                  <td class="py-4 px-6 font-bold text-white">High-Speed NVMe SSD 1TB Upgrade</td>
-                  <td class="py-4 px-6">PCIe Gen4 NVMe 1TB drive (up to 7,000MB/s read) + thermal pad installation + cloning.</td>
-                  <td class="py-4 px-6 font-mono">1 – 2 Hours</td>
+                  <td class="py-4 px-6 font-bold text-white border-r border-[#233D4C]/60">High-Speed NVMe SSD 1TB Upgrade</td>
+                  <td class="py-4 px-6 border-r border-[#233D4C]/60">PCIe Gen4 NVMe 1TB drive (up to 7,000MB/s read) + thermal pad installation + cloning.</td>
+                  <td class="py-4 px-6 font-mono border-r border-[#233D4C]/60">1 – 2 Hours</td>
                   <td class="py-4 px-6 text-right font-bold text-white">₹4,999</td>
                 </tr>
                 <tr class="hover:bg-[#0e181f]/40 transition-colors">
-                  <td class="py-4 px-6 font-bold text-white">DDR4 / DDR5 16GB RAM Expansion</td>
-                  <td class="py-4 px-6">Crucial / Kingston 3200MHz DDR4 or 5600MHz DDR5 + MemTest 4-pass verification.</td>
-                  <td class="py-4 px-6 font-mono">30 Mins</td>
+                  <td class="py-4 px-6 font-bold text-white border-r border-[#233D4C]/60">DDR4 / DDR5 16GB RAM Expansion</td>
+                  <td class="py-4 px-6 border-r border-[#233D4C]/60">Crucial / Kingston 3200MHz DDR4 or 5600MHz DDR5 + MemTest 4-pass verification.</td>
+                  <td class="py-4 px-6 font-mono border-r border-[#233D4C]/60">30 Mins</td>
                   <td class="py-4 px-6 text-right font-bold text-white">₹2,999</td>
                 </tr>
                 <tr class="hover:bg-[#0e181f]/40 transition-colors">
-                  <td class="py-4 px-6 font-bold text-white">FHD IPS OEM Screen Replacement</td>
-                  <td class="py-4 px-6">Grade-A anti-glare display panel, zero dead pixels guaranteed, 1-year panel warranty.</td>
-                  <td class="py-4 px-6 font-mono">2 Hours</td>
+                  <td class="py-4 px-6 font-bold text-white border-r border-[#233D4C]/60">FHD IPS OEM Screen Replacement</td>
+                  <td class="py-4 px-6 border-r border-[#233D4C]/60">Grade-A anti-glare display panel, zero dead pixels guaranteed, 1-year panel warranty.</td>
+                  <td class="py-4 px-6 font-mono border-r border-[#233D4C]/60">2 Hours</td>
                   <td class="py-4 px-6 text-right font-bold text-white">From ₹3,899</td>
                 </tr>
                 <tr class="hover:bg-[#0e181f]/40 transition-colors">
-                  <td class="py-4 px-6 font-bold text-white">Genuine OEM Battery Replacement</td>
-                  <td class="py-4 px-6">Brand-new OEM battery pack with fresh cell cycle count, calibrated gas gauge.</td>
-                  <td class="py-4 px-6 font-mono">1 Hour</td>
+                  <td class="py-4 px-6 font-bold text-white border-r border-[#233D4C]/60">Genuine OEM Battery Replacement</td>
+                  <td class="py-4 px-6 border-r border-[#233D4C]/60">Brand-new OEM battery pack with fresh cell cycle count, calibrated gas gauge.</td>
+                  <td class="py-4 px-6 font-mono border-r border-[#233D4C]/60">1 Hour</td>
                   <td class="py-4 px-6 text-right font-bold text-white">From ₹2,499</td>
                 </tr>
                 <tr class="hover:bg-[#0e181f]/40 transition-colors">
-                  <td class="py-4 px-6 font-bold text-white">Motherboard Power IC / PWM Repair</td>
-                  <td class="py-4 px-6">Cleanroom component replacement, shorted capacitor clearing, 90-day board warranty.</td>
-                  <td class="py-4 px-6 font-mono">Same Day</td>
+                  <td class="py-4 px-6 font-bold text-white border-r border-[#233D4C]/60">Motherboard Power IC / PWM Repair</td>
+                  <td class="py-4 px-6 border-r border-[#233D4C]/60">Cleanroom component replacement, shorted capacitor clearing, 90-day board warranty.</td>
+                  <td class="py-4 px-6 font-mono border-r border-[#233D4C]/60">Same Day</td>
                   <td class="py-4 px-6 text-right font-bold text-white">From ₹2,499</td>
                 </tr>
                 <tr class="hover:bg-[#0e181f]/40 transition-colors">
-                  <td class="py-4 px-6 font-bold text-white">Thermal Overhaul & Fan Deep Clean</td>
-                  <td class="py-4 px-6">Honeywell PTM7950 phase change pad application, ultrasonic fan blade wash, copper heatsink flushes.</td>
-                  <td class="py-4 px-6 font-mono">45 Mins</td>
+                  <td class="py-4 px-6 font-bold text-white border-r border-[#233D4C]/60">Thermal Overhaul & Fan Deep Clean</td>
+                  <td class="py-4 px-6 border-r border-[#233D4C]/60">Honeywell PTM7950 phase change pad application, ultrasonic fan blade wash, copper heatsink flushes.</td>
+                  <td class="py-4 px-6 font-mono border-r border-[#233D4C]/60">45 Mins</td>
                   <td class="py-4 px-6 text-right font-bold text-white">₹899</td>
                 </tr>
               </tbody>
@@ -623,38 +628,38 @@
         <h2 class="text-2xl sm:text-3xl font-black text-white text-center mb-8">How LAPNEST Compares</h2>
         
         <div class="rounded-2xl border border-[#233D4C] overflow-x-auto bg-[#172731]">
-          <table class="w-full text-left text-xs sm:text-sm">
+          <table class="w-full text-left text-xs sm:text-sm border-collapse">
             <thead class="bg-[#0e181f] border-b border-[#233D4C] text-[#9fb3be]">
               <tr>
-                <th class="py-4 px-6 font-bold text-white">Service Metric</th>
-                <th class="py-4 px-6 font-bold text-[#FD802E]">LAPNEST Chennai</th>
-                <th class="py-4 px-6 font-semibold">Authorized Brand Centers</th>
+                <th class="py-4 px-6 font-bold text-white border-r border-[#233D4C]">Service Metric</th>
+                <th class="py-4 px-6 font-bold text-[#FD802E] border-r border-[#233D4C]">LAPNEST Chennai</th>
+                <th class="py-4 px-6 font-semibold border-r border-[#233D4C]">Authorized Brand Centers</th>
                 <th class="py-4 px-6 font-semibold">Local Unorganized Shops</th>
               </tr>
             </thead>
             <tbody class="divide-y divide-[#233D4C] text-[#9fb3be]">
               <tr>
-                <td class="py-4 px-6 font-medium text-white">Diagnostic Fee</td>
-                <td class="py-4 px-6 text-emerald-400 font-bold">₹0 (Free on diagnosis)</td>
-                <td class="py-4 px-6">₹999 – ₹1,500 non-refundable</td>
+                <td class="py-4 px-6 font-medium text-white border-r border-[#233D4C]">Diagnostic Fee</td>
+                <td class="py-4 px-6 text-emerald-400 font-bold border-r border-[#233D4C]">₹0 (Free on diagnosis)</td>
+                <td class="py-4 px-6 border-r border-[#233D4C]">₹999 – ₹1,500 non-refundable</td>
                 <td class="py-4 px-6">Unpredictable</td>
               </tr>
               <tr>
-                <td class="py-4 px-6 font-medium text-white">Component vs Full Board Swap</td>
-                <td class="py-4 px-6 text-[#FD802E] font-bold">Micro-solders individual chips</td>
-                <td class="py-4 px-6">Full board swap only (₹25k+)</td>
+                <td class="py-4 px-6 font-medium text-white border-r border-[#233D4C]">Component vs Full Board Swap</td>
+                <td class="py-4 px-6 text-[#FD802E] font-bold border-r border-[#233D4C]">Micro-solders individual chips</td>
+                <td class="py-4 px-6 border-r border-[#233D4C]">Full board swap only (₹25k+)</td>
                 <td class="py-4 px-6">Hit or miss soldering</td>
               </tr>
               <tr>
-                <td class="py-4 px-6 font-medium text-white">Warranty Coverage</td>
-                <td class="py-4 px-6 text-emerald-400 font-bold">Up to 1 Year Comprehensive</td>
-                <td class="py-4 px-6">90 Days only</td>
+                <td class="py-4 px-6 font-medium text-white border-r border-[#233D4C]">Warranty Coverage</td>
+                <td class="py-4 px-6 text-emerald-400 font-bold border-r border-[#233D4C]">Up to 1 Year Comprehensive</td>
+                <td class="py-4 px-6 border-r border-[#233D4C]">90 Days only</td>
                 <td class="py-4 px-6">7 to 30 Days</td>
               </tr>
               <tr>
-                <td class="py-4 px-6 font-medium text-white">Turnaround Speed</td>
-                <td class="py-4 px-6 text-white font-bold">Same day / 24 Hours</td>
-                <td class="py-4 px-6">7 to 21 Business Days</td>
+                <td class="py-4 px-6 font-medium text-white border-r border-[#233D4C]">Turnaround Speed</td>
+                <td class="py-4 px-6 text-white font-bold border-r border-[#233D4C]">Same day / 24 Hours</td>
+                <td class="py-4 px-6 border-r border-[#233D4C]">7 to 21 Business Days</td>
                 <td class="py-4 px-6">2 to 5 Days</td>
               </tr>
             </tbody>
@@ -773,7 +778,7 @@
 
               <!-- X (Twitter) (Highlighted Clean White) -->
               <a href="https://x.com/lapnestofficial" target="_blank" rel="noopener noreferrer" 
-                 class="w-10 h-10 rounded-full bg-[#172731] border-2 border-white text-white hover:bg-white hover:text-black flex items-center justify-center transition-all hover:scale-110 shadow-md shadow-white/25" 
+                 class="social-x-btn w-10 h-10 rounded-full bg-[#172731] border-2 border-white text-white hover:bg-white hover:text-black flex items-center justify-center transition-all hover:scale-110 shadow-md shadow-white/25" 
                  title="X (Twitter)" aria-label="X Twitter">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               </a>

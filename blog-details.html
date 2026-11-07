@@ -7,7 +7,7 @@
   <meta name="description" content="Technical comparison between PCIe Gen4 NVMe and SATA SSDs. Benchmarking boot speeds, data transfer latency, and heat generation on laptops.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=4.4">
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -20,7 +20,7 @@
     <!-- STICKY NAVBAR - FLOATING CAPSULE PILL DESIGN (IMAGE 2 AESTHETIC) -->
     <!-- STICKY NAVBAR (FULL-WIDTH BRAND HEADER) -->
   <header id="main-navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3.5 bg-[#0e181f]/90 backdrop-blur-md border-b border-[#233D4C]/60">
-    <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 flex items-center justify-between gap-4 lg:gap-6 xl:gap-8">
+    <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-4 xl:px-8 flex items-center justify-between gap-3 lg:gap-3.5 xl:gap-6 2xl:gap-8">
       
       <!-- Brand Logo -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none shrink-0">
@@ -28,15 +28,15 @@
              data-dark="assets/images/logo/logo-dark.svg" 
              data-light="assets/images/logo/logo-light.svg" 
              alt="LAPNEST – BUY • SELL • REPAIR • RENT" 
-             class="brand-logo-img header-logo h-9 sm:h-11 md:h-12 w-auto max-w-[150px] sm:max-w-none transition-transform duration-300 group-hover:scale-105">
+             class="brand-logo-img header-logo h-10 sm:h-11 lg:h-9 xl:h-11 w-auto max-w-[190px] sm:max-w-none lg:max-w-[170px] xl:max-w-none transition-transform duration-300 group-hover:scale-105">
       </a>
 
       <!-- Desktop Center Navigation Menu (Old Nav Layout - Clean Text Links) -->
-      <nav class="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-8">
+      <nav class="hidden lg:flex items-center gap-2 lg:gap-2.5 xl:gap-5 2xl:gap-7">
         
         <!-- Home Dropdown -->
         <div class="relative group dropdown-container">
-          <button type="button" class="dropdown-btn nav-link-item flex items-center gap-1.5 text-sm font-semibold text-white hover:text-[#FD802E] transition-colors focus:outline-none py-2 whitespace-nowrap" aria-expanded="false" aria-haspopup="true">
+          <button type="button" class="dropdown-btn nav-link-item flex items-center gap-1.5 text-xs xl:text-sm font-semibold text-white hover:text-[#FD802E] transition-colors focus:outline-none py-2 whitespace-nowrap" aria-expanded="false" aria-haspopup="true">
             <span>Home</span>
             <svg class="dropdown-arrow-icon w-4 h-4 transition-transform duration-200 group-hover:rotate-180 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </button>
@@ -54,31 +54,31 @@
           </div>
         </div>
 
-        <a href="about.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">About</a>
-        <a href="products.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Products</a>
-        <a href="pricing.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Pricing</a>
-        <a href="repair-upgrade.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Repair & Upgrade</a>
-        <a href="blog.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Blog</a>
-        <a href="contact.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Contact</a>
+        <a href="about.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">About</a>
+        <a href="products.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Products</a>
+        <a href="pricing.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Pricing</a>
+        <a href="repair-upgrade.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Repair & Upgrade</a>
+        <a href="blog.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#FD802E] font-bold transition-colors py-2 whitespace-nowrap" aria-current="page">Blog</a>
+        <a href="contact.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Contact</a>
       </nav>
 
       <!-- Right Controls: RTL Toggle, Theme Toggle, Order CTA -->
-      <div class="flex items-center gap-2 sm:gap-2.5 xl:gap-3 shrink-0">
+      <div class="flex items-center gap-1.5 lg:gap-2 xl:gap-3 shrink-0">
         
         <!-- RTL/LTR Toggle with Clean Arrow -->
-        <button type="button" class="rtl-toggle-btn h-10 px-3 rounded-xl text-xs font-bold border border-[#233D4C] bg-[#172731] text-[#9fb3be] hover:text-[#FD802E] hover:border-[#FD802E] transition-all hidden sm:inline-flex items-center justify-center gap-1.5 shrink-0" title="Toggle RTL / LTR" aria-label="Toggle Text Direction">
+        <button type="button" class="rtl-toggle-btn h-9 xl:h-10 px-2.5 xl:px-3 rounded-xl text-[11px] xl:text-xs font-bold border border-[#233D4C] bg-[#172731] text-[#9fb3be] hover:text-[#FD802E] hover:border-[#FD802E] transition-all hidden lg:inline-flex items-center justify-center gap-1.5 shrink-0" title="Toggle RTL / LTR" aria-label="Toggle Text Direction">
           <svg class="w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
           <span class="dir-badge text-[11px] tracking-wider">RTL</span>
         </button>
 
         <!-- Dark/Light Theme Toggle -->
-        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-xl text-[#9fb3be] hover:text-[#FD802E] bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] transition-all hidden sm:inline-flex items-center justify-center shrink-0" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
+        <button type="button" class="theme-toggle-btn w-9 h-9 xl:w-10 xl:h-10 rounded-xl text-[#9fb3be] hover:text-[#FD802E] bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] transition-all hidden lg:inline-flex items-center justify-center shrink-0" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
           <svg class="sun-icon w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
           <svg class="moon-icon w-4 h-4 text-[#FD802E] hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
         </button>
 
         <!-- Dedicated Order CTA -->
-        <a href="order.html" class="hidden sm:inline-flex items-center justify-center gap-2 h-10 px-4 xl:px-5 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white shadow-lg shadow-[#FD802E]/25 transition-all duration-300 transform hover:-translate-y-0.5 shrink-0 whitespace-nowrap">
+        <a href="order.html" class="hidden lg:inline-flex items-center justify-center gap-1.5 xl:gap-2 h-9 xl:h-10 px-3.5 xl:px-5 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white shadow-lg shadow-[#FD802E]/25 transition-all duration-300 transform hover:-translate-y-0.5 shrink-0 whitespace-nowrap">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
           <span>Order Now</span>
         </a>
@@ -119,7 +119,7 @@
       <a href="products.html" class="block py-2.5 px-3 text-white font-medium hover:bg-[#172731] rounded-lg">Products Catalog</a>
       <a href="pricing.html" class="block py-2.5 px-3 text-white font-medium hover:bg-[#172731] rounded-lg">Pricing & Rentals</a>
       <a href="repair-upgrade.html" class="block py-2.5 px-3 text-white font-medium hover:bg-[#172731] rounded-lg">Repair & Upgrade</a>
-      <a href="blog.html" class="block py-2.5 px-3 text-white font-medium hover:bg-[#172731] rounded-lg">Tech Blog</a>
+      <a href="blog.html" class="block py-2.5 px-3 text-[#FD802E] font-bold bg-[#172731] rounded-lg">Tech Blog</a>
       <a href="contact.html" class="block py-2.5 px-3 text-white font-medium hover:bg-[#172731] rounded-lg">Contact & Location</a>
     </nav>
 
@@ -168,106 +168,193 @@
       
       <!-- Breadcrumb -->
       <nav class="flex items-center gap-2 text-xs text-[#9fb3be] mb-6">
-        <a href="index.html" class="hover:text-[#FD802E]">Home</a>
+        <a href="index.html" class="hover:text-[#FD802E] transition-colors">Home</a>
         <span>/</span>
-        <a href="blog.html" class="hover:text-[#FD802E]">Blog</a>
+        <a href="blog.html" class="hover:text-[#FD802E] transition-colors">Blog</a>
         <span>/</span>
-        <span class="text-[#FD802E] font-semibold">SSD Benchmark Guide</span>
+        <span id="blog-breadcrumb-title" class="text-[#FD802E] font-semibold">SSD Benchmark Guide</span>
       </nav>
 
       <!-- Article Header -->
       <div class="max-w-4xl mx-auto mb-10">
         <div class="flex items-center gap-3 text-xs text-[#9fb3be] mb-3">
-          <span class="px-2.5 py-1 rounded bg-[#FD802E] text-white font-bold uppercase">Hardware Upgrades</span>
-          <span>Published on Nov 02, 2026</span>
+          <span id="blog-category-badge" class="px-2.5 py-1 rounded bg-[#FD802E] text-white font-bold uppercase">Hardware Upgrades</span>
+          <span id="blog-publish-date">Published on Nov 02, 2026</span>
           <span>•</span>
-          <span class="text-[#FD802E] font-semibold">8 Min Read</span>
+          <span id="blog-read-time" class="text-[#FD802E] font-semibold">8 Min Read</span>
         </div>
-        <h1 class="text-3xl sm:text-5xl font-black text-white leading-tight">
+        <h1 id="blog-title" class="text-3xl sm:text-5xl font-black text-white leading-tight">
           NVMe Gen4 vs Legacy SATA SSD: The Real-World Engineering Benchmark
         </h1>
         <div class="flex items-center gap-4 mt-6 pt-6 border-t border-[#233D4C]">
-          <img src="assets/images/team/team-2.jpg" alt="Venkatesh Raghavan" class="w-12 h-12 rounded-full object-cover border-2 border-[#FD802E]">
+          <img id="blog-author-img" src="assets/images/team/team-2.jpg" alt="Venkatesh Raghavan" class="w-12 h-12 rounded-full object-cover border-2 border-[#FD802E]">
           <div>
-            <h4 class="text-sm font-bold text-white">Venkatesh Raghavan</h4>
-            <p class="text-xs text-[#9fb3be]">Lead Hardware Engineer, Cleanroom Diagnostics</p>
+            <h4 id="blog-author-name" class="text-sm font-bold text-white">Venkatesh Raghavan</h4>
+            <p id="blog-author-role" class="text-xs text-[#9fb3be]">Lead Hardware Engineer, Cleanroom Diagnostics</p>
           </div>
         </div>
       </div>
 
       <!-- Featured Image -->
       <div class="max-w-4xl mx-auto aspect-[16/9] rounded-3xl overflow-hidden border border-[#233D4C] bg-[#172731] mb-12 shadow-2xl">
-        <img src="assets/images/blog/blog-1.jpg" alt="SSD testing and logic board" class="w-full h-full object-cover">
+        <img id="blog-featured-img" src="assets/images/blog/blog-1.jpg" alt="SSD testing and logic board" class="w-full h-full object-cover">
       </div>
 
-      <!-- Layout: Content + Sticky Sidebar (TOC & Categories) -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-4xl mx-auto items-start">
+      <!-- Layout: Content + Sticky Sidebar (4 Cards) Equal Alignment & Height -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 max-w-4xl mx-auto items-stretch">
         
-        <!-- Main Article Content (8 Cols) -->
-        <article class="lg:col-span-8 space-y-6 text-xs sm:text-sm text-[#9fb3be] leading-relaxed">
+        <!-- Main Article Content (8 Cols, flex-col with mt-auto to align bottoms) -->
+        <article id="blog-article-content" class="lg:col-span-8 flex flex-col justify-between text-xs sm:text-sm text-[#9fb3be] leading-relaxed">
           
-          <p class="text-base text-white font-medium leading-relaxed">
-            In our laptop repair laboratory in Sholinganallur, Chennai, the single most requested upgrade from slow laptop owners is storage replacement. But with marketing terms like PCIe 4.0, NVMe, QLC, TLC and DRAM-cache thrown around, what is the genuine measurable difference in everyday Indian computing?
-          </p>
+          <div class="space-y-6">
+            <p class="text-base text-white font-medium leading-relaxed">
+              In our laptop repair laboratory in Sholinganallur, Chennai, the single most requested upgrade from slow laptop owners is storage replacement. But with marketing terms like PCIe 4.0, NVMe, QLC, TLC and DRAM-cache thrown around, what is the genuine measurable difference in everyday Indian computing?
+            </p>
 
-          <h2 id="sec-1" class="text-xl font-bold text-white text-base sm:text-xl pt-4 border-t border-[#233D4C]">1. The Bus Architecture: SATA III vs PCIe Lane Bandwidth</h2>
-          <p>
-            Traditional 2.5-inch SATA III solid state drives are physically throttled by the legacy AHCI controller protocol, topping out at roughly 550 MB/s sequential read and write speeds.
-          </p>
-          <p>
-            In contrast, modern M.2 NVMe drives utilize four direct PCIe lanes communicating natively with the CPU socket. A Gen4 NVMe drive effortlessly achieves between 3,500 MB/s and 7,000 MB/s—over 12 times the raw data throughput.
-          </p>
+            <h2 id="sec-1" class="text-xl font-bold text-white text-base sm:text-xl mt-8 pt-6 border-t border-[#233D4C]">1. The Bus Architecture: SATA III vs PCIe Lane Bandwidth</h2>
+            <p>
+              Traditional 2.5-inch SATA III solid state drives are physically throttled by the legacy AHCI controller protocol, topping out at roughly 550 MB/s sequential read and write speeds.
+            </p>
+            <p>
+              In contrast, modern M.2 NVMe drives utilize four direct PCIe lanes communicating natively with the CPU socket. A Gen4 NVMe drive effortlessly achieves between 3,500 MB/s and 7,000 MB/s—over 12 times the raw data throughput.
+            </p>
 
-          <div class="p-4 rounded-xl bg-[#172731] border-l-4 border-[#FD802E] my-4 text-xs text-white">
-            <strong>Lab Benchmark Result:</strong> Windows 11 cold boot time dropped from 38.4 seconds on SATA to 6.2 seconds on a Gen4 Crucial P3 Plus NVMe drive.
+            <div class="p-4 rounded-xl bg-[#172731] border-l-4 border-[#FD802E] my-4 text-xs text-white shadow-md">
+              <strong>Lab Benchmark Result:</strong> Windows 11 cold boot time dropped from 38.4 seconds on SATA to 6.2 seconds on a Gen4 Crucial P3 Plus NVMe drive.
+            </div>
+
+            <h2 id="sec-2" class="text-xl font-bold text-white text-base sm:text-xl mt-8 pt-6 border-t border-[#233D4C]">2. Heavy Workloads: Video Rendering & Coding</h2>
+            <p>
+              Where users notice monumental gains is sustained input/output queues. Compiling large C++ codebases or rendering 4K 10-bit H.265 video in DaVinci Resolve requires constant reading of cache scratches. The IOPS (Input/Output Operations Per Second) on Gen4 NVMe reach 650,000 IOPS compared to just 90,000 IOPS on legacy drives.
+            </p>
+
+            <h2 id="sec-3" class="text-xl font-bold text-white text-base sm:text-xl mt-8 pt-6 border-t border-[#233D4C]">3. Thermal Considerations in Chennai Summers</h2>
+            <p>
+              Speed generates heat. A Gen4 SSD under full write load can peak at 78°C. Without proper silicone thermal pads connecting the drive controller to the laptop's aluminum base chassis, the drive will severely throttle speeds down to SATA levels after 90 seconds. At LAPNEST, all SSD installations include high-conductivity copper-graphene thermal dispersion foils.
+            </p>
+
+            <h2 id="sec-4" class="text-xl font-bold text-white text-base sm:text-xl mt-8 pt-6 border-t border-[#233D4C]">4. DRAM-Cache vs Host Memory Buffer (HMB)</h2>
+            <p>
+              Budget DRAM-less SSDs offload index mapping to system RAM via HMB. Under sustained sequential writes exceeding 40GB, SLC caching exhausts and speeds plummet to 45 MB/s. LAPNEST exclusively equips workstation upgrades with onboard LPDDR4 DRAM-cached drives for unbreakable transfer stability.
+            </p>
+
+            <h2 id="sec-5" class="text-xl font-bold text-white text-base sm:text-xl mt-8 pt-6 border-t border-[#233D4C]">5. 4-Step Cleanroom Clone & Upgrade Protocol</h2>
+            <p>
+              Our lab performs zero-loss bit-level drive cloning preserving Windows activation, developer environment variables, and hidden EFI recovery partitions. Every drive is partitioned with 10% OP (Over-Provisioning) to maximize NAND flash write-endurance over a 5-year operating life.
+            </p>
           </div>
 
-          <h2 id="sec-2" class="text-xl font-bold text-white text-base sm:text-xl pt-4 border-t border-[#233D4C]">2. Heavy Workloads: Video Rendering & Coding</h2>
-          <p>
-            Where users notice monumental gains is sustained input/output queues. Compiling large C++ codebases or rendering 4K 10-bit H.265 video in DaVinci Resolve requires constant reading of cache scratches. The IOPS (Input/Output Operations Per Second) on Gen4 NVMe reach 650,000 IOPS compared to just 90,000 IOPS on legacy drives.
-          </p>
+          <!-- Bottom: Cleanroom Assurance Card & Social Sharing (Sticks flush to bottom via mt-auto) -->
+          <div class="mt-auto pt-8 space-y-6">
+            <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C] flex items-start gap-4 shadow-lg">
+              <div class="w-12 h-12 rounded-xl bg-[#FD802E]/10 border border-[#FD802E]/30 flex items-center justify-center shrink-0 text-[#FD802E]">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white mb-1.5 flex items-center gap-2">
+                  <span>LAPNEST Cleanroom Verification Assurance</span>
+                  <span class="text-[10px] font-mono font-normal text-[#25D366] bg-[#25D366]/10 px-2 py-0.5 rounded border border-[#25D366]/20">ISO-Class 5 Certified</span>
+                </h4>
+                <p class="text-xs text-[#9fb3be] leading-relaxed">
+                  Every motherboard repair, BGA reballing, and hardware upgrade performed in our Sholinganallur cleanroom is verified with FLIR thermal imaging, 40-point rail impedance diagnostics, and backed by our unconditional 90-day parts and labor warranty.
+                </p>
+              </div>
+            </div>
 
-          <h2 id="sec-3" class="text-xl font-bold text-white text-base sm:text-xl pt-4 border-t border-[#233D4C]">3. Thermal Considerations in Chennai Summers</h2>
-          <p>
-            Speed generates heat. A Gen4 SSD under full write load can peak at 78°C. Without proper silicone thermal pads connecting the drive controller to the laptop's aluminum base chassis, the drive will severely throttle speeds down to SATA levels after 90 seconds. At LAPNEST, all SSD installations include high-conductivity copper-graphene thermal dispersion foils.
-          </p>
-
-          <!-- Social Sharing -->
-          <div class="pt-8 border-t border-[#233D4C] flex items-center justify-between">
-            <span class="text-xs font-bold text-white uppercase tracking-wider">Share This Article:</span>
-            <div class="flex gap-2">
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-[#172731] hover:bg-[#FD802E] hover:text-white border border-[#233D4C] text-xs transition-colors">X / Twitter</a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-[#172731] hover:bg-[#FD802E] hover:text-white border border-[#233D4C] text-xs transition-colors">LinkedIn</a>
-              <a href="https://wa.me/?text=Check+out+this+laptop+SSD+guide" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-[#172731] hover:bg-[#25D366] hover:text-white border border-[#233D4C] text-xs transition-colors">WhatsApp</a>
+            <!-- Social Sharing -->
+            <div class="pt-6 border-t border-[#233D4C] flex flex-wrap items-center justify-between gap-3">
+              <span class="text-xs font-bold text-white uppercase tracking-wider">Share This Technical Guide:</span>
+              <div class="flex gap-2">
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-[#172731] hover:bg-[#FD802E] hover:text-white border border-[#233D4C] text-xs transition-colors">X / Twitter</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-[#172731] hover:bg-[#FD802E] hover:text-white border border-[#233D4C] text-xs transition-colors">LinkedIn</a>
+                <a href="https://wa.me/?text=Check+out+this+laptop+SSD+guide" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-[#172731] hover:bg-[#25D366] hover:text-white border border-[#233D4C] text-xs transition-colors">WhatsApp</a>
+              </div>
             </div>
           </div>
 
         </article>
 
-        <!-- Sidebar: Table of Contents & Categories (4 Cols) -->
-        <aside class="lg:col-span-4 space-y-6 sticky top-24">
+        <!-- Sidebar: 4 Cards with Equal Height & Bottom Baseline Alignment -->
+        <aside id="blog-sidebar" class="lg:col-span-4 flex flex-col justify-between space-y-6">
           
-          <!-- Table of Contents -->
-          <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C] space-y-3">
+          <!-- Card 1: Table of Contents -->
+          <div id="blog-toc-card" class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C] space-y-3">
             <h4 class="text-xs font-bold text-white uppercase tracking-wider text-[#FD802E]">Table of Contents</h4>
-            <ul class="space-y-2 text-xs text-[#9fb3be]">
-              <li><a href="#sec-1" class="hover:text-[#FD802E]">1. SATA III vs PCIe Lane Bandwidth</a></li>
-              <li><a href="#sec-2" class="hover:text-[#FD802E]">2. Heavy Workloads: Video & Code</a></li>
-              <li><a href="#sec-3" class="hover:text-[#FD802E]">3. Thermal Considerations in Chennai</a></li>
+            <ul id="blog-toc-list" class="space-y-2 text-xs text-[#9fb3be]">
+              <li><a href="#sec-1" class="hover:text-[#FD802E] transition-colors block py-0.5">1. SATA III vs PCIe Lane Bandwidth</a></li>
+              <li><a href="#sec-2" class="hover:text-[#FD802E] transition-colors block py-0.5">2. Heavy Workloads: Video & Code</a></li>
+              <li><a href="#sec-3" class="hover:text-[#FD802E] transition-colors block py-0.5">3. Thermal Considerations in Chennai</a></li>
+              <li><a href="#sec-4" class="hover:text-[#FD802E] transition-colors block py-0.5">4. DRAM-Cache vs HMB Architecture</a></li>
+              <li><a href="#sec-5" class="hover:text-[#FD802E] transition-colors block py-0.5">5. 4-Step Cleanroom Clone Protocol</a></li>
             </ul>
           </div>
 
-          <!-- Upgrade CTA -->
-          <div class="p-6 rounded-2xl bg-gradient-to-b from-[#172731] to-[#0e181f] border border-[#FD802E]/40 text-center space-y-3">
-            <h4 class="text-sm font-bold text-white">Upgrade Your Laptop's SSD</h4>
-            <p class="text-xs text-[#9fb3be]">Includes free data cloning. 30-minute turnaround in Chennai showroom.</p>
-            <a href="service-details.html?service=ssd" class="block w-full py-2.5 rounded-xl bg-[#FD802E] hover:bg-[#ff9248] text-white font-bold text-xs shadow-md shadow-[#FD802E]/25 transition-all">
+          <!-- Card 2: Upgrade CTA -->
+          <div id="blog-sidebar-cta" class="p-6 rounded-2xl bg-gradient-to-b from-[#172731] to-[#0e181f] border border-[#FD802E]/40 text-center space-y-3">
+            <h4 id="blog-cta-title" class="text-sm font-bold text-white">Upgrade Your Laptop's SSD</h4>
+            <p id="blog-cta-desc" class="text-xs text-[#9fb3be]">Includes free data cloning. 30-minute turnaround in Chennai showroom.</p>
+            <a id="blog-cta-btn" href="service-details.html?service=ssd" class="block w-full py-2.5 rounded-xl bg-[#FD802E] hover:bg-[#ff9248] text-white font-bold text-xs shadow-md shadow-[#FD802E]/25 transition-all">
               SSD Upgrade Plans from ₹1,999
             </a>
           </div>
 
-        </aside>
+          <!-- Card 3: Related Engineering Guides -->
+          <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C] space-y-4">
+            <div class="flex items-center justify-between border-b border-[#233D4C] pb-3">
+              <h4 class="text-xs font-bold text-white uppercase tracking-wider text-[#FD802E]">Related Guides</h4>
+              <a href="blog.html" class="text-[11px] font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors">View All</a>
+            </div>
+            <div id="blog-sidebar-related" class="space-y-3.5">
+              <a href="blog-details.html?id=thermal-paste-guide" class="group flex items-start gap-3 p-1.5 rounded-xl hover:bg-[#0e181f]/60 transition-colors">
+                <img src="assets/images/blog/blog-2.jpg" alt="Thermal Paste" class="w-16 h-12 rounded-lg object-cover border border-[#233D4C] shrink-0 group-hover:scale-105 transition-transform duration-300">
+                <div class="space-y-1 min-w-0">
+                  <span class="text-[10px] font-bold text-[#FD802E] uppercase tracking-wider block">Maintenance</span>
+                  <h5 class="text-xs font-bold text-white group-hover:text-[#FD802E] transition-colors line-clamp-2 leading-snug">Why Replacing Thermal Paste Every 18 Months Saves Your GPU</h5>
+                  <span class="text-[10px] text-[#9fb3be] block">6 Min Read</span>
+                </div>
+              </a>
+              <a href="blog-details.html?id=student-guide" class="group flex items-start gap-3 p-1.5 rounded-xl hover:bg-[#0e181f]/60 transition-colors">
+                <img src="assets/images/blog/blog-3.jpg" alt="Student Laptops" class="w-16 h-12 rounded-lg object-cover border border-[#233D4C] shrink-0 group-hover:scale-105 transition-transform duration-300">
+                <div class="space-y-1 min-w-0">
+                  <span class="text-[10px] font-bold text-[#FD802E] uppercase tracking-wider block">Buying Guides</span>
+                  <h5 class="text-xs font-bold text-white group-hover:text-[#FD802E] transition-colors line-clamp-2 leading-snug">Best Laptops for Anna University Engineering Students</h5>
+                  <span class="text-[10px] text-[#9fb3be] block">10 Min Read</span>
+                </div>
+              </a>
+              <a href="blog-details.html?id=apple-vs-intel" class="group flex items-start gap-3 p-1.5 rounded-xl hover:bg-[#0e181f]/60 transition-colors">
+                <img src="assets/images/blog/blog-4.jpg" alt="Apple M3 vs Intel" class="w-16 h-12 rounded-lg object-cover border border-[#233D4C] shrink-0 group-hover:scale-105 transition-transform duration-300">
+                <div class="space-y-1 min-w-0">
+                  <span class="text-[10px] font-bold text-[#FD802E] uppercase tracking-wider block">Hardware</span>
+                  <h5 class="text-xs font-bold text-white group-hover:text-[#FD802E] transition-colors line-clamp-2 leading-snug">Apple M3 Pro vs Intel Core i9: Battery vs Raw Throughput</h5>
+                  <span class="text-[10px] text-[#9fb3be] block">7 Min Read</span>
+                </div>
+              </a>
+            </div>
+          </div>
 
+          <!-- Card 4: Need Expert Help / Cleanroom Consultation (mt-auto aligns flush to bottom) -->
+          <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C] space-y-3.5 mt-auto">
+            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-[#0e181f] border border-[#233D4C] text-[10px] font-bold text-[#FD802E]">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span>ENGINEERS ACTIVE • CHENNAI</span>
+            </div>
+            <h4 class="text-sm font-bold text-white leading-snug">Have a Complex Logic Board or Thermal Issue?</h4>
+            <p class="text-xs text-[#9fb3be] leading-relaxed">
+              Talk directly with our chip-level engineers at OMR Sholinganallur. Free 15-minute diagnostic consultation.
+            </p>
+            <div class="pt-1 space-y-2">
+              <a href="https://wa.me/919840012345?text=Hi%20LAPNEST%20team%2C%20I%20have%20a%20laptop%20hardware%20query" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-xs shadow-md shadow-[#25D366]/20 transition-all">
+                <svg class="w-4 h-4 fill-currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>WhatsApp an Engineer</span>
+              </a>
+              <a href="contact.html" class="flex items-center justify-center gap-1.5 w-full py-2 rounded-xl bg-[#0e181f] hover:bg-[#233D4C] text-[#9fb3be] hover:text-white border border-[#233D4C] font-semibold text-xs transition-colors">
+                <span>Book Storefront Consultation</span>
+                <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+              </a>
+            </div>
+          </div>
+
+        </aside>
       </div>
 
     </div>
@@ -314,7 +401,7 @@
 
               <!-- X (Twitter) (Highlighted Clean White) -->
               <a href="https://x.com/lapnestofficial" target="_blank" rel="noopener noreferrer" 
-                 class="w-10 h-10 rounded-full bg-[#172731] border-2 border-white text-white hover:bg-white hover:text-black flex items-center justify-center transition-all hover:scale-110 shadow-md shadow-white/25" 
+                 class="social-x-btn w-10 h-10 rounded-full bg-[#172731] border-2 border-white text-white hover:bg-white hover:text-black flex items-center justify-center transition-all hover:scale-110 shadow-md shadow-white/25" 
                  title="X (Twitter)" aria-label="X Twitter">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               </a>
@@ -409,7 +496,8 @@
   <script src="assets/js/theme.js"></script>
   <script src="assets/js/rtl.js"></script>
   <script src="assets/js/navbar.js"></script>
-    <script src="assets/js/animations.js"></script>
+  <script src="assets/js/animations.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/blog-details.js?v=3.1"></script>
 </body>
 </html>

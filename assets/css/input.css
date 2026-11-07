@@ -224,6 +224,11 @@ html.light .gold-gradient-text, html.light .pumpkin-gradient-text {
   flex-direction: column;
 }
 
+.equal-card.hidden,
+.blog-article-card.hidden {
+  display: none !important;
+}
+
 .equal-card-body {
   display: flex;
   flex-direction: column;
@@ -233,6 +238,19 @@ html.light .gold-gradient-text, html.light .pumpkin-gradient-text {
 .equal-card-footer {
   margin-top: auto;
   padding-top: 1.25rem;
+}
+
+/* Ensure generous breathing room above separation lines across all cards */
+.equal-card-body p:last-of-type,
+.equal-card p:last-of-type,
+.blog-article-card p:last-of-type {
+  margin-bottom: 1.25rem;
+}
+
+.equal-card-footer.border-t,
+.equal-card-footer[class*="border-t"] {
+  margin-top: auto !important;
+  padding-top: 1.25rem !important;
 }
 
 /* Glassmorphism */
@@ -557,6 +575,30 @@ html.light .theme-toggle-btn:hover,
   color: #FD802E !important;
 }
 
+/* Blog Category Filter Buttons */
+.blog-filter-btn.is-active,
+html.light .blog-filter-btn.is-active,
+.light .blog-filter-btn.is-active {
+  background-color: #FD802E !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 14px rgba(253, 128, 46, 0.3) !important;
+}
+
+html.light .blog-filter-btn:not(.is-active),
+.light .blog-filter-btn:not(.is-active) {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(35, 61, 76, 0.25) !important;
+  color: #111e26 !important;
+}
+
+html.light .blog-filter-btn:not(.is-active):hover,
+.light .blog-filter-btn:not(.is-active):hover {
+  background-color: #f3f6f8 !important;
+  color: #FD802E !important;
+  border-color: #FD802E !important;
+}
+
 html.light .rtl-toggle-btn span,
 .light .rtl-toggle-btn span {
   color: #0f172a !important;
@@ -674,6 +716,86 @@ html.light .glass-panel,
 }
 
 /* Form Inputs in Light Mode */
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+.calendar-input {
+  color-scheme: dark !important;
+}
+
+/* In Dark Mode (Default / html:not(.light)) - Vibrant Lapnest Brand Orange Calendar Icon (#FD802E) */
+html:not(.light) input[type="date"]::-webkit-calendar-picker-indicator,
+html:not(.light) input[type="time"]::-webkit-calendar-picker-indicator,
+html:not(.light) input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+html:not(.light) .calendar-input::-webkit-calendar-picker-indicator,
+body:not(.light) input[type="date"]::-webkit-calendar-picker-indicator,
+body:not(.light) .calendar-input::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-calendar-picker-indicator,
+.calendar-input::-webkit-calendar-picker-indicator {
+  filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(1514%) hue-rotate(345deg) brightness(101%) contrast(99%) !important;
+  cursor: pointer !important;
+  opacity: 1 !important;
+  padding: 4px !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+html:not(.light) input[type="date"]::-webkit-calendar-picker-indicator:hover,
+html:not(.light) input[type="time"]::-webkit-calendar-picker-indicator:hover,
+html:not(.light) input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover,
+html:not(.light) .calendar-input::-webkit-calendar-picker-indicator:hover,
+body:not(.light) input[type="date"]::-webkit-calendar-picker-indicator:hover,
+body:not(.light) .calendar-input::-webkit-calendar-picker-indicator:hover,
+input[type="date"]::-webkit-calendar-picker-indicator:hover,
+.calendar-input::-webkit-calendar-picker-indicator:hover {
+  opacity: 1 !important;
+  filter: brightness(0) saturate(100%) invert(60%) sepia(95%) saturate(1600%) hue-rotate(345deg) brightness(115%) contrast(105%) !important;
+  background-color: rgba(253, 128, 46, 0.2) !important;
+  transform: scale(1.12) !important;
+}
+
+/* In Light Mode - Also Vibrant Lapnest Brand Orange Calendar Icon (#FD802E) */
+html.light input[type="date"],
+html.light input[type="time"],
+html.light input[type="datetime-local"],
+html.light .calendar-input,
+.light input[type="date"],
+.light input[type="time"],
+.light input[type="datetime-local"],
+.light .calendar-input {
+  color-scheme: light !important;
+}
+
+html.light input[type="date"]::-webkit-calendar-picker-indicator,
+html.light input[type="time"]::-webkit-calendar-picker-indicator,
+html.light input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+html.light .calendar-input::-webkit-calendar-picker-indicator,
+.light input[type="date"]::-webkit-calendar-picker-indicator,
+.light input[type="time"]::-webkit-calendar-picker-indicator,
+.light input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+.light .calendar-input::-webkit-calendar-picker-indicator {
+  filter: brightness(0) saturate(100%) invert(56%) sepia(90%) saturate(1514%) hue-rotate(345deg) brightness(101%) contrast(99%) !important;
+  opacity: 1 !important;
+  cursor: pointer !important;
+  padding: 4px !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+html.light input[type="date"]::-webkit-calendar-picker-indicator:hover,
+html.light input[type="time"]::-webkit-calendar-picker-indicator:hover,
+html.light input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover,
+html.light .calendar-input::-webkit-calendar-picker-indicator:hover,
+.light input[type="date"]::-webkit-calendar-picker-indicator:hover,
+.light input[type="time"]::-webkit-calendar-picker-indicator:hover,
+.light input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover,
+.light .calendar-input::-webkit-calendar-picker-indicator:hover {
+  opacity: 1 !important;
+  filter: brightness(0) saturate(100%) invert(60%) sepia(95%) saturate(1600%) hue-rotate(345deg) brightness(115%) contrast(105%) !important;
+  background-color: rgba(253, 128, 46, 0.15) !important;
+  transform: scale(1.12) !important;
+}
+
 html.light input:not([type="checkbox"]):not([type="radio"]),
 html.light select,
 html.light textarea,
@@ -821,6 +943,50 @@ html.light #main-navbar.backdrop-blur-md,
   #main-navbar #mobile-menu-btn {
     display: inline-flex !important;
   }
+}
+
+/* Desktop Navigation Links: Always Flex on >= 1024px, Hidden on < 1024px */
+@media (min-width: 1024px) {
+  #main-navbar nav {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  #main-navbar nav {
+    display: none !important;
+  }
+}
+
+/* Light Mode Desktop Navigation Links & Dropdown */
+html.light #main-navbar .nav-link-item,
+.light #main-navbar .nav-link-item {
+  color: #334155 !important;
+}
+
+html.light #main-navbar .nav-link-item:hover,
+.light #main-navbar .nav-link-item:hover,
+html.light #main-navbar .nav-link-item.text-\[\#FD802E\],
+.light #main-navbar .nav-link-item.text-\[\#FD802E\] {
+  color: #FD802E !important;
+}
+
+html.light #main-navbar .dropdown-menu-wrapper > div,
+.light #main-navbar .dropdown-menu-wrapper > div {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+html.light #main-navbar .dropdown-menu-wrapper a,
+.light #main-navbar .dropdown-menu-wrapper a {
+  color: #334155 !important;
+}
+
+html.light #main-navbar .dropdown-menu-wrapper a:hover,
+.light #main-navbar .dropdown-menu-wrapper a:hover {
+  background-color: #f1f5f9 !important;
+  color: #FD802E !important;
 }
 
 /* Mobile Drawer Responsive & Light Mode Support */
@@ -1319,6 +1485,141 @@ html.light footer .border-\[\#233D4C\],
   border-color: rgba(35, 61, 76, 0.6) !important;
 }
 
+/* Footer Social Channel Icons (Crisp Contrast in Both Dark and Light Modes) */
+footer a[aria-label="WhatsApp"]:hover,
+footer a[href*="wa.me"]:hover,
+html.light footer a[aria-label="WhatsApp"]:hover,
+html.light footer a[href*="wa.me"]:hover,
+.light footer a[aria-label="WhatsApp"]:hover,
+.light footer a[href*="wa.me"]:hover {
+  background-color: #25D366 !important;
+  border-color: #25D366 !important;
+  color: #ffffff !important;
+}
+footer a[aria-label="WhatsApp"]:hover svg,
+footer a[aria-label="WhatsApp"]:hover *,
+footer a[href*="wa.me"]:hover svg,
+footer a[href*="wa.me"]:hover *,
+html.light footer a[aria-label="WhatsApp"]:hover svg,
+html.light footer a[aria-label="WhatsApp"]:hover *,
+html.light footer a[href*="wa.me"]:hover svg,
+html.light footer a[href*="wa.me"]:hover *,
+.light footer a[aria-label="WhatsApp"]:hover svg,
+.light footer a[aria-label="WhatsApp"]:hover *,
+.light footer a[href*="wa.me"]:hover svg,
+.light footer a[href*="wa.me"]:hover * {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+
+footer a[aria-label="Instagram"]:hover,
+footer a[href*="instagram.com"]:hover,
+html.light footer a[aria-label="Instagram"]:hover,
+html.light footer a[href*="instagram.com"]:hover,
+.light footer a[aria-label="Instagram"]:hover,
+.light footer a[href*="instagram.com"]:hover {
+  background-color: #E4405F !important;
+  border-color: #E4405F !important;
+  color: #ffffff !important;
+}
+footer a[aria-label="Instagram"]:hover svg,
+footer a[aria-label="Instagram"]:hover *,
+footer a[href*="instagram.com"]:hover svg,
+footer a[href*="instagram.com"]:hover *,
+html.light footer a[aria-label="Instagram"]:hover svg,
+html.light footer a[aria-label="Instagram"]:hover *,
+html.light footer a[href*="instagram.com"]:hover svg,
+html.light footer a[href*="instagram.com"]:hover *,
+.light footer a[aria-label="Instagram"]:hover svg,
+.light footer a[aria-label="Instagram"]:hover *,
+.light footer a[href*="instagram.com"]:hover svg,
+.light footer a[href*="instagram.com"]:hover * {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+
+.social-x-btn:hover,
+footer a[aria-label="X Twitter"]:hover,
+footer a[title="X (Twitter)"]:hover,
+footer a[href*="x.com"]:hover,
+html.light .social-x-btn:hover,
+html.light footer a[aria-label="X Twitter"]:hover,
+html.light footer a[title="X (Twitter)"]:hover,
+html.light footer a[href*="x.com"]:hover,
+.light .social-x-btn:hover,
+.light footer a[aria-label="X Twitter"]:hover,
+.light footer a[title="X (Twitter)"]:hover,
+.light footer a[href*="x.com"]:hover {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #000000 !important;
+}
+.social-x-btn:hover svg,
+.social-x-btn:hover path,
+.social-x-btn:hover *,
+footer a[aria-label="X Twitter"]:hover svg,
+footer a[aria-label="X Twitter"]:hover path,
+footer a[aria-label="X Twitter"]:hover *,
+footer a[title="X (Twitter)"]:hover svg,
+footer a[title="X (Twitter)"]:hover path,
+footer a[title="X (Twitter)"]:hover *,
+footer a[href*="x.com"]:hover svg,
+footer a[href*="x.com"]:hover path,
+footer a[href*="x.com"]:hover *,
+html.light .social-x-btn:hover svg,
+html.light .social-x-btn:hover path,
+html.light .social-x-btn:hover *,
+html.light footer a[aria-label="X Twitter"]:hover svg,
+html.light footer a[aria-label="X Twitter"]:hover path,
+html.light footer a[aria-label="X Twitter"]:hover *,
+html.light footer a[title="X (Twitter)"]:hover svg,
+html.light footer a[title="X (Twitter)"]:hover path,
+html.light footer a[title="X (Twitter)"]:hover *,
+html.light footer a[href*="x.com"]:hover svg,
+html.light footer a[href*="x.com"]:hover path,
+html.light footer a[href*="x.com"]:hover *,
+.light .social-x-btn:hover svg,
+.light .social-x-btn:hover path,
+.light .social-x-btn:hover *,
+.light footer a[aria-label="X Twitter"]:hover svg,
+.light footer a[aria-label="X Twitter"]:hover path,
+.light footer a[aria-label="X Twitter"]:hover *,
+.light footer a[title="X (Twitter)"]:hover svg,
+.light footer a[title="X (Twitter)"]:hover path,
+.light footer a[title="X (Twitter)"]:hover *,
+.light footer a[href*="x.com"]:hover svg,
+.light footer a[href*="x.com"]:hover path,
+.light footer a[href*="x.com"]:hover * {
+  fill: #000000 !important;
+  color: #000000 !important;
+}
+
+footer a[aria-label="Facebook"]:hover,
+footer a[href*="facebook.com"]:hover,
+html.light footer a[aria-label="Facebook"]:hover,
+html.light footer a[href*="facebook.com"]:hover,
+.light footer a[aria-label="Facebook"]:hover,
+.light footer a[href*="facebook.com"]:hover {
+  background-color: #1877F2 !important;
+  border-color: #1877F2 !important;
+  color: #ffffff !important;
+}
+footer a[aria-label="Facebook"]:hover svg,
+footer a[aria-label="Facebook"]:hover *,
+footer a[href*="facebook.com"]:hover svg,
+footer a[href*="facebook.com"]:hover *,
+html.light footer a[aria-label="Facebook"]:hover svg,
+html.light footer a[aria-label="Facebook"]:hover *,
+html.light footer a[href*="facebook.com"]:hover svg,
+html.light footer a[href*="facebook.com"]:hover *,
+.light footer a[aria-label="Facebook"]:hover svg,
+.light footer a[aria-label="Facebook"]:hover *,
+.light footer a[href*="facebook.com"]:hover svg,
+.light footer a[href*="facebook.com"]:hover * {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+
 /* 2. Newsletter CTA Section in Light Mode (Seamless, clean, high-contrast) */
 html.light #newsletter,
 .light #newsletter,
@@ -1483,22 +1784,65 @@ html.light .bg-\[\#25D366\] *,
   fill: #ffffff !important;
 }
 
-/* Dark Floating Badges & Rating Pills Over Images (Always Crisp Bright White in Both Modes) */
+/* Dark Floating Badges, Hero Overlays & Rating Pills Over Images (Always Crisp Bright White in Both Modes) */
+.hero-image-badge,
+.dark-badge-lock,
+html.light .hero-image-badge,
+.light .hero-image-badge,
+html.light .dark-badge-lock,
+.light .dark-badge-lock,
+html.light span.absolute.bottom-3.left-3,
+.light span.absolute.bottom-3.left-3,
+html.light div.absolute.bottom-3.left-3,
+.light div.absolute.bottom-3.left-3,
 html.light [class*="bg-black/"],
 .light [class*="bg-black/"],
 html.light [class*="bg-black"],
 .light [class*="bg-black"],
+html.light [class*="bg-[#0e181f]/90"],
+.light [class*="bg-[#0e181f]/90"],
+html.light [class*="bg-[#0e181f]/80"],
+.light [class*="bg-[#0e181f]/80"],
 html.light .product-dark-badge,
 .light .product-dark-badge,
 html.light .rating-pill-dark,
 .light .rating-pill-dark,
 .product-dark-badge,
 .rating-pill-dark {
-  background-color: rgba(0, 0, 0, 0.85) !important;
+  background-color: rgba(14, 24, 31, 0.92) !important;
   color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35) !important;
 }
 
+.hero-image-badge,
+.hero-image-badge *,
+.dark-badge-lock,
+.dark-badge-lock *,
+html.light .hero-image-badge,
+html.light .hero-image-badge *,
+.light .hero-image-badge,
+.light .hero-image-badge *,
+html.light .dark-badge-lock,
+html.light .dark-badge-lock *,
+.light .dark-badge-lock,
+.light .dark-badge-lock *,
+html.light span.absolute.bottom-3.left-3,
+html.light span.absolute.bottom-3.left-3 *,
+.light span.absolute.bottom-3.left-3,
+.light span.absolute.bottom-3.left-3 *,
+html.light div.absolute.bottom-3.left-3,
+html.light div.absolute.bottom-3.left-3 *,
+.light div.absolute.bottom-3.left-3,
+.light div.absolute.bottom-3.left-3 *,
+html.light [class*="bg-[#0e181f]/90"],
+html.light [class*="bg-[#0e181f]/90"] *,
+.light [class*="bg-[#0e181f]/90"],
+.light [class*="bg-[#0e181f]/90"] *,
+html.light [class*="bg-[#0e181f]/80"],
+html.light [class*="bg-[#0e181f]/80"] *,
+.light [class*="bg-[#0e181f]/80"],
+.light [class*="bg-[#0e181f]/80"] *,
 html.light .product-dark-badge,
 .light .product-dark-badge,
 html.light .product-dark-badge span,
@@ -1511,6 +1855,51 @@ html.light .rating-pill-dark .rating-score,
 .rating-pill-dark span,
 .rating-pill-dark .rating-score {
   color: #ffffff !important;
+}
+
+/* Text Overlaid on Dark Photos / Videos (e.g. Home-2 Split Hero & Workstation Overlays) */
+.image-overlay-dark-lock,
+.image-overlay-dark-lock *,
+html.light .image-overlay-dark-lock,
+html.light .image-overlay-dark-lock *,
+.light .image-overlay-dark-lock,
+.light .image-overlay-dark-lock *,
+html.light [class*="bg-gradient-to-t from-black"] h1,
+html.light [class*="bg-gradient-to-t from-black"] h2,
+html.light [class*="bg-gradient-to-t from-black"] h3,
+html.light [class*="bg-gradient-to-t from-black"] p,
+.light [class*="bg-gradient-to-t from-black"] h1,
+.light [class*="bg-gradient-to-t from-black"] h2,
+.light [class*="bg-gradient-to-t from-black"] h3,
+.light [class*="bg-gradient-to-t from-black"] p {
+  color: #ffffff !important;
+}
+
+html.light [class*="bg-gradient-to-t from-black"] p.text-\[\#9fb3be\],
+html.light [class*="bg-gradient-to-t from-black"] p.text-gray-300,
+.light [class*="bg-gradient-to-t from-black"] p.text-\[\#9fb3be\],
+.light [class*="bg-gradient-to-t from-black"] p.text-gray-300 {
+  color: rgba(255, 255, 255, 0.88) !important;
+}
+
+/* Hero Sub-tag Pills & Status Badges: Always Maintain Vibrant Brand Orange in Light Mode */
+html.light .text-\[\#FD802E\],
+.light .text-\[\#FD802E\],
+html.light .bg-\[\#0e181f\] .text-\[\#FD802E\],
+.light .bg-\[\#0e181f\] .text-\[\#FD802E\],
+html.light .bg-\[\#0e181f\].text-\[\#FD802E\],
+.light .bg-\[\#0e181f\].text-\[\#FD802E\],
+html.light .inline-flex.bg-\[\#0e181f\] span,
+.light .inline-flex.bg-\[\#0e181f\] span {
+  color: #FD802E !important;
+}
+
+/* Green Badges in Light Mode */
+html.light .text-emerald-400,
+.light .text-emerald-400,
+html.light .bg-\[\#0e181f\] .text-emerald-400,
+.light .bg-\[\#0e181f\] .text-emerald-400 {
+  color: #10b981 !important;
 }
 
 html.light .rating-pill-dark .rating-count,
@@ -1615,3 +2004,44 @@ html.light .toast-item.toast-error .toast-text,
   color: #991b1b !important;
   font-weight: 600 !important;
 }
+
+/* ==========================================================================
+   KNOWLEDGEBASE & GLOSSARY VERTICAL SEPARATION MODULES
+   ========================================================================== */
+
+.knowledgebase-module,
+.glossary-module {
+  transition: all 0.3s ease;
+}
+
+html.light .knowledgebase-module,
+.light .knowledgebase-module,
+html.light .glossary-module,
+.light .glossary-module {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 24px -2px rgba(35, 61, 76, 0.06) !important;
+}
+
+html.light .knowledgebase-module .divide-\[\#233D4C\] > :not([hidden]) ~ :not([hidden]),
+.light .knowledgebase-module .divide-\[\#233D4C\] > :not([hidden]) ~ :not([hidden]),
+html.light .glossary-module .divide-\[\#233D4C\] > :not([hidden]) ~ :not([hidden]),
+.light .glossary-module .divide-\[\#233D4C\] > :not([hidden]) ~ :not([hidden]),
+html.light .knowledgebase-module .border-b,
+.light .knowledgebase-module .border-b,
+html.light .glossary-module .border-b,
+.light .glossary-module .border-b {
+  border-color: #e2e8f0 !important;
+}
+
+html.light .knowledgebase-module div:hover,
+.light .knowledgebase-module div:hover {
+  background-color: #f8fafc !important;
+}
+
+/* Google Maps iframe light mode reset */
+html.light .map-iframe,
+.light .map-iframe {
+  filter: none !important;
+}
+

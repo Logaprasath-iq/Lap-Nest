@@ -194,4 +194,47 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+
+  // 7. Blog Category Filtering (All, Buying Guides, Hardware Upgrades, Maintenance)
+  const blogFilterBtns = document.querySelectorAll('.blog-filter-btn');
+  const blogArticles = document.querySelectorAll('.blog-article-card');
+
+  if (blogFilterBtns.length > 0 && blogArticles.length > 0) {
+    blogFilterBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const selectedCategory = btn.getAttribute('data-category');
+
+        // Toggle active button style
+        blogFilterBtns.forEach(b => {
+          b.classList.remove('is-active', 'bg-[#FD802E]', 'text-white', 'font-bold', 'border-transparent', 'shadow-md', 'shadow-[#FD802E]/25');
+          b.classList.add('bg-[#172731]', 'text-[#9fb3be]', 'border-[#233D4C]');
+        });
+
+        btn.classList.add('is-active', 'bg-[#FD802E]', 'text-white', 'font-bold', 'border-transparent', 'shadow-md', 'shadow-[#FD802E]/25');
+        btn.classList.remove('bg-[#172731]', 'text-[#9fb3be]', 'border-[#233D4C]');
+
+        // Filter cards with explicit display and smooth transition
+        blogArticles.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+          const isMatch = (selectedCategory === 'all' || cardCategory === selectedCategory);
+
+          if (isMatch) {
+            card.classList.remove('hidden');
+            card.style.setProperty('display', 'flex', 'important');
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(8px)';
+            requestAnimationFrame(() => {
+              card.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            });
+          } else {
+            card.classList.add('hidden');
+            card.style.setProperty('display', 'none', 'important');
+          }
+        });
+      });
+    });
+  }
 });

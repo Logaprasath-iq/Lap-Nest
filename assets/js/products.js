@@ -361,14 +361,21 @@ function renderProductCardHTML(product) {
         </h3>
 
         <!-- Key specs chips -->
-        <div class="space-y-1.5 mb-4 text-xs text-[#9fb3be] bg-[#111e26] p-3 rounded-xl border border-[#233D4C]">
-          <div class="flex items-center gap-2">
+        <div class="mb-4 text-xs text-[#9fb3be] bg-[#111e26] p-3 rounded-xl border border-[#233D4C]">
+          <div class="flex items-center gap-2 pb-2">
             <svg class="w-3.5 h-3.5 text-[#FD802E] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
-            <span class="truncate">${product.processor}</span>
+            <span class="truncate font-medium text-white/95">${product.processor}</span>
           </div>
-          <div class="flex items-center justify-between gap-2 pt-1 border-t border-[#233D4C]/60">
-            <span class="truncate">RAM: <strong class="text-white font-medium">${product.ram}</strong></span>
-            <span class="truncate">SSD: <strong class="text-white font-medium">${product.storage}</strong></span>
+          <div class="flex items-center justify-between gap-3 pt-2.5 border-t border-[#233D4C]">
+            <div class="truncate flex items-center gap-1.5 flex-1 min-w-0">
+              <span class="text-[#9fb3be] shrink-0">RAM:</span>
+              <strong class="text-white font-semibold truncate">${product.ram}</strong>
+            </div>
+            <span class="w-px h-3.5 bg-[#233D4C] shrink-0"></span>
+            <div class="truncate flex items-center gap-1.5 flex-1 min-w-0 justify-end">
+              <span class="text-[#9fb3be] shrink-0">SSD:</span>
+              <strong class="text-white font-semibold truncate">${product.storage}</strong>
+            </div>
           </div>
         </div>
 
@@ -379,7 +386,7 @@ function renderProductCardHTML(product) {
         </div>
 
         <!-- Equal Card Footer (Actions push to bottom) -->
-        <div class="equal-card-footer grid grid-cols-2 gap-2.5">
+        <div class="equal-card-footer mt-auto pt-4 border-t border-[#233D4C] grid grid-cols-2 gap-2.5">
           <a href="product-details.html?id=${product.id}"
              class="px-3 py-2.5 rounded-xl text-center text-xs sm:text-sm font-semibold border border-[#233D4C] hover:border-[#FD802E] text-white hover:text-[#FD802E] transition-colors duration-200">
             View Details

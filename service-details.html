@@ -7,7 +7,7 @@
   <meta name="description" content="In-depth service specifications, OEM parts breakdown, turnaround times, and booking for laptop screen replacement and motherboard repairs.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=4.4">
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
@@ -20,7 +20,7 @@
     <!-- STICKY NAVBAR - FLOATING CAPSULE PILL DESIGN (IMAGE 2 AESTHETIC) -->
     <!-- STICKY NAVBAR (FULL-WIDTH BRAND HEADER) -->
   <header id="main-navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3.5 bg-[#0e181f]/90 backdrop-blur-md border-b border-[#233D4C]/60">
-    <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-8 flex items-center justify-between gap-4 lg:gap-6 xl:gap-8">
+    <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-4 xl:px-8 flex items-center justify-between gap-3 lg:gap-3.5 xl:gap-6 2xl:gap-8">
       
       <!-- Brand Logo -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none shrink-0">
@@ -28,15 +28,15 @@
              data-dark="assets/images/logo/logo-dark.svg" 
              data-light="assets/images/logo/logo-light.svg" 
              alt="LAPNEST – BUY • SELL • REPAIR • RENT" 
-             class="brand-logo-img header-logo h-9 sm:h-11 md:h-12 w-auto max-w-[150px] sm:max-w-none transition-transform duration-300 group-hover:scale-105">
+             class="brand-logo-img header-logo h-10 sm:h-11 lg:h-9 xl:h-11 w-auto max-w-[190px] sm:max-w-none lg:max-w-[170px] xl:max-w-none transition-transform duration-300 group-hover:scale-105">
       </a>
 
       <!-- Desktop Center Navigation Menu (Old Nav Layout - Clean Text Links) -->
-      <nav class="hidden lg:flex items-center gap-4 xl:gap-6 2xl:gap-8">
+      <nav class="hidden lg:flex items-center gap-2 lg:gap-2.5 xl:gap-5 2xl:gap-7">
         
         <!-- Home Dropdown -->
         <div class="relative group dropdown-container">
-          <button type="button" class="dropdown-btn nav-link-item flex items-center gap-1.5 text-sm font-semibold text-white hover:text-[#FD802E] transition-colors focus:outline-none py-2 whitespace-nowrap" aria-expanded="false" aria-haspopup="true">
+          <button type="button" class="dropdown-btn nav-link-item flex items-center gap-1.5 text-xs xl:text-sm font-semibold text-white hover:text-[#FD802E] transition-colors focus:outline-none py-2 whitespace-nowrap" aria-expanded="false" aria-haspopup="true">
             <span>Home</span>
             <svg class="dropdown-arrow-icon w-4 h-4 transition-transform duration-200 group-hover:rotate-180 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
           </button>
@@ -54,31 +54,31 @@
           </div>
         </div>
 
-        <a href="about.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">About</a>
-        <a href="products.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Products</a>
-        <a href="pricing.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Pricing</a>
-        <a href="repair-upgrade.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Repair & Upgrade</a>
-        <a href="blog.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Blog</a>
-        <a href="contact.html" class="nav-link-item text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Contact</a>
+        <a href="about.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">About</a>
+        <a href="products.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Products</a>
+        <a href="pricing.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Pricing</a>
+        <a href="repair-upgrade.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Repair & Upgrade</a>
+        <a href="blog.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Blog</a>
+        <a href="contact.html" class="nav-link-item text-xs xl:text-sm font-semibold text-[#9fb3be] hover:text-[#FD802E] transition-colors py-2 whitespace-nowrap">Contact</a>
       </nav>
 
       <!-- Right Controls: RTL Toggle, Theme Toggle, Order CTA -->
-      <div class="flex items-center gap-2 sm:gap-2.5 xl:gap-3 shrink-0">
+      <div class="flex items-center gap-1.5 lg:gap-2 xl:gap-3 shrink-0">
         
         <!-- RTL/LTR Toggle with Clean Arrow -->
-        <button type="button" class="rtl-toggle-btn h-10 px-3 rounded-xl text-xs font-bold border border-[#233D4C] bg-[#172731] text-[#9fb3be] hover:text-[#FD802E] hover:border-[#FD802E] transition-all hidden sm:inline-flex items-center justify-center gap-1.5 shrink-0" title="Toggle RTL / LTR" aria-label="Toggle Text Direction">
+        <button type="button" class="rtl-toggle-btn h-9 xl:h-10 px-2.5 xl:px-3 rounded-xl text-[11px] xl:text-xs font-bold border border-[#233D4C] bg-[#172731] text-[#9fb3be] hover:text-[#FD802E] hover:border-[#FD802E] transition-all hidden lg:inline-flex items-center justify-center gap-1.5 shrink-0" title="Toggle RTL / LTR" aria-label="Toggle Text Direction">
           <svg class="w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
           <span class="dir-badge text-[11px] tracking-wider">RTL</span>
         </button>
 
         <!-- Dark/Light Theme Toggle -->
-        <button type="button" class="theme-toggle-btn w-10 h-10 rounded-xl text-[#9fb3be] hover:text-[#FD802E] bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] transition-all hidden sm:inline-flex items-center justify-center shrink-0" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
+        <button type="button" class="theme-toggle-btn w-9 h-9 xl:w-10 xl:h-10 rounded-xl text-[#9fb3be] hover:text-[#FD802E] bg-[#172731] border border-[#233D4C] hover:border-[#FD802E] transition-all hidden lg:inline-flex items-center justify-center shrink-0" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode">
           <svg class="sun-icon w-4 h-4 text-[#FD802E]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
           <svg class="moon-icon w-4 h-4 text-[#FD802E] hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
         </button>
 
         <!-- Dedicated Order CTA -->
-        <a href="order.html" class="hidden sm:inline-flex items-center justify-center gap-2 h-10 px-4 xl:px-5 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white shadow-lg shadow-[#FD802E]/25 transition-all duration-300 transform hover:-translate-y-0.5 shrink-0 whitespace-nowrap">
+        <a href="order.html" class="hidden lg:inline-flex items-center justify-center gap-1.5 xl:gap-2 h-9 xl:h-10 px-3.5 xl:px-5 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white shadow-lg shadow-[#FD802E]/25 transition-all duration-300 transform hover:-translate-y-0.5 shrink-0 whitespace-nowrap">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
           <span>Order Now</span>
         </a>
@@ -227,58 +227,101 @@
       </div>
 
       <!-- 3-Column Diagnostic Protocol -->
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16 items-stretch">
         
-        <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C] space-y-3">
-          <h3 class="text-base font-bold text-white flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-[#FD802E]"></span>
-            <span>Common Failure Symptoms</span>
-          </h3>
-          <ul id="service-symptoms-list" class="space-y-2 text-xs text-[#9fb3be]">
-            <li>• Spiderweb impact cracks from dropped laptops</li>
-            <li>• Vertical color lines or flickering backlight strips</li>
-            <li>• "Black Screen" with faint image visible under torchlight</li>
-            <li>• Bleeding ink stains spreading across the matrix</li>
-            <li>• Hinge tear causing EDP cable severed connection</li>
-          </ul>
+        <!-- Card 1: Common Failure Symptoms -->
+        <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C] flex flex-col justify-between h-full shadow-lg">
+          <div>
+            <h3 class="text-sm sm:text-base font-bold text-white flex items-center gap-2 pb-4 mb-2 border-b border-[#233D4C]">
+              <span class="w-2 h-2 rounded-full bg-[#FD802E]"></span>
+              <span>Common Failure Symptoms</span>
+            </h3>
+            <ul id="service-symptoms-list" class="text-xs text-[#9fb3be]">
+              <li class="min-h-[3.25rem] flex items-center gap-2.5 py-2 border-b border-[#233D4C]/40 leading-snug">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#FD802E] shrink-0"></span>
+                <span>Spiderweb impact cracks from dropped laptops</span>
+              </li>
+              <li class="min-h-[3.25rem] flex items-center gap-2.5 py-2 border-b border-[#233D4C]/40 leading-snug">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#FD802E] shrink-0"></span>
+                <span>Vertical color lines or flickering backlight strips</span>
+              </li>
+              <li class="min-h-[3.25rem] flex items-center gap-2.5 py-2 border-b border-[#233D4C]/40 leading-snug">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#FD802E] shrink-0"></span>
+                <span>"Black Screen" with faint image under torchlight</span>
+              </li>
+              <li class="min-h-[3.25rem] flex items-center gap-2.5 py-2 border-b border-[#233D4C]/40 leading-snug">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#FD802E] shrink-0"></span>
+                <span>Bleeding ink stains spreading across the matrix</span>
+              </li>
+              <li class="min-h-[3.25rem] flex items-center gap-2.5 py-2 leading-snug">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#FD802E] shrink-0"></span>
+                <span>Hinge tear causing EDP cable severed connection</span>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C] space-y-3">
-          <h3 class="text-base font-bold text-white flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-[#FD802E]"></span>
-            <span>Our Technical Procedure</span>
-          </h3>
-          <ul id="service-procedures-list" class="space-y-2 text-xs text-[#9fb3be]">
-            <li>1. Battery isolation to prevent motherboard backlight fuse blowout</li>
-            <li>2. Ultrasonic bezel separation with heat pad</li>
-            <li>3. Exact panel model number & 30-pin/40-pin EDP verification</li>
-            <li>4. OEM adhesive pull-tape alignment</li>
-            <li>5. Color uniformity & RGB calibration check</li>
-          </ul>
+        <!-- Card 2: Our Technical Procedure -->
+        <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C] flex flex-col justify-between h-full shadow-lg">
+          <div>
+            <h3 class="text-sm sm:text-base font-bold text-white flex items-center gap-2 pb-4 mb-2 border-b border-[#233D4C]">
+              <span class="w-2 h-2 rounded-full bg-[#FD802E]"></span>
+              <span>Our Technical Procedure</span>
+            </h3>
+            <ul id="service-procedures-list" class="text-xs text-[#9fb3be]">
+              <li class="min-h-[3.25rem] flex items-center gap-2.5 py-2 border-b border-[#233D4C]/40 leading-snug">
+                <span class="text-[10px] font-mono font-bold text-[#FD802E] bg-[#0e181f] px-1.5 py-0.5 rounded border border-[#233D4C] shrink-0">01</span>
+                <span>Battery isolation to protect backlight rail fuse</span>
+              </li>
+              <li class="min-h-[3.25rem] flex items-center gap-2.5 py-2 border-b border-[#233D4C]/40 leading-snug">
+                <span class="text-[10px] font-mono font-bold text-[#FD802E] bg-[#0e181f] px-1.5 py-0.5 rounded border border-[#233D4C] shrink-0">02</span>
+                <span>Ultrasonic bezel separation with thermal pad</span>
+              </li>
+              <li class="min-h-[3.25rem] flex items-center gap-2.5 py-2 border-b border-[#233D4C]/40 leading-snug">
+                <span class="text-[10px] font-mono font-bold text-[#FD802E] bg-[#0e181f] px-1.5 py-0.5 rounded border border-[#233D4C] shrink-0">03</span>
+                <span>Exact panel model & 30/40-pin EDP verification</span>
+              </li>
+              <li class="min-h-[3.25rem] flex items-center gap-2.5 py-2 border-b border-[#233D4C]/40 leading-snug">
+                <span class="text-[10px] font-mono font-bold text-[#FD802E] bg-[#0e181f] px-1.5 py-0.5 rounded border border-[#233D4C] shrink-0">04</span>
+                <span>Factory-grade pull-tab adhesive alignment</span>
+              </li>
+              <li class="min-h-[3.25rem] flex items-center gap-2.5 py-2 leading-snug">
+                <span class="text-[10px] font-mono font-bold text-[#FD802E] bg-[#0e181f] px-1.5 py-0.5 rounded border border-[#233D4C] shrink-0">05</span>
+                <span>True-tone RGB color calibration & pixel check</span>
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C] space-y-3">
-          <h3 class="text-base font-bold text-white flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-[#FD802E]"></span>
-            <span>Pricing & Turnaround</span>
-          </h3>
-          <div id="service-pricing-list" class="space-y-2 text-xs text-[#9fb3be]">
-            <p class="flex justify-between border-b border-[#233D4C]/50 pb-1">
-              <span>Standard 15.6" HD / FHD Panel:</span>
-              <strong class="text-white">₹2,499 – ₹3,499</strong>
-            </p>
-            <p class="flex justify-between border-b border-[#233D4C]/50 pb-1">
-              <span>144Hz IPS High Refresh Gaming:</span>
-              <strong class="text-white">₹4,200 – ₹5,800</strong>
-            </p>
-            <p class="flex justify-between border-b border-[#233D4C]/50 pb-1">
-              <span>MacBook Air Retina Assembly:</span>
-              <strong class="text-white">₹7,990 onwards</strong>
-            </p>
-            <p class="flex justify-between">
-              <span>Touch Screen Digitizer Units:</span>
-              <strong class="text-white">Custom Quote</strong>
-            </p>
+        <!-- Card 3: Pricing & Turnaround -->
+        <div class="p-6 rounded-2xl bg-[#172731] border border-[#233D4C] flex flex-col justify-between h-full shadow-lg">
+          <div>
+            <h3 class="text-sm sm:text-base font-bold text-white flex items-center gap-2 pb-4 mb-2 border-b border-[#233D4C]">
+              <span class="w-2 h-2 rounded-full bg-[#FD802E]"></span>
+              <span>Pricing & Turnaround</span>
+            </h3>
+            <div id="service-pricing-list" class="text-xs text-[#9fb3be]">
+              <div class="min-h-[3.25rem] flex items-center justify-between gap-3 py-2 border-b border-[#233D4C]/40 leading-snug">
+                <span>Standard 15.6" HD / FHD Panel:</span>
+                <strong class="text-white text-right shrink-0">₹2,499 – ₹3,499</strong>
+              </div>
+              <div class="min-h-[3.25rem] flex items-center justify-between gap-3 py-2 border-b border-[#233D4C]/40 leading-snug">
+                <span>144Hz IPS High Refresh Gaming:</span>
+                <strong class="text-white text-right shrink-0">₹4,200 – ₹5,800</strong>
+              </div>
+              <div class="min-h-[3.25rem] flex items-center justify-between gap-3 py-2 border-b border-[#233D4C]/40 leading-snug">
+                <span>MacBook Air Retina Assembly:</span>
+                <strong class="text-white text-right shrink-0">₹7,990 onwards</strong>
+              </div>
+              <div class="min-h-[3.25rem] flex items-center justify-between gap-3 py-2 border-b border-[#233D4C]/40 leading-snug">
+                <span>Touch Screen Digitizer Units:</span>
+                <strong class="text-white text-right shrink-0">Custom Quote</strong>
+              </div>
+              <div class="min-h-[3.25rem] flex items-center justify-between gap-3 py-2 leading-snug">
+                <span>Zero Dead-Pixel Diagnostic:</span>
+                <strong class="text-white text-right shrink-0">Included (FREE)</strong>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -338,7 +381,7 @@
 
               <!-- X (Twitter) (Highlighted Clean White) -->
               <a href="https://x.com/lapnestofficial" target="_blank" rel="noopener noreferrer" 
-                 class="w-10 h-10 rounded-full bg-[#172731] border-2 border-white text-white hover:bg-white hover:text-black flex items-center justify-center transition-all hover:scale-110 shadow-md shadow-white/25" 
+                 class="social-x-btn w-10 h-10 rounded-full bg-[#172731] border-2 border-white text-white hover:bg-white hover:text-black flex items-center justify-center transition-all hover:scale-110 shadow-md shadow-white/25" 
                  title="X (Twitter)" aria-label="X Twitter">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               </a>
@@ -435,7 +478,7 @@
   <script src="assets/js/navbar.js"></script>
   <script src="assets/js/three-d.js"></script>
   <script src="assets/js/animations.js"></script>
-  <script src="assets/js/services.js"></script>
+  <script src="assets/js/services.js?v=3.2"></script>
   <script src="assets/js/forms.js"></script>
   <script src="assets/js/main.js"></script>
 </body>

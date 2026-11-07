@@ -85,7 +85,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-link-item');
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+    const isBlogMatch = (currentPath === 'blog-details.html' || currentPath.startsWith('blog-details')) && href === 'blog.html';
+    const isProductMatch = (currentPath === 'product-details.html' || currentPath.startsWith('product-details')) && href === 'products.html';
+    const isServiceMatch = (currentPath === 'service-details.html' || currentPath.startsWith('service-details')) && href === 'repair-upgrade.html';
+
+    if (href === currentPath || (currentPath === '' && href === 'index.html') || isBlogMatch || isProductMatch || isServiceMatch) {
       link.classList.add('text-[#FD802E]', 'font-bold');
       link.classList.remove('text-[#9fb3be]', 'text-gray-300', 'text-white');
     }
