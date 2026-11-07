@@ -891,8 +891,8 @@ html.light #main-navbar.backdrop-blur-md,
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04) !important;
 }
 
-/* Precise Equal-Height Navbar Control Buttons */
-@media (max-width: 639px) {
+/* Precise Navbar Control Buttons: Strictly Hidden on < 1024px (Mobile & Tablet 768px), Displayed on >= 1024px */
+@media (max-width: 1023px) {
   #main-navbar .rtl-toggle-btn,
   #main-navbar .theme-toggle-btn,
   #main-navbar a[href*="order.html"] {
@@ -900,18 +900,31 @@ html.light #main-navbar.backdrop-blur-md,
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   #main-navbar .rtl-toggle-btn,
   #main-navbar .theme-toggle-btn,
   #main-navbar a[href*="order.html"] {
-    height: 40px !important;
-    max-height: 40px !important;
-    min-height: 40px !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     box-sizing: border-box !important;
     line-height: 1 !important;
+    height: 36px !important;
+    min-height: 36px !important;
+  }
+
+  #main-navbar .theme-toggle-btn {
+    width: 36px !important;
+    min-width: 36px !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  #main-navbar .rtl-toggle-btn,
+  #main-navbar .theme-toggle-btn,
+  #main-navbar a[href*="order.html"] {
+    height: 40px !important;
+    min-height: 40px !important;
   }
 
   #main-navbar .theme-toggle-btn {
@@ -1131,6 +1144,10 @@ html.light .timing-card-note {
 
 html.light .timing-card-border {
   border-color: rgba(35, 61, 76, 0.16) !important;
+}
+
+.timing-card-status {
+  white-space: nowrap !important;
 }
 
 html.light .timing-card-status {

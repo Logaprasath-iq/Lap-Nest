@@ -16,7 +16,7 @@
   <link rel="preload" href="assets/videos/home1.mp4" as="video" type="video/mp4">
   
   <!-- Compiled Tailwind & Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=4.4">
+  <link rel="stylesheet" href="assets/css/style.css?v=5.1">
 </head>
 <body class="bg-[#0e181f] text-white selection:bg-[#FD802E] selection:text-white antialiased overflow-x-hidden min-h-screen flex flex-col">
 
@@ -25,7 +25,7 @@
 
   <!-- STICKY NAVBAR (FULL-WIDTH BRAND HEADER) -->
   <header id="main-navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3.5 bg-[#0e181f]/90 backdrop-blur-md border-b border-[#233D4C]/60">
-    <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-4 xl:px-8 flex items-center justify-between gap-3 lg:gap-3.5 xl:gap-6 2xl:gap-8">
+    <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-4 xl:px-8 flex items-center justify-between gap-3 lg:gap-4 xl:gap-6 2xl:gap-8">
       
       <!-- Brand Logo -->
       <a href="index.html" class="flex items-center gap-3 group focus:outline-none shrink-0">
@@ -37,7 +37,7 @@
       </a>
 
       <!-- Desktop Center Navigation Menu (Old Nav Layout - Clean Text Links) -->
-      <nav class="hidden lg:flex items-center gap-2 lg:gap-2.5 xl:gap-5 2xl:gap-7">
+      <nav class="hidden lg:flex items-center gap-2 lg:gap-4 xl:gap-6 2xl:gap-8">
         
         <!-- Home Dropdown -->
         <div class="relative group dropdown-container">
@@ -610,15 +610,15 @@
       </div>
 
       <!-- 3 Flagship Cards Grid (Equal Heights, Perfectly Aligned) -->
-      <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 equal-card-grid">
+      <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-6 xl:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8 equal-card-grid">
           
           <!-- Flagship Card 1: Apple MacBook Pro M3 Max -->
-          <div class="equal-card rounded-3xl bg-[#172731] border border-[#233D4C] p-6 sm:p-7 flex flex-col justify-between hover:border-[#FD802E] transition-all duration-300 shadow-xl tilt-card group">
+          <div class="equal-card rounded-3xl bg-[#172731] border border-[#233D4C] p-6 sm:p-7 lg:p-5 xl:p-7 flex flex-col justify-between hover:border-[#FD802E] transition-all duration-300 shadow-xl tilt-card group">
             <div>
-              <div class="flex items-center justify-between text-xs mb-3">
-                <span class="px-3 py-1 rounded-full font-bold bg-[#FD802E] text-white uppercase tracking-wider text-[11px]">Space Black</span>
-                <span class="font-mono text-[#9fb3be] text-[11px]">01 / 03</span>
+              <div class="flex items-center justify-between gap-2 text-xs mb-3">
+                <span class="px-3 py-1 rounded-full font-bold bg-[#FD802E] text-white uppercase tracking-wider text-[11px] whitespace-nowrap truncate shadow-sm">Space Black</span>
+                <span class="font-mono text-[#9fb3be] text-[11px] shrink-0 whitespace-nowrap">01 / 03</span>
               </div>
               <div class="relative h-48 sm:h-52 rounded-2xl bg-[#0e181f] overflow-hidden mb-5">
                 <img src="assets/images/products/apple-macbook.jpg" alt="Apple MacBook Pro M3 Max" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -626,26 +626,26 @@
               </div>
               <h3 class="text-xl font-black text-white group-hover:text-[#FD802E] transition-colors">Apple MacBook Pro 16″</h3>
               <p class="text-xs text-[#9fb3be] mt-1 mb-4 min-h-[36px] flex items-center">Apple M3 Max (16-Core CPU, 40-Core GPU) • 48GB Unified RAM • 1TB SSD</p>
-              <div class="grid grid-cols-2 my-4 p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C] mb-4 min-h-[58px]">
+              <div class="grid grid-cols-2 my-4 p-3 lg:p-2.5 xl:p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C] mb-4 min-h-[58px]">
                 <div class="pr-2 border-r border-[#233D4C]"><span class="text-white font-bold block">120Hz ProMotion</span>Color Reference</div>
                 <div class="pl-2"><span class="text-white font-bold block">22 Hr Battery</span>MagSafe 3 Fast</div>
               </div>
             </div>
-            <div class="pt-4 border-t border-[#233D4C] flex items-center justify-between mt-auto">
-              <div>
-                <span class="text-xs text-[#9fb3be] block">Direct Showroom Price</span>
-                <span class="text-2xl font-black text-white">₹3,49,900</span>
+            <div class="pt-4 border-t border-[#233D4C] flex items-center justify-between gap-2.5 xl:gap-3 mt-auto">
+              <div class="min-w-0">
+                <span class="text-[11px] xl:text-xs text-[#9fb3be] block">Direct Showroom Price</span>
+                <span class="text-xl sm:text-2xl lg:text-xl xl:text-2xl font-black text-white whitespace-nowrap">₹3,49,900</span>
               </div>
-              <a href="order.html?product=apple-macbook" class="px-5 py-2.5 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white shadow-md shadow-[#FD802E]/25 transition-all">Order Now</a>
+              <a href="order.html?product=apple-macbook" class="px-3.5 sm:px-5 lg:px-3.5 xl:px-5 py-2.5 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white shadow-md shadow-[#FD802E]/25 transition-all shrink-0 whitespace-nowrap">Order Now</a>
             </div>
           </div>
 
           <!-- Flagship Card 2: ASUS ROG Strix SCAR 18 -->
-          <div class="equal-card rounded-3xl bg-[#172731] border border-[#233D4C] p-6 sm:p-7 flex flex-col justify-between hover:border-[#FD802E] transition-all duration-300 shadow-xl tilt-card group">
+          <div class="equal-card rounded-3xl bg-[#172731] border border-[#233D4C] p-6 sm:p-7 lg:p-5 xl:p-7 flex flex-col justify-between hover:border-[#FD802E] transition-all duration-300 shadow-xl tilt-card group">
             <div>
-              <div class="flex items-center justify-between text-xs mb-3">
-                <span class="px-3 py-1 rounded-full font-bold bg-[#FD802E] text-white uppercase tracking-wider text-[11px] shadow-sm">Extreme Gaming</span>
-                <span class="font-mono text-[#9fb3be] text-[11px]">02 / 03</span>
+              <div class="flex items-center justify-between gap-2 text-xs mb-3">
+                <span class="px-3 py-1 rounded-full font-bold bg-[#FD802E] text-white uppercase tracking-wider text-[11px] whitespace-nowrap truncate shadow-sm">Extreme Gaming</span>
+                <span class="font-mono text-[#9fb3be] text-[11px] shrink-0 whitespace-nowrap">02 / 03</span>
               </div>
               <div class="relative h-48 sm:h-52 rounded-2xl bg-[#0e181f] overflow-hidden mb-5">
                 <img src="assets/images/products/asus-rog.jpg" alt="ASUS ROG Strix SCAR 18" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -653,26 +653,26 @@
               </div>
               <h3 class="text-xl font-black text-white group-hover:text-[#FD802E] transition-colors">ASUS ROG Strix SCAR 18</h3>
               <p class="text-xs text-[#9fb3be] mt-1 mb-4 min-h-[36px] flex items-center">Intel Core i9-14900HX • 64GB DDR5 5600MHz • 2TB PCIe 4.0 RAID 0</p>
-              <div class="grid grid-cols-2 my-4 p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C] mb-4 min-h-[58px]">
+              <div class="grid grid-cols-2 my-4 p-3 lg:p-2.5 xl:p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C] mb-4 min-h-[58px]">
                 <div class="pr-2 border-r border-[#233D4C]"><span class="text-white font-bold block">18″ 2.5K 240Hz</span>Mini-LED HDR 1100</div>
                 <div class="pl-2"><span class="text-white font-bold block">Tri-Fan Tech</span>Liquid Metal Conduct</div>
               </div>
             </div>
-            <div class="pt-4 border-t border-[#233D4C] flex items-center justify-between mt-auto">
-              <div>
-                <span class="text-xs text-[#9fb3be] block">Direct Showroom Price</span>
-                <span class="text-2xl font-black text-white">₹3,79,990</span>
+            <div class="pt-4 border-t border-[#233D4C] flex items-center justify-between gap-2.5 xl:gap-3 mt-auto">
+              <div class="min-w-0">
+                <span class="text-[11px] xl:text-xs text-[#9fb3be] block">Direct Showroom Price</span>
+                <span class="text-xl sm:text-2xl lg:text-xl xl:text-2xl font-black text-white whitespace-nowrap">₹3,79,990</span>
               </div>
-              <a href="order.html?product=asus-rog" class="px-5 py-2.5 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white shadow-md shadow-[#FD802E]/25 transition-all">Order Now</a>
+              <a href="order.html?product=asus-rog" class="px-3.5 sm:px-5 lg:px-3.5 xl:px-5 py-2.5 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white shadow-md shadow-[#FD802E]/25 transition-all shrink-0 whitespace-nowrap">Order Now</a>
             </div>
           </div>
 
           <!-- Flagship Card 3: Lenovo ThinkPad X1 Carbon Gen 11 -->
-          <div class="equal-card rounded-3xl bg-[#172731] border border-[#233D4C] p-6 sm:p-7 flex flex-col justify-between hover:border-[#FD802E] transition-all duration-300 shadow-xl tilt-card group">
+          <div class="equal-card rounded-3xl bg-[#172731] border border-[#233D4C] p-6 sm:p-7 lg:p-5 xl:p-7 flex flex-col justify-between hover:border-[#FD802E] transition-all duration-300 shadow-xl tilt-card group md:col-span-2 lg:col-span-1 md:w-[calc(50%-1rem)] md:mx-auto lg:w-full">
             <div>
-              <div class="flex items-center justify-between text-xs mb-3">
-                <span class="px-3 py-1 rounded-full font-bold bg-[#FD802E] text-white uppercase tracking-wider text-[11px]">Enterprise Titan</span>
-                <span class="font-mono text-[#9fb3be] text-[11px]">03 / 03</span>
+              <div class="flex items-center justify-between gap-2 text-xs mb-3">
+                <span class="px-3 py-1 rounded-full font-bold bg-[#FD802E] text-white uppercase tracking-wider text-[11px] whitespace-nowrap truncate shadow-sm">Enterprise Titan</span>
+                <span class="font-mono text-[#9fb3be] text-[11px] shrink-0 whitespace-nowrap">03 / 03</span>
               </div>
               <div class="relative h-48 sm:h-52 rounded-2xl bg-[#0e181f] overflow-hidden mb-5">
                 <img src="assets/images/products/lenovo-thinkpad.jpg" alt="Lenovo ThinkPad X1 Carbon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -680,17 +680,17 @@
               </div>
               <h3 class="text-xl font-black text-white group-hover:text-[#FD802E] transition-colors">ThinkPad X1 Carbon Gen 11</h3>
               <p class="text-xs text-[#9fb3be] mt-1 mb-4 min-h-[36px] flex items-center">Intel Core i7-1365U vPro • 32GB LPDDR5 • 1TB Performance SSD</p>
-              <div class="grid grid-cols-2 my-4 p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C] mb-4 min-h-[58px]">
+              <div class="grid grid-cols-2 my-4 p-3 lg:p-2.5 xl:p-3 rounded-xl bg-[#0e181f]/60 text-[11px] text-[#9fb3be] border border-[#233D4C] mb-4 min-h-[58px]">
                 <div class="pr-2 border-r border-[#233D4C]"><span class="text-white font-bold block">2.8K OLED Display</span>100% DCI-P3 Anti-Glare</div>
                 <div class="pl-2"><span class="text-white font-bold block">MIL-STD-810H</span>Military Tested Frame</div>
               </div>
             </div>
-            <div class="pt-4 border-t border-[#233D4C] flex items-center justify-between mt-auto">
-              <div>
-                <span class="text-xs text-[#9fb3be] block">Direct Showroom Price</span>
-                <span class="text-2xl font-black text-white">₹1,94,990</span>
+            <div class="pt-4 border-t border-[#233D4C] flex items-center justify-between gap-2.5 xl:gap-3 mt-auto">
+              <div class="min-w-0">
+                <span class="text-[11px] xl:text-xs text-[#9fb3be] block">Direct Showroom Price</span>
+                <span class="text-xl sm:text-2xl lg:text-xl xl:text-2xl font-black text-white whitespace-nowrap">₹1,94,990</span>
               </div>
-              <a href="order.html?product=lenovo-thinkpad" class="px-5 py-2.5 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white shadow-md shadow-[#FD802E]/25 transition-all">Order Now</a>
+              <a href="order.html?product=lenovo-thinkpad" class="px-3.5 sm:px-5 lg:px-3.5 xl:px-5 py-2.5 rounded-xl text-xs font-bold bg-[#FD802E] hover:bg-[#ff9248] text-white shadow-md shadow-[#FD802E]/25 transition-all shrink-0 whitespace-nowrap">Order Now</a>
             </div>
           </div>
 
@@ -1387,7 +1387,7 @@
           <p class="text-sm text-[#9fb3be] mt-2">Real feedback from professionals, developers, and gamers across South India.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 equal-card-grid">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 equal-card-grid">
           
           <!-- Testimonial 1 -->
           <div class="equal-card p-8 rounded-2xl bg-[#172731] border border-[#233D4C] relative flex flex-col justify-between group hover:border-[#FD802E] transition-all duration-300 shadow-xl tilt-card">
@@ -1432,7 +1432,7 @@
           </div>
 
           <!-- Testimonial 3 -->
-          <div class="equal-card p-8 rounded-2xl bg-[#172731] border border-[#233D4C] relative flex flex-col justify-between group hover:border-[#FD802E] transition-all duration-300 shadow-xl tilt-card">
+          <div class="equal-card p-8 rounded-2xl bg-[#172731] border border-[#233D4C] relative flex flex-col justify-between group hover:border-[#FD802E] transition-all duration-300 shadow-xl tilt-card md:col-span-2 lg:col-span-1 md:w-[calc(50%-1rem)] md:mx-auto lg:w-full">
             <div>
               <div class="flex items-center gap-1 text-[#FD802E] text-sm mb-4">
                 ★★★★★
