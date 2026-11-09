@@ -313,7 +313,13 @@ html.light body,
 
 /* Base Light Mode Text Color for All General text-white Elements */
 html.light .text-white,
+html.light .text-white\/90,
+html.light .text-white\/80,
+html.light .text-white\/70,
 .light .text-white,
+.light .text-white\/90,
+.light .text-white\/80,
+.light .text-white\/70,
 html.light-theme .text-white,
 .light-theme .text-white {
   color: #111e26 !important;
@@ -2061,4 +2067,115 @@ html.light .map-iframe,
 .light .map-iframe {
   filter: none !important;
 }
+
+/* ==========================================================================
+   FEATURE CARDS (#why-choose-us) ICON HOVER CONTRAST (LIGHT & DARK MODES)
+   ========================================================================== */
+
+/* 1. Feature icon box hover in both dark and light modes */
+#why-choose-us .group:hover .feature-icon-box,
+#why-choose-us .feature-card:hover .feature-icon-box,
+#why-choose-us .feature-icon-box:hover,
+#why-choose-us .group:hover [class*="group-hover:bg-[#FD802E]"],
+html.light #why-choose-us .group:hover .feature-icon-box,
+html.light #why-choose-us .feature-card:hover .feature-icon-box,
+html.light #why-choose-us .feature-icon-box:hover,
+html.light #why-choose-us .group:hover [class*="group-hover:bg-[#FD802E]"],
+.light #why-choose-us .group:hover .feature-icon-box,
+.light #why-choose-us .feature-card:hover .feature-icon-box,
+.light #why-choose-us .feature-icon-box:hover,
+.light #why-choose-us .group:hover [class*="group-hover:bg-[#FD802E]"] {
+  background-color: #FD802E !important;
+  border-color: #FD802E !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(253, 128, 46, 0.4) !important;
+}
+
+/* 2. Pure white SVG stroke & color inside feature icon box on hover */
+#why-choose-us .group:hover .feature-icon-box *,
+#why-choose-us .group:hover .feature-icon-box svg,
+#why-choose-us .group:hover .feature-icon-box svg path,
+#why-choose-us .feature-card:hover .feature-icon-box *,
+#why-choose-us .feature-card:hover .feature-icon-box svg,
+#why-choose-us .feature-card:hover .feature-icon-box svg path,
+#why-choose-us .feature-icon-box:hover *,
+#why-choose-us .feature-icon-box:hover svg,
+#why-choose-us .feature-icon-box:hover svg path,
+#why-choose-us .group:hover [class*="group-hover:bg-[#FD802E]"] *,
+#why-choose-us .group:hover [class*="group-hover:bg-[#FD802E]"] svg,
+#why-choose-us .group:hover [class*="group-hover:bg-[#FD802E]"] svg path,
+html.light #why-choose-us .group:hover .feature-icon-box *,
+html.light #why-choose-us .group:hover .feature-icon-box svg,
+html.light #why-choose-us .group:hover .feature-icon-box svg path,
+html.light #why-choose-us .feature-card:hover .feature-icon-box *,
+html.light #why-choose-us .feature-card:hover .feature-icon-box svg,
+html.light #why-choose-us .feature-card:hover .feature-icon-box svg path,
+html.light #why-choose-us .feature-icon-box:hover *,
+html.light #why-choose-us .feature-icon-box:hover svg,
+html.light #why-choose-us .feature-icon-box:hover svg path,
+html.light #why-choose-us .group:hover [class*="group-hover:bg-[#FD802E]"] *,
+html.light #why-choose-us .group:hover [class*="group-hover:bg-[#FD802E]"] svg,
+html.light #why-choose-us .group:hover [class*="group-hover:bg-[#FD802E]"] svg path,
+.light #why-choose-us .group:hover .feature-icon-box *,
+.light #why-choose-us .group:hover .feature-icon-box svg,
+.light #why-choose-us .group:hover .feature-icon-box svg path,
+.light #why-choose-us .feature-card:hover .feature-icon-box *,
+.light #why-choose-us .feature-card:hover .feature-icon-box svg,
+.light #why-choose-us .feature-card:hover .feature-icon-box svg path,
+.light #why-choose-us .feature-icon-box:hover *,
+.light #why-choose-us .feature-icon-box:hover svg,
+.light #why-choose-us .feature-icon-box:hover svg path,
+.light #why-choose-us .group:hover [class*="group-hover:bg-[#FD802E]"] *,
+.light #why-choose-us .group:hover [class*="group-hover:bg-[#FD802E]"] svg,
+.light #why-choose-us .group:hover [class*="group-hover:bg-[#FD802E]"] svg path {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+  fill: none !important;
+}
+
+/* 3. Card title hover transition in light mode */
+html.light #why-choose-us .group:hover h3,
+.light #why-choose-us .group:hover h3,
+html.light #why-choose-us .feature-card:hover h3,
+.light #why-choose-us .feature-card:hover h3,
+html.light .group:hover .group-hover\:text-\[\#FD802E\],
+.light .group:hover .group-hover\:text-\[\#FD802E\] {
+  color: #FD802E !important;
+}
+
+/* 4. Global Light Mode Hover text-white & stroke overrides */
+html.light .group:hover .group-hover\:text-white,
+.light .group:hover .group-hover\:text-white,
+html.light .group:hover [class*="group-hover:text-white"],
+.light .group:hover [class*="group-hover:text-white"],
+html.light .hover\:text-white:hover,
+.light .hover\:text-white:hover,
+html.light [class*="hover:text-white"]:hover,
+.light [class*="hover:text-white"]:hover,
+html.light a[class*="hover:text-white"]:hover,
+.light a[class*="hover:text-white"]:hover,
+html.light button[class*="hover:text-white"]:hover,
+.light button[class*="hover:text-white"]:hover {
+  color: #ffffff !important;
+}
+
+html.light .group:hover .group-hover\:text-white *,
+.light .group:hover .group-hover\:text-white *,
+html.light .group:hover [class*="group-hover:text-white"] *,
+.light .group:hover [class*="group-hover:text-white"] *,
+html.light [class*="hover:text-white"]:hover *,
+.light [class*="hover:text-white"]:hover * {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+html.light a[class*="hover:bg-[#FD802E]"]:hover,
+.light a[class*="hover:bg-[#FD802E]"]:hover,
+html.light button[class*="hover:bg-[#FD802E]"]:hover,
+.light button[class*="hover:bg-[#FD802E]"]:hover {
+  background-color: #FD802E !important;
+  border-color: #FD802E !important;
+  color: #ffffff !important;
+}
+
 

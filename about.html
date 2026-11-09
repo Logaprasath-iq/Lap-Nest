@@ -7,7 +7,7 @@
   <meta name="description" content="Discover the story behind LAPNEST. Chennai's premier laptop sales, purchase, rental, repair and upgrade business founded by hardware engineers.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   
-  <link rel="stylesheet" href="assets/css/style.css?v=5.1">
+  <link rel="stylesheet" href="assets/css/style.css?v=5.4">
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
@@ -44,11 +44,11 @@
             <div class="rounded-xl bg-[#172731] border border-[#233D4C] shadow-2xl p-2">
               <a href="index.html" class="flex items-center gap-2.5 px-3 py-2 text-xs font-semibold rounded-lg text-white hover:bg-[#233D4C] hover:text-[#FD802E] transition-colors">
                 <span class="w-2 h-2 rounded-full bg-[#FD802E]"></span>
-                Home 1 – Flagship Store
+                Flagship Store
               </a>
               <a href="home-2.html" class="flex items-center gap-2.5 px-3 py-2 text-xs font-semibold rounded-lg text-[#9fb3be] hover:bg-[#233D4C] hover:text-[#FD802E] transition-colors">
                 <span class="w-2 h-2 rounded-full bg-[#233D4C]"></span>
-                Home 2 – Editorial Tech
+                Editorial Tech
               </a>
             </div>
           </div>
@@ -110,8 +110,8 @@
           <svg class="dropdown-arrow w-4 h-4 text-[#FD802E] transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
         </button>
         <div class="hidden pl-4 py-1 space-y-1">
-          <a href="index.html" class="block py-2 px-3 text-sm text-[#FD802E] font-semibold hover:bg-[#172731] rounded-md">• Home 1 (Store)</a>
-          <a href="home-2.html" class="block py-2 px-3 text-sm text-[#9fb3be] hover:text-white hover:bg-[#172731] rounded-md">• Home 2 (Editorial)</a>
+          <a href="index.html" class="block py-2 px-3 text-sm text-[#FD802E] font-semibold hover:bg-[#172731] rounded-md">• Flagship Store</a>
+          <a href="home-2.html" class="block py-2 px-3 text-sm text-[#9fb3be] hover:text-white hover:bg-[#172731] rounded-md">• Editorial Tech</a>
         </div>
       </div>
 
@@ -470,47 +470,55 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch equal-card-grid">
-          <div class="tilt-card equal-card rounded-2xl bg-[#172731] border border-[#233D4C] overflow-hidden group">
-            <div class="aspect-square overflow-hidden bg-[#111e26]">
-              <img src="assets/images/team/team-2.jpg" alt="Venkatesh Raghavan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="tilt-card equal-card rounded-2xl bg-[#172731] border border-[#233D4C] overflow-hidden group shadow-lg flex flex-col justify-between hover:border-[#FD802E] transition-all duration-300">
+            <div class="aspect-square w-full overflow-hidden bg-[#111e26]">
+              <img src="assets/images/team/team-2.jpg?v=5.3" alt="Venkatesh Raghavan" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="p-5 equal-card-body flex flex-col flex-1">
-              <h3 class="text-base font-bold text-white">Venkatesh Raghavan</h3>
-              <p class="text-xs text-[#FD802E] font-semibold min-h-[2rem] flex items-center">Founder & Chief Hardware Architect</p>
-              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Over 14+ years in BGA micro-soldering, chip diagnostic lab protocols, and schematic analysis.</p>
-            </div>
-          </div>
-
-          <div class="tilt-card equal-card rounded-2xl bg-[#172731] border border-[#233D4C] overflow-hidden group">
-            <div class="aspect-square overflow-hidden bg-[#111e26]">
-              <img src="assets/images/team/team-1.jpg" alt="Pooja Meenakshi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="p-5 equal-card-body flex flex-col flex-1">
-              <h3 class="text-base font-bold text-white">Pooja Meenakshi</h3>
-              <p class="text-xs text-[#FD802E] font-semibold min-h-[2rem] flex items-center">Head of Enterprise Rental Solutions</p>
-              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Manages procurement, logistics and custom OS deployments for 50+ Chennai startups.</p>
+            <div class="p-5 sm:p-6 equal-card-body flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="text-base font-bold text-white">Venkatesh Raghavan</h3>
+                <p class="text-xs text-[#FD802E] font-semibold min-h-[2rem] flex items-center">Founder & Chief Hardware Architect</p>
+                <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem]">Over 14+ years in BGA micro-soldering, chip diagnostic lab protocols, and schematic analysis.</p>
+              </div>
             </div>
           </div>
 
-          <div class="tilt-card equal-card rounded-2xl bg-[#172731] border border-[#233D4C] overflow-hidden group">
-            <div class="aspect-square overflow-hidden bg-[#111e26]">
-              <img src="assets/images/team/team-4.jpg" alt="Ashwin Sundar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="tilt-card equal-card rounded-2xl bg-[#172731] border border-[#233D4C] overflow-hidden group shadow-lg flex flex-col justify-between hover:border-[#FD802E] transition-all duration-300">
+            <div class="aspect-square w-full overflow-hidden bg-[#111e26]">
+              <img src="assets/images/team/team-1.jpg?v=5.3" alt="Pooja Meenakshi" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="p-5 equal-card-body flex flex-col flex-1">
-              <h3 class="text-base font-bold text-white">Ashwin Sundar</h3>
-              <p class="text-xs text-[#FD802E] font-semibold min-h-[2rem] flex items-center">Senior Apple & Logic Board Specialist</p>
-              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Certified Mac technician specializing in Apple Silicon power rails and liquid recovery.</p>
+            <div class="p-5 sm:p-6 equal-card-body flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="text-base font-bold text-white">Pooja Meenakshi</h3>
+                <p class="text-xs text-[#FD802E] font-semibold min-h-[2rem] flex items-center">Head of Enterprise Rental Solutions</p>
+                <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem]">Manages procurement, logistics and custom OS deployments for 50+ Chennai startups.</p>
+              </div>
             </div>
           </div>
 
-          <div class="tilt-card equal-card rounded-2xl bg-[#172731] border border-[#233D4C] overflow-hidden group">
-            <div class="aspect-square overflow-hidden bg-[#111e26]">
-              <img src="assets/images/team/team-3.jpg" alt="Divya Balasubramanian" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <div class="tilt-card equal-card rounded-2xl bg-[#172731] border border-[#233D4C] overflow-hidden group shadow-lg flex flex-col justify-between hover:border-[#FD802E] transition-all duration-300">
+            <div class="aspect-square w-full overflow-hidden bg-[#111e26]">
+              <img src="assets/images/team/team-4.jpg?v=5.3" alt="Ashwin Sundar" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
             </div>
-            <div class="p-5 equal-card-body flex flex-col flex-1">
-              <h3 class="text-base font-bold text-white">Divya Balasubramanian</h3>
-              <p class="text-xs text-[#FD802E] font-semibold min-h-[2rem] flex items-center">Customer Experience & QA Lead</p>
-              <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem] max-h-[3.75rem] line-clamp-3">Ensures strict quality compliance and coordinates our 24-hour turnaround guarantees.</p>
+            <div class="p-5 sm:p-6 equal-card-body flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="text-base font-bold text-white">Ashwin Sundar</h3>
+                <p class="text-xs text-[#FD802E] font-semibold min-h-[2rem] flex items-center">Senior Apple & Logic Board Specialist</p>
+                <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem]">Certified Mac technician specializing in Apple Silicon power rails and liquid recovery.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tilt-card equal-card rounded-2xl bg-[#172731] border border-[#233D4C] overflow-hidden group shadow-lg flex flex-col justify-between hover:border-[#FD802E] transition-all duration-300">
+            <div class="aspect-square w-full overflow-hidden bg-[#111e26]">
+              <img src="assets/images/team/team-3.jpg?v=5.3" alt="Divya Balasubramanian" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-5 sm:p-6 equal-card-body flex flex-col flex-1 justify-between">
+              <div>
+                <h3 class="text-base font-bold text-white">Divya Balasubramanian</h3>
+                <p class="text-xs text-[#FD802E] font-semibold min-h-[2rem] flex items-center">Customer Experience & QA Lead</p>
+                <p class="text-xs text-[#9fb3be] mt-2 leading-relaxed min-h-[3.75rem]">Ensures strict quality compliance and coordinates our 24-hour turnaround guarantees.</p>
+              </div>
             </div>
           </div>
         </div>
