@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "LAPNEST - Premium Laptop Sales, Rental, Repair & Upgrade Website",
   "scripts": {
-    "build:css": "node --max-old-space-size=256 ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/input.css -o ./assets/css/style.css --minify",
-    "watch:css": "node --max-old-space-size=256 ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/input.css -o ./assets/css/style.css --watch"
+    "build:css": "node --max-old-space-size=4096 ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/input.css -o ./assets/css/style.css --minify",
+    "watch:css": "node --max-old-space-size=4096 ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/input.css -o ./assets/css/style.css --watch"
   },
   "keywords": [
     "laptop",
