@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { background: #f8fafc; padding: 40px; font-family: sans-serif; display: flex; flex-direction: column; gap: 30px; }
+    .row { display: flex; gap: 30px; align-items: center; }
+    .box { display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #1e293b; }
+    .btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8fafc;
+      border: 1.5px solid #cbd5e1;
+      color: #FD802E;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Feather Moon (28px) vs Sun (24px & 26px)</h2>
+  
+  <div class="row">
+
+    <!-- Feather Moon 28px (stroke 2.2) -->
+    <div class="box">
+      <span>Feather Moon 28px</span>
+      <button class="btn">
+        <svg style="width: 28px; height: 28px; color: #FD802E;" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Feather Moon 30px (stroke 2.2) -->
+    <div class="box">
+      <span>Feather Moon 30px</span>
+      <button class="btn">
+        <svg style="width: 30px; height: 30px; color: #FD802E;" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Sun 24px (stroke 2) -->
+    <div class="box">
+      <span>Sun 24px</span>
+      <button class="btn">
+        <svg style="width: 24px; height: 24px; color: #FD802E;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Sun 26px (stroke 2) -->
+    <div class="box">
+      <span>Sun 26px</span>
+      <button class="btn">
+        <svg style="width: 26px; height: 26px; color: #FD802E;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+      </button>
+    </div>
+
+  </div>
+
+</body>
+</html>

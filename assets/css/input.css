@@ -964,6 +964,7 @@ html.light #main-navbar.backdrop-blur-md,
     line-height: 1 !important;
     height: 36px !important;
     min-height: 36px !important;
+    max-height: 36px !important;
   }
 
   #main-navbar .theme-toggle-btn {
@@ -978,6 +979,7 @@ html.light #main-navbar.backdrop-blur-md,
   #main-navbar a[href*="order.html"] {
     height: 40px !important;
     min-height: 40px !important;
+    max-height: 40px !important;
   }
 
   #main-navbar .theme-toggle-btn {
@@ -986,7 +988,7 @@ html.light #main-navbar.backdrop-blur-md,
   }
 }
 
-/* Sizing & Vibrant Orange Styling for Theme Toggle Icons */
+/* Sizing & Vibrant Orange Styling for Theme Toggle Icons - Unified 22px inside height */
 .theme-toggle-btn svg.sun-icon,
 .theme-toggle-btn svg.moon-icon,
 html.light .theme-toggle-btn svg.sun-icon,
@@ -994,32 +996,45 @@ html.light .theme-toggle-btn svg.moon-icon {
   color: #FD802E !important;
   stroke: #FD802E !important;
   transition: transform 0.2s ease;
+  flex-shrink: 0 !important;
 }
 
-.theme-toggle-btn svg.sun-icon {
-  width: 24px !important;
-  height: 24px !important;
+.theme-toggle-btn svg.hidden {
+  display: none !important;
+}
+
+.theme-toggle-btn svg.sun-icon,
+html.light .theme-toggle-btn svg.sun-icon {
+  width: 22px !important;
+  height: 22px !important;
+  min-width: 22px !important;
+  min-height: 22px !important;
+  stroke-width: 2 !important;
+}
+
+.theme-toggle-btn svg.moon-icon,
+html.light .theme-toggle-btn svg.moon-icon {
+  width: 22px !important;
+  height: 22px !important;
+  min-width: 22px !important;
+  min-height: 22px !important;
   stroke-width: 2.2 !important;
 }
 
-.theme-toggle-btn svg.moon-icon {
-  width: 26px !important;
-  height: 26px !important;
-  stroke-width: 2.5 !important;
+/* Ensure Order Now CTA icon and text match the inside content height */
+#main-navbar a[href*="order.html"] svg {
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+  min-height: 16px !important;
+  flex-shrink: 0 !important;
 }
 
-@media (min-width: 1280px) {
-  #main-navbar .theme-toggle-btn svg.sun-icon {
-    width: 26px !important;
-    height: 26px !important;
-    stroke-width: 2.2 !important;
-  }
-
-  #main-navbar .theme-toggle-btn svg.moon-icon {
-    width: 28px !important;
-    height: 28px !important;
-    stroke-width: 2.5 !important;
-  }
+#main-navbar a[href*="order.html"] span,
+#main-navbar .rtl-toggle-btn span {
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 1 !important;
 }
 
 /* Mobile Menu Hamburger: Strictly Hidden on Desktop (>= 1024px), Equal 40px on Mobile (< 1024px) */
