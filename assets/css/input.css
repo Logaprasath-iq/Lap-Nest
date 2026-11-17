@@ -312,32 +312,32 @@ html.light body,
 }
 
 /* Base Light Mode Text Color for All General text-white Elements */
-html.light .text-white,
-html.light .text-white\/90,
-html.light .text-white\/80,
-html.light .text-white\/70,
-.light .text-white,
-.light .text-white\/90,
-.light .text-white\/80,
-.light .text-white\/70,
-html.light-theme .text-white,
-.light-theme .text-white {
+html.light .text-white:not(.image-overlay-dark-lock *):not(.image-overlay-dark-lock):not(.dark-badge-lock *):not(.dark-badge-lock):not([class*="bg-black"] *):not([class*="bg-black"]):not([class*="bg-[#0e181f]/90"] *),
+html.light .text-white\/90:not(.image-overlay-dark-lock *):not(.image-overlay-dark-lock):not(.dark-badge-lock *):not(.dark-badge-lock):not([class*="bg-black"] *):not([class*="bg-black"]):not([class*="bg-[#0e181f]/90"] *),
+html.light .text-white\/80:not(.image-overlay-dark-lock *):not(.image-overlay-dark-lock):not(.dark-badge-lock *):not(.dark-badge-lock):not([class*="bg-black"] *):not([class*="bg-black"]):not([class*="bg-[#0e181f]/90"] *),
+html.light .text-white\/70:not(.image-overlay-dark-lock *):not(.image-overlay-dark-lock):not(.dark-badge-lock *):not(.dark-badge-lock):not([class*="bg-black"] *):not([class*="bg-black"]):not([class*="bg-[#0e181f]/90"] *),
+.light .text-white:not(.image-overlay-dark-lock *):not(.image-overlay-dark-lock):not(.dark-badge-lock *):not(.dark-badge-lock):not([class*="bg-black"] *):not([class*="bg-black"]):not([class*="bg-[#0e181f]/90"] *),
+.light .text-white\/90:not(.image-overlay-dark-lock *):not(.image-overlay-dark-lock):not(.dark-badge-lock *):not(.dark-badge-lock):not([class*="bg-black"] *):not([class*="bg-black"]):not([class*="bg-[#0e181f]/90"] *),
+.light .text-white\/80:not(.image-overlay-dark-lock *):not(.image-overlay-dark-lock):not(.dark-badge-lock *):not(.dark-badge-lock):not([class*="bg-black"] *):not([class*="bg-black"]):not([class*="bg-[#0e181f]/90"] *),
+.light .text-white\/70:not(.image-overlay-dark-lock *):not(.image-overlay-dark-lock):not(.dark-badge-lock *):not(.dark-badge-lock):not([class*="bg-black"] *):not([class*="bg-black"]):not([class*="bg-[#0e181f]/90"] *),
+html.light-theme .text-white:not(.image-overlay-dark-lock *):not(.image-overlay-dark-lock):not(.dark-badge-lock *):not(.dark-badge-lock):not([class*="bg-black"] *):not([class*="bg-black"]),
+.light-theme .text-white:not(.image-overlay-dark-lock *):not(.image-overlay-dark-lock):not(.dark-badge-lock *):not(.dark-badge-lock):not([class*="bg-black"] *):not([class*="bg-black"]) {
   color: #111e26 !important;
 }
 
 /* Headings in Light Mode */
-html.light h1:not(footer *):not(.footer-dark-lock *),
-html.light h2:not(footer *):not(.footer-dark-lock *),
-html.light h3:not(footer *):not(.footer-dark-lock *),
-html.light h4:not(footer *):not(.footer-dark-lock *),
-html.light h5:not(footer *):not(.footer-dark-lock *),
-html.light h6:not(footer *):not(.footer-dark-lock *),
-.light h1:not(footer *):not(.footer-dark-lock *),
-.light h2:not(footer *):not(.footer-dark-lock *),
-.light h3:not(footer *):not(.footer-dark-lock *),
-.light h4:not(footer *):not(.footer-dark-lock *),
-.light h5:not(footer *):not(.footer-dark-lock *),
-.light h6:not(footer *):not(.footer-dark-lock *) {
+html.light h1:not(footer *):not(.footer-dark-lock *):not(.image-overlay-dark-lock *),
+html.light h2:not(footer *):not(.footer-dark-lock *):not(.image-overlay-dark-lock *),
+html.light h3:not(footer *):not(.footer-dark-lock *):not(.image-overlay-dark-lock *),
+html.light h4:not(footer *):not(.footer-dark-lock *):not(.image-overlay-dark-lock *),
+html.light h5:not(footer *):not(.footer-dark-lock *):not(.image-overlay-dark-lock *),
+html.light h6:not(footer *):not(.footer-dark-lock *):not(.image-overlay-dark-lock *),
+.light h1:not(footer *):not(.footer-dark-lock *):not(.image-overlay-dark-lock *),
+.light h2:not(footer *):not(.footer-dark-lock *):not(.image-overlay-dark-lock *),
+.light h3:not(footer *):not(.footer-dark-lock *):not(.image-overlay-dark-lock *),
+.light h4:not(footer *):not(.footer-dark-lock *):not(.image-overlay-dark-lock *),
+.light h5:not(footer *):not(.footer-dark-lock *):not(.image-overlay-dark-lock *),
+.light h6:not(footer *):not(.footer-dark-lock *):not(.image-overlay-dark-lock *) {
   color: #0f172a !important;
 }
 
@@ -411,31 +411,31 @@ html.light .equal-card-footer a:not(.category-explore-btn):not(.bg-\[\#FD802E\])
   color: #0f172a !important;
 }
 
-html.light a.bg-\[\#172731\]:not(footer *):not(.category-explore-btn):hover,
+html.light a.bg-\[\#172731\]:not(footer *):not(.category-explore-btn):not(.brand-portfolio-card):not(.brand-portfolio-card *):hover,
 html.light button.bg-\[\#172731\]:hover,
-html.light a.bg-\[\#233D4C\]:not(footer *):not(.category-explore-btn):hover,
+html.light a.bg-\[\#233D4C\]:not(footer *):not(.category-explore-btn):not(.brand-portfolio-card):not(.brand-portfolio-card *):hover,
 html.light button.bg-\[\#233D4C\]:hover,
-html.light .equal-card-footer a:not(.category-explore-btn):not(.bg-\[\#FD802E\]):hover,
-.light a.bg-\[\#172731\]:not(footer *):not(.category-explore-btn):hover,
+html.light .equal-card-footer a:not(.category-explore-btn):not(.bg-\[\#FD802E\]):not(.brand-portfolio-card):hover,
+.light a.bg-\[\#172731\]:not(footer *):not(.category-explore-btn):not(.brand-portfolio-card):not(.brand-portfolio-card *):hover,
 .light button.bg-\[\#172731\]:hover,
-.light a.bg-\[\#233D4C\]:not(footer *):not(.category-explore-btn):hover,
+.light a.bg-\[\#233D4C\]:not(footer *):not(.category-explore-btn):not(.brand-portfolio-card):not(.brand-portfolio-card *):hover,
 .light button.bg-\[\#233D4C\]:hover,
-.light .equal-card-footer a:not(.category-explore-btn):not(.bg-\[\#FD802E\]):hover {
+.light .equal-card-footer a:not(.category-explore-btn):not(.bg-\[\#FD802E\]):not(.brand-portfolio-card):hover {
   background-color: #fff7ed !important;
   border-color: #FD802E !important;
   color: #FD802E !important;
 }
 
-html.light a.bg-\[\#172731\]:not(footer *):not(.category-explore-btn):hover *,
+html.light a.bg-\[\#172731\]:not(footer *):not(.category-explore-btn):not(.brand-portfolio-card):not(.brand-portfolio-card *):hover *,
 html.light button.bg-\[\#172731\]:hover *,
-html.light a.bg-\[\#233D4C\]:not(footer *):not(.category-explore-btn):hover *,
+html.light a.bg-\[\#233D4C\]:not(footer *):not(.category-explore-btn):not(.brand-portfolio-card):not(.brand-portfolio-card *):hover *,
 html.light button.bg-\[\#233D4C\]:hover *,
-html.light .equal-card-footer a:not(.category-explore-btn):not(.bg-\[\#FD802E\]):hover *,
-.light a.bg-\[\#172731\]:not(footer *):not(.category-explore-btn):hover *,
+html.light .equal-card-footer a:not(.category-explore-btn):not(.bg-\[\#FD802E\]):not(.brand-portfolio-card):hover *,
+.light a.bg-\[\#172731\]:not(footer *):not(.category-explore-btn):not(.brand-portfolio-card):not(.brand-portfolio-card *):hover *,
 .light button.bg-\[\#172731\]:hover *,
-.light a.bg-\[\#233D4C\]:not(footer *):not(.category-explore-btn):hover *,
+.light a.bg-\[\#233D4C\]:not(footer *):not(.category-explore-btn):not(.brand-portfolio-card):not(.brand-portfolio-card *):hover *,
 .light button.bg-\[\#233D4C\]:hover *,
-.light .equal-card-footer a:not(.category-explore-btn):not(.bg-\[\#FD802E\]):hover * {
+.light .equal-card-footer a:not(.category-explore-btn):not(.bg-\[\#FD802E\]):not(.brand-portfolio-card):hover * {
   color: #FD802E !important;
   stroke: #FD802E !important;
 }
@@ -1818,6 +1818,10 @@ html.light span.absolute.bottom-3.left-3,
 .light span.absolute.bottom-3.left-3,
 html.light div.absolute.bottom-3.left-3,
 .light div.absolute.bottom-3.left-3,
+html.light span.absolute.bottom-3.right-3,
+.light span.absolute.bottom-3.right-3,
+html.light div.absolute.bottom-3.right-3,
+.light div.absolute.bottom-3.right-3,
 html.light [class*="bg-black/"],
 .light [class*="bg-black/"],
 html.light [class*="bg-black"],
@@ -1858,6 +1862,18 @@ html.light div.absolute.bottom-3.left-3,
 html.light div.absolute.bottom-3.left-3 *,
 .light div.absolute.bottom-3.left-3,
 .light div.absolute.bottom-3.left-3 *,
+html.light span.absolute.bottom-3.right-3,
+html.light span.absolute.bottom-3.right-3 *,
+.light span.absolute.bottom-3.right-3,
+.light span.absolute.bottom-3.right-3 *,
+html.light div.absolute.bottom-3.right-3,
+html.light div.absolute.bottom-3.right-3 *,
+.light div.absolute.bottom-3.right-3,
+.light div.absolute.bottom-3.right-3 *,
+html.light [class*="bg-black"],
+html.light [class*="bg-black"] *,
+.light [class*="bg-black"],
+.light [class*="bg-black"] *,
 html.light [class*="bg-[#0e181f]/90"],
 html.light [class*="bg-[#0e181f]/90"] *,
 .light [class*="bg-[#0e181f]/90"],
@@ -2053,7 +2069,13 @@ html.light .glossary-module .divide-\[\#233D4C\] > :not([hidden]) ~ :not([hidden
 html.light .knowledgebase-module .border-b,
 .light .knowledgebase-module .border-b,
 html.light .glossary-module .border-b,
-.light .glossary-module .border-b {
+.light .glossary-module .border-b,
+html.light .glossary-module .border-r,
+.light .glossary-module .border-r,
+html.light .glossary-module .border-t,
+.light .glossary-module .border-t,
+html.light .glossary-module [class*="border-[#233D4C]"],
+.light .glossary-module [class*="border-[#233D4C]"] {
   border-color: #e2e8f0 !important;
 }
 
@@ -2176,6 +2198,220 @@ html.light button[class*="hover:bg-[#FD802E]"]:hover,
   background-color: #FD802E !important;
   border-color: #FD802E !important;
   color: #ffffff !important;
+}
+
+/* ==========================================================================
+   4-PHASE HARDWARE CERTIFICATION STEP CARDS (LIGHT & DARK THEME CONTRAST)
+   ========================================================================== */
+
+.sticky-step-card {
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.sticky-step-card:hover,
+.sticky-step-card.active-step {
+  border-color: #FD802E !important;
+  box-shadow: 0 10px 25px -5px rgba(253, 128, 46, 0.2) !important;
+}
+
+/* Light Theme Overrides for Step Cards */
+html.light .sticky-step-card,
+.light .sticky-step-card {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Light Theme Active / Hovered Step Card */
+html.light .sticky-step-card:hover,
+html.light .sticky-step-card.active-step,
+.light .sticky-step-card:hover,
+.light .sticky-step-card.active-step {
+  background-color: #ffffff !important;
+  border-color: #FD802E !important;
+  box-shadow: 0 12px 30px -5px rgba(253, 128, 46, 0.25) !important;
+}
+
+/* Ensure crystal clear typography contrast in Light Theme inside step cards */
+html.light .sticky-step-card h3,
+html.light .sticky-step-card:hover h3,
+html.light .sticky-step-card.active-step h3,
+.light .sticky-step-card h3,
+.light .sticky-step-card:hover h3,
+.light .sticky-step-card.active-step h3 {
+  color: #0e181f !important;
+}
+
+html.light .sticky-step-card p,
+html.light .sticky-step-card:hover p,
+html.light .sticky-step-card.active-step p,
+.light .sticky-step-card p,
+.light .sticky-step-card:hover p,
+.light .sticky-step-card.active-step p {
+  color: #475569 !important;
+}
+
+/* Light Theme Pills & Tags inside Step Cards */
+html.light .sticky-step-card .bg-\[\#0e181f\],
+html.light .sticky-step-card:hover .bg-\[\#0e181f\],
+html.light .sticky-step-card.active-step .bg-\[\#0e181f\],
+.light .sticky-step-card .bg-\[\#0e181f\],
+.light .sticky-step-card:hover .bg-\[\#0e181f\],
+.light .sticky-step-card.active-step .bg-\[\#0e181f\] {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+html.light .sticky-step-card .bg-\[\#0e181f\] span,
+.light .sticky-step-card .bg-\[\#0e181f\] span {
+  color: #334155 !important;
+}
+
+html.light .sticky-step-card .bg-\[\#0e181f\] span.text-\[\#FD802E\],
+.light .sticky-step-card .bg-\[\#0e181f\] span.text-\[\#FD802E\] {
+  color: #FD802E !important;
+}
+
+/* Catch-all for dynamically added bg-[#1a2f3d] class in JS */
+html.light .bg-\[\#1a2f3d\],
+.light .bg-\[\#1a2f3d\] {
+  background-color: #ffffff !important;
+  border-color: #FD802E !important;
+}
+
+html.light .bg-\[\#1a2f3d\] h3,
+.light .bg-\[\#1a2f3d\] h3 {
+  color: #0e181f !important;
+}
+
+html.light .bg-\[\#1a2f3d\] p,
+.light .bg-\[\#1a2f3d\] p {
+  color: #475569 !important;
+}
+
+/* ==========================================================================
+   LAPTOP BRANDS WE SUPPORT (HOME 2 LOGO CARDS)
+   ========================================================================== */
+html.light .brand-portfolio-card,
+.light .brand-portfolio-card {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+html.light .brand-portfolio-card:hover,
+.light .brand-portfolio-card:hover {
+  background-color: #ffffff !important;
+  border-color: #FD802E !important;
+  box-shadow: 0 12px 25px -5px rgba(253, 128, 46, 0.2) !important;
+}
+
+html.light .brand-portfolio-card .brand-logo-box,
+.light .brand-portfolio-card .brand-logo-box {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+}
+
+html.light .brand-portfolio-card .brand-logo-box svg,
+html.light .brand-portfolio-card .brand-logo-box svg path,
+.light .brand-portfolio-card .brand-logo-box svg,
+.light .brand-portfolio-card .brand-logo-box svg path {
+  color: #0e181f !important;
+  fill: currentColor !important;
+  stroke: none !important;
+}
+
+html.light .brand-portfolio-card:hover .brand-logo-box,
+.light .brand-portfolio-card:hover .brand-logo-box {
+  background-color: rgba(253, 128, 46, 0.1) !important;
+  border-color: rgba(253, 128, 46, 0.6) !important;
+}
+
+html.light .brand-portfolio-card:hover .brand-logo-box svg,
+html.light .brand-portfolio-card:hover .brand-logo-box svg path,
+.light .brand-portfolio-card:hover .brand-logo-box svg,
+.light .brand-portfolio-card:hover .brand-logo-box svg path {
+  color: #FD802E !important;
+  fill: currentColor !important;
+  stroke: none !important;
+}
+
+html.light .brand-portfolio-card .brand-name,
+.light .brand-portfolio-card .brand-name {
+  color: #0e181f !important;
+}
+
+html.light .brand-portfolio-card:hover .brand-name,
+.light .brand-portfolio-card:hover .brand-name {
+  color: #FD802E !important;
+}
+
+html.light .brand-portfolio-card span:last-child,
+html.light .brand-portfolio-card .brand-subtext,
+html.light .brand-portfolio-card:hover span:last-child,
+html.light .brand-portfolio-card:hover .brand-subtext,
+.light .brand-portfolio-card span:last-child,
+.light .brand-portfolio-card .brand-subtext,
+.light .brand-portfolio-card:hover span:last-child,
+.light .brand-portfolio-card:hover .brand-subtext {
+  color: #475569 !important;
+}
+
+/* ==========================================================================
+   IMAGE OVERLAY DARK LOCK (HOME-2 & GLOBAL PHOTO OVERLAYS CONTRAST)
+   ========================================================================== */
+html.light .image-overlay-dark-lock,
+html.light .image-overlay-dark-lock *,
+html.light .image-overlay-dark-lock h1,
+html.light .image-overlay-dark-lock h2,
+html.light .image-overlay-dark-lock h3,
+html.light .image-overlay-dark-lock h4,
+html.light .image-overlay-dark-lock p,
+html.light .image-overlay-dark-lock span:not(.bg-\[\#FD802E\]),
+html.light .image-overlay-dark-lock a,
+.light .image-overlay-dark-lock,
+.light .image-overlay-dark-lock *,
+.light .image-overlay-dark-lock h1,
+.light .image-overlay-dark-lock h2,
+.light .image-overlay-dark-lock h3,
+.light .image-overlay-dark-lock h4,
+.light .image-overlay-dark-lock p,
+.light .image-overlay-dark-lock span:not(.bg-\[\#FD802E\]),
+.light .image-overlay-dark-lock a {
+  color: #ffffff !important;
+}
+
+html.light .image-overlay-dark-lock h3,
+.light .image-overlay-dark-lock h3 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+}
+
+html.light .image-overlay-dark-lock p,
+.light .image-overlay-dark-lock p {
+  color: rgba(255, 255, 255, 0.92) !important;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+html.light .image-overlay-dark-lock a.rounded-full,
+.light .image-overlay-dark-lock a.rounded-full {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+html.light .image-overlay-dark-lock a.rounded-full:hover,
+.light .image-overlay-dark-lock a.rounded-full:hover {
+  background-color: #FD802E !important;
+  border-color: #FD802E !important;
+  color: #ffffff !important;
+}
+
+html.light .image-overlay-dark-lock svg,
+.light .image-overlay-dark-lock svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
 

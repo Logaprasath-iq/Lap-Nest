@@ -180,16 +180,21 @@
           onEnter: () => activateStepHighlight(i + 1, stepCard),
           onEnterBack: () => activateStepHighlight(i + 1, stepCard)
         });
+
+        // Hover listener to also activate step highlight when user hovers over any step card
+        stepCard.addEventListener('mouseenter', () => {
+          activateStepHighlight(i + 1, stepCard);
+        });
       });
 
       function activateStepHighlight(stepNum, cardEl) {
         // Highlight active step card on right
         stickyStepCards.forEach(c => {
-          c.classList.remove('border-[#FD802E]', 'bg-[#1a2f3d]', 'shadow-lg');
+          c.classList.remove('border-[#FD802E]', 'bg-[#1a2f3d]', 'shadow-lg', 'active-step');
           c.classList.add('border-[#233D4C]', 'bg-[#172731]');
         });
         cardEl.classList.remove('border-[#233D4C]', 'bg-[#172731]');
-        cardEl.classList.add('border-[#FD802E]', 'bg-[#1a2f3d]', 'shadow-lg');
+        cardEl.classList.add('border-[#FD802E]', 'bg-[#1a2f3d]', 'shadow-lg', 'active-step');
 
         // Dynamically highlight corresponding left card
         if (stepNum <= 2) {

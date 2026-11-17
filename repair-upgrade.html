@@ -7,7 +7,7 @@
   <meta name="description" content="Micro-soldering, motherboard repairs, broken screens, battery replacements, and SSD upgrades with 24-hour turnaround in Chennai.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   
-  <link rel="stylesheet" href="assets/css/style.css?v=5.5">
+  <link rel="stylesheet" href="assets/css/style.css?v=6.3">
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
@@ -201,15 +201,20 @@
               South India's premier multi-brand repair lab. Precision logic board soldering, liquid spill recovery, and 90-minute SSD/RAM expansions.
             </p>
 
-            <!-- Compact Action / Badge Pill -->
-            <div class="pt-1 flex items-center gap-3">
-              <span class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-[#0e181f] border border-[#233D4C] text-[#FD802E]">
-                99% Logic Board Revival Rate
-              </span>
-              <a href="#services-list" class="text-xs font-semibold text-white hover:text-[#FD802E] flex items-center gap-1 transition-colors">
+            <!-- Primary & Secondary Action CTAs -->
+            <div class="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
+              <a href="contact.html?service=repair"
+                 class="px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm bg-[#FD802E] hover:bg-[#ff9248] text-white shadow-lg shadow-[#FD802E]/25 transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2">
+                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                <span>Book Lab Diagnosis</span>
+              </a>
+              <a href="#services-list" class="text-xs sm:text-sm font-semibold text-white hover:text-[#FD802E] flex items-center gap-1 transition-colors px-2 py-2">
                 <span>View Repair Tariffs</span>
                 <svg class="w-3.5 h-3.5 rtl-flip" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
               </a>
+              <span class="hidden sm:inline-flex px-3 py-1.5 rounded-xl text-xs font-mono font-medium bg-[#0e181f] border border-[#233D4C] text-[#9fb3be]">
+                <strong class="text-[#FD802E] mr-1">99%</strong> Revival Rate
+              </span>
             </div>
           </div>
 
@@ -235,10 +240,10 @@
     <div class="w-full max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12 py-6 sm:py-8">
       <div class="relative flex items-center justify-center">
         <div class="w-full border-t border-[#233D4C]"></div>
-        <div class="absolute bg-[#0e181f] px-5 py-1.5 rounded-full border border-[#233D4C] flex items-center gap-2.5 text-[11px] font-mono font-bold tracking-widest text-[#FD802E] uppercase shadow-lg shadow-black/40">
-          <span class="w-2 h-2 rounded-full bg-[#FD802E] animate-pulse"></span>
+        <div class="absolute bg-[#0e181f] px-6 sm:px-8 py-2 sm:py-2.5 rounded-full border border-[#233D4C] flex items-center gap-2.5 sm:gap-3 text-xs sm:text-sm font-mono font-bold tracking-wider sm:tracking-widest text-[#FD802E] uppercase shadow-xl shadow-black/40 whitespace-nowrap text-center">
+          <span class="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-[#FD802E] animate-pulse flex-shrink-0"></span>
           <span>CERTIFIED LAB REPAIR & UPGRADE BENCH</span>
-          <span class="w-2 h-2 rounded-full bg-[#FD802E] animate-pulse"></span>
+          <span class="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-[#FD802E] animate-pulse flex-shrink-0"></span>
         </div>
       </div>
     </div>
@@ -440,23 +445,23 @@
         
         <!-- Hardware Repairs -->
         <div class="space-y-4 flex flex-col justify-between h-full">
-          <div>
+          <div class="min-h-[140px] md:min-h-[160px] lg:min-h-[140px] flex flex-col justify-start">
             <span class="text-xs font-bold uppercase tracking-widest text-[#FD802E] block mb-2">Mechanical & Electrical</span>
-            <h2 class="text-2xl sm:text-3xl lg:text-2xl xl:text-3xl font-black text-white min-h-[36px] sm:min-h-[44px] lg:min-h-[40px] xl:min-h-[44px] flex items-center">Hardware Structural Repairs</h2>
-            <p class="text-xs sm:text-sm text-[#9fb3be] leading-relaxed mt-2 min-h-[44px] flex items-center">
+            <h2 class="text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl font-black text-white min-h-[56px] md:min-h-[64px] lg:min-h-[56px] xl:min-h-[64px] flex items-center">Hardware Structural Repairs</h2>
+            <p class="text-xs sm:text-sm text-[#9fb3be] leading-relaxed mt-2 min-h-[56px] md:min-h-[60px] lg:min-h-[48px] flex items-center">
               Beyond silicon, we repair mechanical stress points that cause chassis cracking, broken brass anchor nuts, and hinge seizures.
             </p>
           </div>
           <ul class="space-y-3 text-xs text-[#9fb3be] mt-auto">
-            <li class="p-3.5 rounded-xl bg-[#172731] border border-[#233D4C] flex items-center justify-between min-h-[54px] gap-3">
+            <li class="p-3.5 rounded-xl bg-[#172731] border border-[#233D4C] flex items-center justify-between min-h-[62px] md:min-h-[66px] lg:min-h-[58px] xl:min-h-[58px] gap-3">
               <span class="font-medium text-white">Hinge Anchor Re-Casting & Plastic Welding</span>
               <strong class="text-white shrink-0 whitespace-nowrap">Same Day Service</strong>
             </li>
-            <li class="p-3.5 rounded-xl bg-[#172731] border border-[#233D4C] flex items-center justify-between min-h-[54px] gap-3">
+            <li class="p-3.5 rounded-xl bg-[#172731] border border-[#233D4C] flex items-center justify-between min-h-[62px] md:min-h-[66px] lg:min-h-[58px] xl:min-h-[58px] gap-3">
               <span class="font-medium text-white">Fan Bearing Replacement & Copper Heatpipe Recore</span>
               <strong class="text-white shrink-0 whitespace-nowrap">Under 2 Hours</strong>
             </li>
-            <li class="p-3.5 rounded-xl bg-[#172731] border border-[#233D4C] flex items-center justify-between min-h-[54px] gap-3">
+            <li class="p-3.5 rounded-xl bg-[#172731] border border-[#233D4C] flex items-center justify-between min-h-[62px] md:min-h-[66px] lg:min-h-[58px] xl:min-h-[58px] gap-3">
               <span class="font-medium text-white">Trackpad Click-Mechanism Re-Tensioning</span>
               <strong class="text-white shrink-0 whitespace-nowrap">Under 1 Hour</strong>
             </li>
@@ -465,23 +470,23 @@
 
         <!-- Software Troubleshooting -->
         <div class="space-y-4 flex flex-col justify-between h-full">
-          <div>
+          <div class="min-h-[140px] md:min-h-[160px] lg:min-h-[140px] flex flex-col justify-start">
             <span class="text-xs font-bold uppercase tracking-widest text-[#FD802E] block mb-2">Operating Systems</span>
-            <h2 class="text-2xl sm:text-3xl lg:text-2xl xl:text-3xl font-black text-white min-h-[36px] sm:min-h-[44px] lg:min-h-[40px] xl:min-h-[44px] flex items-center">Software & Firmware Calibration</h2>
-            <p class="text-xs sm:text-sm text-[#9fb3be] leading-relaxed mt-2 min-h-[44px] flex items-center">
+            <h2 class="text-xl sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl font-black text-white min-h-[56px] md:min-h-[64px] lg:min-h-[56px] xl:min-h-[64px] flex items-center">Software & Firmware Calibration</h2>
+            <p class="text-xs sm:text-sm text-[#9fb3be] leading-relaxed mt-2 min-h-[56px] md:min-h-[60px] lg:min-h-[48px] flex items-center">
               Blue screen of death (BSOD), kernel panics, EFI lock bypass assistance with proof of ownership, and clean driver optimization.
             </p>
           </div>
           <ul class="space-y-3 text-xs text-[#9fb3be] mt-auto">
-            <li class="p-3.5 rounded-xl bg-[#172731] border border-[#233D4C] flex items-center justify-between min-h-[54px] gap-3">
+            <li class="p-3.5 rounded-xl bg-[#172731] border border-[#233D4C] flex items-center justify-between min-h-[62px] md:min-h-[66px] lg:min-h-[58px] xl:min-h-[58px] gap-3">
               <span class="font-medium text-white">Windows 11 / macOS Reinstall & Data Backup</span>
               <strong class="text-white shrink-0 whitespace-nowrap">₹599</strong>
             </li>
-            <li class="p-3.5 rounded-xl bg-[#172731] border border-[#233D4C] flex items-center justify-between min-h-[54px] gap-3">
+            <li class="p-3.5 rounded-xl bg-[#172731] border border-[#233D4C] flex items-center justify-between min-h-[62px] md:min-h-[66px] lg:min-h-[58px] xl:min-h-[58px] gap-3">
               <span class="font-medium text-white">Deep Malware, Spyware & Cryptominer Purging</span>
               <strong class="text-white shrink-0 whitespace-nowrap">₹499</strong>
             </li>
-            <li class="p-3.5 rounded-xl bg-[#172731] border border-[#233D4C] flex items-center justify-between min-h-[54px] gap-3">
+            <li class="p-3.5 rounded-xl bg-[#172731] border border-[#233D4C] flex items-center justify-between min-h-[62px] md:min-h-[66px] lg:min-h-[58px] xl:min-h-[58px] gap-3">
               <span class="font-medium text-white">Dual-Boot Linux Ubuntu & CUDA Driver Setup</span>
               <strong class="text-white shrink-0 whitespace-nowrap">₹899</strong>
             </li>
